@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<section mlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd"
+	version="5.0">
+
+	<title>Sources of information</title>
+
+	<para>
+		The following place may help you in understanding and using the
+		Eclipse SCADA system:
+
+		<itemizedlist>
+			<listitem>
+				<para>
+					<link xlink:href="http://www.eclipse.org/eclipsescada/">http://www.eclipse.org/eclipsescada</link>
+					– The Eclipse SCADA homepage
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+					<link xlink:href="http://openscada.org">http://openscada.org</link>
+					– The openSCADA homepage holds some information about the system
+					that became Eclipse SCADA. There is also the wiki, news group and
+					blog.
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+					<link xlink:href="https://wiki.eclipse.org/EclipseSCADA">https://wiki.eclipse.org/EclipseSCADA</link>
+					– The Eclipse SCADA Wiki page
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+					<link xlink:href="http://download.eclipse.org/eclipsescada/">http://download.eclipse.org/eclipsescada
+					</link>
+					– The download area of Eclipse SCADA
+				</para>
+			</listitem>
+		</itemizedlist>
+
+	</para>
+
+</section>
