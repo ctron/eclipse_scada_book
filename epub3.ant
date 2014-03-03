@@ -4,9 +4,10 @@
 	<import file="build.ant" />
 
 	<description>
-    	Used to transform DocBook XML to HTML5 output
+    	Used to transform DocBook XML to EPUB3 output
 	</description>
 
+	<property name="epub" value="EclipseSCADABook"/>
 	<property name="type" value="epub3"/>
 	<property name="output.dir" location="output/epub3/OEBPS" />
 	<property name="stylesheet" location="${docbook.xsl.user.dir}/epub3/chunk.xsl" />
@@ -26,33 +27,31 @@
 			<arg file="${input.dir}/generated/index.xml" />
 		</exec>
 		
-		<echo message="application/epub+zip" file="${output.dir}/../mimetype"/>
+		<delete file="${output.dir}/../${epub}.epub"/>
 		
-		<delete file="${output.dir}/../EclipseSCADABook.epub"/>
-		
-		<zip destfile="${output.dir}/../EclipseSCADABook.mimetime.zip" compress="false">
+		<zip destfile="${output.dir}/../${epub}.mimetime.zip" compress="false">
 			<zipfileset file="${output.dir}/../mimetype" />
 		</zip>
 		
 		<delete dir="${output.dir}/images"/> <!-- for now -->
 		
-		<zip destfile="${output.dir}/../EclipseSCADABook.zip" compress="true">
+		<zip destfile="${output.dir}/../${epub}.zip" compress="true">
 			<zipfileset dir="${output.dir}/../META-INF" prefix="META-INF" />
 			<zipfileset dir="${output.dir}" prefix="OEBPS" />
 		</zip>
 		
-		<zip destfile="${output.dir}/../EclipseSCADABook.epub" compress="true" update="true" keepcompression="true">
-		    <zipfileset src="${output.dir}/../EclipseSCADABook.mimetime.zip" />
-		    <zipfileset src="${output.dir}/../EclipseSCADABook.zip" />
+		<zip destfile="${output.dir}/../${epub}.epub" compress="true" update="true" keepcompression="true">
+		    <zipfileset src="${output.dir}/../${epub}.mimetime.zip" />
+		    <zipfileset src="${output.dir}/../${epub}.zip" />
 		</zip>
 		
-		<delete file="${output.dir}/../EclipseSCADABook.mimetime.zip"/>
-		<delete file="${output.dir}/../EclipseSCADABook.zip"/>
+		<delete file="${output.dir}/../${epub}.mimetime.zip"/>
+		<delete file="${output.dir}/../${epub}.zip"/>
 	</target>
 
 	<target name="check" depends="build">
 		<java fork="true" jar="build/epubcheck-3.0.1/epubcheck-3.0.1.jar">
-			<arg file="${output.dir}/../EclipseSCADABook.epub" />
+			<arg file="${output.dir}/../${epub}.epub" />
 		</java>
 	</target>
 
