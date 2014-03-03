@@ -54,14 +54,8 @@
 			<param name="html.stylesheet" expression="style.css" />
 			<param name="docbook.css.source" expression="" />
 			<param name="section.autolabel" expression="1" />
-			<!--
-			<param name="make.clean.html" expression="1" />
-			-->
+			<param name="chapter.autolabel" expression="A"/>
 			<param name="chunker.output.encoding" expression="UTF-8"/>
-
-			<!--
-			<outputproperty name="indent" value="yes" />
-			-->
 
 			<classpath refid="classpath.saxon" />
 		</xslt>
