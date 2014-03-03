@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<project name="Build HTML5" default="build" basedir=".">
+	
+	<import file="build.ant"/>
+
+	<description>
+    	Used to transform DocBook XML to HTML5 output
+	</description>
+
+	<property name="output.dir" location="output/html5" />
+	<property name="xhtml5.stylesheet" location="${docbook.xsl.user.dir}/xhtml5/chunk.xsl" />
+
+	<target name="build" depends="clean, mkdirs, xinclude, copy">
+
+		<xslt style="${xhtml5.stylesheet}" extension=".html" basedir="${input.dir}/generated" destdir="${output.dir}">
+
+			<include name="index.xml" />
+
+			<param name="html.stylesheet" expression="style.css" />
+			<param name="docbook.css.source" expression="" />
+			<param name="section.autolabel" expression="1" />
+			<param name="chapter.autolabel" expression="A"/>
+			<param name="chunker.output.encoding" expression="UTF-8"/>
+
+			<classpath refid="classpath.saxon" />
+		</xslt>
+	</target>
+
+</project>

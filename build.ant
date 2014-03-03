@@ -1,18 +1,14 @@
 <?xml version="1.0"?>
-<!-- - Author: Lars Vogel -->
-<project name="build HTML5" default="build-html" basedir=".">
+<project name="Common Builder" basedir=".">
 
 	<description>
     	Used to transform DocBook XML to HTML5 output
 	</description>
 
 	<property name="input.dir" location="input" />
-	<property name="output.dir" location="output" />
 
 	<property name="docbook.xsl.dir" location="build/docbook-xsl-1.78.1" />
 	<property name="docbook.xsl.user.dir" location="build/user" />
-
-	<property name="xhtml5.stylesheet" location="${docbook.xsl.user.dir}/xhtml5/chunk.xsl" />
 
 	<path id="classpath.saxon">
 		<pathelement location="lib/saxon.jar" />
@@ -22,19 +18,17 @@
 		<delete dir="${output.dir}" />
 	</target>
 
-	<target name="dirs">
+	<target name="mkdirs">
 		<mkdir dir="${output.dir}" />
 		<mkdir dir="${output.dir}/images" />
 	</target>
-
 
 	<target name="xinclude">
 		<echo message="${input.dir}" />
 		<xsl.xinclude in="${input.dir}/content/index.xml" out="${input.dir}/generated/index.xml" />
 	</target>
 
-	<target name="build-html" depends="clean, dirs, xinclude">
-
+	<target name="copy">
 		<copy todir="${output.dir}">
 			<fileset dir="${input.dir}/css">
 				<include name="*.css" />
@@ -46,19 +40,6 @@
 				<include name="*.png" />
 			</fileset>
 		</copy>
-
-		<xslt style="${xhtml5.stylesheet}" extension=".html" basedir="${input.dir}/generated" destdir="${output.dir}">
-
-			<include name="index.xml" />
-
-			<param name="html.stylesheet" expression="style.css" />
-			<param name="docbook.css.source" expression="" />
-			<param name="section.autolabel" expression="1" />
-			<param name="chapter.autolabel" expression="A"/>
-			<param name="chunker.output.encoding" expression="UTF-8"/>
-
-			<classpath refid="classpath.saxon" />
-		</xslt>
 	</target>
 
 </project>
