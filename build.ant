@@ -12,7 +12,7 @@
 	<property name="docbook.xsl.dir" location="build/docbook-xsl-1.78.1" />
 	<property name="docbook.xsl.user.dir" location="build/user" />
 
-	<property name="xhtml5.stylesheet" location="${docbook.xsl.user.dir}/xhtml5/docbook.xsl" />
+	<property name="xhtml5.stylesheet" location="${docbook.xsl.user.dir}/xhtml5/chunk.xsl" />
 
 	<path id="classpath.saxon">
 		<pathelement location="lib/saxon.jar" />
@@ -54,9 +54,14 @@
 			<param name="html.stylesheet" expression="style.css" />
 			<param name="docbook.css.source" expression="" />
 			<param name="section.autolabel" expression="1" />
+			<!--
 			<param name="make.clean.html" expression="1" />
+			-->
+			<param name="chunker.output.encoding" expression="UTF-8"/>
 
+			<!--
 			<outputproperty name="indent" value="yes" />
+			-->
 
 			<classpath refid="classpath.saxon" />
 		</xslt>

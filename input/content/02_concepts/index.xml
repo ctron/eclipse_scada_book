@@ -4,13 +4,13 @@
 	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd"
 	version="5.0">
 
-	<title>Introduction</title>
-	<para>
-	Welcome to Eclipse SCADA!
-	</para>
+	<title>Concepts</title>
 
-	<xi:include href="01_sources.xml" />
-	<xi:include href="02_common.xml" />
-	<xi:include href="03_overview.xml" />
+	<para>
+	The following sub sections describe the different concepts of Eclipse SCADA
+	</para>
+	
+	<xi:include href="01_communication/index.xml"/>
+	<xi:include href="02_security/index.xml"/>
 
 </chapter>

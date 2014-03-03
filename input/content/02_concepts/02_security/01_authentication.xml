@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" 
+	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd"
+	version="5.0">
+
+	<title>Authentication</title>
+
+<para>
+Before any further authorization can be performed the system needs to know <emphasis>who</emphasis>
+wants to perform an operation. Selecting a user and verifying the identity is the process called
+<quote>authentication</quote>.
+</para>
+
+<para>
+openSCADA uses a simple TCP client/server communication concept with the NGP and NET protocol. After the TCP
+connection has been established the client side sends its user credentials to the server side. The server verifies
+and remembers the authenticated user for the lifetime of the TCP connection or closes the TCP connection immediately.
+Data subscription and control operation can only be performed after the user has been authenticated.
+</para>
+
+<para>
+After the user has been authenticated it will be checked if the user has the right to connect to the server.
+See also the section "authorization".
+</para>
+
+<para>
+There are two ways of authenticating a user in openSCADA. The first, simple, mechanism is used for connector
+modules (aka drivers). Each driver checks for a specific username and password combination during the logon
+process described above. The server checks for the system property
+<property>org.eclipse.scada.core.server.common.ServiceCommon.password</property> if is is set
+the value will be used as password. The user name is not relevant but will be remembered by the server. If the
+password is not set any user is allowed to connect to the service without authentication.
+</para>
+
+<para>
+The second, more complex, way is used by OSGi based services (aka <quote>master server</quote> and <quote>hd server</quote> ). The server
+will scan for authentication services using OSGi. All registered services will be consulted in the order of their
+priority. When the first authentication service returns a valid user, this user will be used. If no service is found
+or no service accepted nor rejected the user the user information will be <quote>anonymous</quote> and accepted. Although the
+user might connect as anonymous during this step, access will be restricted by the authorization step afterwards
+where it is checked if the user is allowed to log on.
+</para>
+
+
+</section>

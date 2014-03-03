@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" 
+	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd"
+	version="5.0">
+
+	<title>Reconnects</title>
+
+<para>
+openSCADA has two different behaviors for connections to servers. One manual mode and one automatic mode.
+The decision is done by the application which mode to use. It cannot be configured in the connection
+string itself.  
+</para>
+
+<para>
+The easier version is the manual mode. Establishing the connection is manually triggered (e.g. by 
+a user) and manually closed. If the connections breaks, it simply stays closed. This mode is, for example, used
+in the <productname>OSTC</productname> application. Connections are opened and closed on user request.
+If the connection breaks, an error message displayed to the user and the connection stays closed until the
+user re-opens.  
+</para>
+
+<para>
+In automatic mode the application simply decides weather the connection should stay open or stay closed.
+openSCADA manages then the connection state and will trigger connect and disconnect calls automatically.
+In most cases the application simply requests the connection to be open. This mode is primarily used
+by the master server or the normal end user client.
+</para>
+
+<para>
+When the connection is requested to be opened, the appropriate call is made to the connection itself. If the
+connection break a re-connect will be triggered immediately. The time of this requested will be noted
+and the next action (connect or disconnect) will be delayed by the quiet period. The default quiet
+period is 10 seconds, but can be changed using the system property
+<property>org.eclipse.scada.default.reconnect.delay</property> which holds the time in
+<emphasis>milliseconds</emphasis>.
+So if the connection breaks and the first reconnect fails, the next reconnect will not be tried until the quiet
+period is over. After that the next connection attempt will be made.
+</para>
+</section>
