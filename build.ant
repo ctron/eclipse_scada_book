@@ -30,7 +30,10 @@
 
 	<target name="copy">
 		<copy todir="${output.dir}">
-			<fileset dir="${input.dir}/css">
+			<fileset dir="${input.dir}/css/common">
+				<include name="*.css" />
+			</fileset>
+			<fileset dir="${input.dir}/css/${type}">
 				<include name="*.css" />
 			</fileset>
 		</copy>

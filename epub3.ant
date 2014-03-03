@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<project name="Build HTML5" default="check" basedir=".">
+
+	<import file="build.ant" />
+
+	<description>
+    	Used to transform DocBook XML to HTML5 output
+	</description>
+
+	<property name="type" value="epub3"/>
+	<property name="output.dir" location="output/epub3/OEBPS" />
+	<property name="stylesheet" location="${docbook.xsl.user.dir}/epub3/chunk.xsl" />
+
+	<target name="build" depends="clean, mkdirs, xinclude, copy">
+
+		<exec executable="xsltproc">
+			<arg value="--stringparam" />
+			<arg value="base.dir" />
+			<arg file="${output.dir}" />
+			
+			<arg value="--stringparam" />
+			<arg value="html.stylesheet" />
+			<arg value="style.css" />
+			
+			<arg file="${stylesheet}" />
+			<arg file="${input.dir}/generated/index.xml" />
+		</exec>
+		
+		<echo message="application/epub+zip" file="${output.dir}/../mimetype"/>
+		
+		<delete file="${output.dir}/../EclipseSCADABook.epub"/>
+		
+		<zip destfile="${output.dir}/../EclipseSCADABook.mimetime.zip" compress="false">
+			<zipfileset file="${output.dir}/../mimetype" />
+		</zip>
+		
+		<delete dir="${output.dir}/images"/> <!-- for now -->
+		
+		<zip destfile="${output.dir}/../EclipseSCADABook.zip" compress="true">
+			<zipfileset dir="${output.dir}/../META-INF" prefix="META-INF" />
+			<zipfileset dir="${output.dir}" prefix="OEBPS" />
+		</zip>
+		
+		<zip destfile="${output.dir}/../EclipseSCADABook.epub" compress="true" update="true" keepcompression="true">
+		    <zipfileset src="${output.dir}/../EclipseSCADABook.mimetime.zip" />
+		    <zipfileset src="${output.dir}/../EclipseSCADABook.zip" />
+		</zip>
+		
+		<delete file="${output.dir}/../EclipseSCADABook.mimetime.zip"/>
+		<delete file="${output.dir}/../EclipseSCADABook.zip"/>
+	</target>
+
+	<target name="check" depends="build">
+		<java fork="true" jar="build/epubcheck-3.0.1/epubcheck-3.0.1.jar">
+			<arg file="${output.dir}/../EclipseSCADABook.epub" />
+		</java>
+	</target>
+
+</project>
