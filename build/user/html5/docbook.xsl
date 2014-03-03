@@ -6,6 +6,7 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:import href="../../docbook-xsl-1.78.1/xhtml5/docbook.xsl" />
 	
+	<xsl:include href="titlepage.xsl"/>
 	
 	<xsl:template name="user.head.content">
 		<meta xmlns="http://www.w3.org/1999/xhtml" http-equiv="Content-Type" content="text/html; charset=utf-8" />

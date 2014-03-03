@@ -9,10 +9,17 @@
 
 	<property name="type" value="html5"/>
 	<property name="output.dir" location="output/html5" />
-	<property name="xhtml5.stylesheet" location="${docbook.xsl.user.dir}/xhtml5/chunk.xsl" />
+	<property name="xhtml5.stylesheet" location="${docbook.xsl.user.dir}/${type}/chunk.xsl" />
 
 	<target name="build" depends="clean, mkdirs, xinclude, copy">
 
+		<xslt
+			in="${docbook.xsl.user.dir}/${type}/titlepage.xml"
+			out="${docbook.xsl.user.dir}/${type}/titlepage.xsl"
+			style="${docbook.xsl.dir}/template/titlepage.xsl">
+			<classpath refid="classpath.saxon" />
+		</xslt>
+		
 		<xslt style="${xhtml5.stylesheet}" extension=".html" basedir="${input.dir}/generated" destdir="${output.dir}">
 
 			<include name="index.xml" />

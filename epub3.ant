@@ -33,8 +33,6 @@
 			<zipfileset file="${output.dir}/../mimetype" />
 		</zip>
 		
-		<delete dir="${output.dir}/images"/> <!-- for now -->
-		
 		<zip destfile="${output.dir}/../${epub}.zip" compress="true">
 			<zipfileset dir="${output.dir}/../META-INF" prefix="META-INF" />
 			<zipfileset dir="${output.dir}" prefix="OEBPS" />

@@ -6,6 +6,7 @@
 	</description>
 
 	<property name="input.dir" location="input" />
+	<property name="temp.dir" location="temp" />
 
 	<property name="docbook.xsl.dir" location="build/docbook-xsl-1.78.1" />
 	<property name="docbook.xsl.user.dir" location="build/user" />
@@ -16,11 +17,13 @@
 
 	<target name="clean">
 		<delete dir="${output.dir}" />
+		<delete dir="${temp.dir}" />
 	</target>
 
 	<target name="mkdirs">
 		<mkdir dir="${output.dir}" />
 		<mkdir dir="${output.dir}/images" />
+		<mkdir dir="${temp.dir}" />
 	</target>
 
 	<target name="xinclude">
@@ -40,7 +43,7 @@
 
 		<copy todir="${output.dir}/images">
 			<fileset dir="${input.dir}/content/images">
-				<include name="*.png" />
+				<include name="**/*.png" />
 			</fileset>
 		</copy>
 	</target>

@@ -31,6 +31,18 @@
 			</author>
 		</authorgroup>
 
+		<cover>
+			<para role="tagline">The Official Documentation for Eclipse SCADA</para>
+			<mediaobject>
+				<imageobject condition="web">
+					<imagedata fileref="images/cover/logo.png" />
+				</imageobject>
+				<imageobject condition="print">
+					<imagedata fileref="images/cover/logo.eps" />
+				</imageobject>
+			</mediaobject>
+		</cover>
+		
 		<legalnotice>
 			<para>
 				Permission is granted to copy, distribute and/or modify this
