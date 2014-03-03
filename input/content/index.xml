@@ -64,6 +64,7 @@
 
 	<xi:include href="01_introduction/index.xml" />
 	<xi:include href="02_concepts/index.xml" />
+	<xi:include href="03_getting_started/index.xml" />
 
 	<xi:include href="../generated/bundles.xml" />
 	<xi:include href="fdl.xml" />

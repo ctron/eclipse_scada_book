@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<section
+	xmlns="http://docbook.org/ns/docbook"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+
+	<title>Standard ports</title>
+
+	<para>
+		The protocols Eclipse SCADA provides are normally based on plain
+		TCP
+		client/server protocols. Each driver and application provides
+		services
+		on different TCP ports. The follow map provides a list of
+		<quote>well known ports</quote>
+		in the Eclipse SCADA system.
+	</para>
+
+	<para>
+		For an update to list, see also the Eclipse SCADA Wiki page at
+		<link
+			xlink:href="https://wiki.eclipse.org/EclipseSCADA/Documentation/StandardPorts">https://wiki.eclipse.org/EclipseSCADA/Documentation/StandardPorts
+		</link>
+		.
+	</para>
+
+	<table>
+
+		<title>OSGi application port matrix</title>
+
+		<tgroup cols="6">
+			<colspec />
+			<colspec />
+			<colspec />
+			<colspec />
+			<colspec />
+			<colspec />
+
+			<thead>
+				<row>
+					<entry>Instance Name</entry>
+					<entry>Instance #</entry>
+					<entry>DA (NGP)</entry>
+					<entry>AE (NGP)</entry>
+					<entry>HD (NGP)</entry>
+					<entry>CA (NGP)</entry>
+				</row>
+			</thead>
+
+
+			<tbody>
+				<row>
+					<entry align="center">master</entry>
+					<entry align="center">1</entry>
+					<entry align="center">2101</entry>
+					<entry align="center">2201</entry>
+					<entry align="center">-</entry>
+					<entry align="center">2401</entry>
+				</row>
+				<row>
+					<entry align="center">hdserver</entry>
+					<entry align="center">2</entry>
+					<entry align="center">-</entry>
+					<entry align="center">-</entry>
+					<entry align="center">2302</entry>
+					<entry align="center">2402</entry>
+				</row>
+				<row>
+					<entry align="center">hdslave</entry>
+					<entry align="center">3</entry>
+					<entry align="center">-</entry>
+					<entry align="center">-</entry>
+					<entry align="center">2303</entry>
+					<entry align="center">2403</entry>
+				</row>
+			</tbody>
+			
+		</tgroup>
+
+	</table>
+
+</section>

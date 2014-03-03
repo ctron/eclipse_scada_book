@@ -1,3 +1,11 @@
 html {
 	font-family: Helvetica, Arial, sans-serif;
 }
+
+.programlisting {
+	background-color: #F4F4F4;
+	border: 1px solid #AAAAAA;
+	padding: 1em;
+	margin: 1em;
+	border-radius: 1em; 
+}

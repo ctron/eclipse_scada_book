@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" 
+	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd"
+	version="5.0">
+
+	<title>Getting started</title>
+
+	<para>
+	The following sub section should give you a quick start into the Eclipse SCADA system.
+	Also see <link xlink:href="https://wiki.eclipse.org/EclipseSCADA#Getting_started">https://wiki.eclipse.org/EclipseSCADA#Getting_started</link>
+	in the Eclipse SCADA wiki.
+	</para>
+	
+	<xi:include href="02_development/index.xml"/>
+
+</chapter>

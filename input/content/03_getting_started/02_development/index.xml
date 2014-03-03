@@ -4,13 +4,8 @@
 	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd"
 	version="5.0">
 
-	<title>Communication</title>
-
-	<para>
-	The following sections describe the communication behavior of the Eclipse SCADA system.
-	</para>
+	<title>Development</title>
 	
-	<xi:include href="01_reconnect.xml"/>
-	<xi:include href="02_ports.xml"/>
+	<xi:include href="01_client.xml"/>
 
 </section>

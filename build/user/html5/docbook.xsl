@@ -4,7 +4,9 @@
 
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	
 	<xsl:import href="../../docbook-xsl-1.78.1/xhtml5/docbook.xsl" />
+	<xsl:import href="highlight.xsl"/>
 	
 	<xsl:include href="titlepage.xsl"/>
 	

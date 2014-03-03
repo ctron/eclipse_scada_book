@@ -14,18 +14,34 @@
 
 	<target name="build" depends="clean, mkdirs, xinclude, copy">
 
+		<!--
 		<exec executable="xsltproc">
-			<arg value="--stringparam" />
+			<arg value="- -stringparam" />
 			<arg value="base.dir" />
 			<arg file="${output.dir}" />
 			
-			<arg value="--stringparam" />
+			<arg value="- -stringparam" />
 			<arg value="html.stylesheet" />
 			<arg value="style.css" />
 			
 			<arg file="${stylesheet}" />
 			<arg file="${input.dir}/generated/index.xml" />
 		</exec>
+		-->
+		
+		<xslt
+			style="${stylesheet}"
+			destdir="${output.dir}"
+			basedir="${input.dir}/generated"
+			>
+			
+			<include name="index.xml"/>
+			
+			<param name="base.dir" expression="${output.dir}" />
+			<param name="html.stylesheet" expression="style.css" />
+			
+			<classpath refid="classpath.xslt" />
+		</xslt>
 		
 		<delete file="${output.dir}/../${epub}.epub"/>
 		

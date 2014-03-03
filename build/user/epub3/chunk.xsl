@@ -9,4 +9,9 @@
 	<!-- fixes some validation errors, no idea why -->
 	<xsl:param name="root.is.a.chunk" select="0"/>
 	
+	<xsl:param name="highlight.source" select="1"/>
+	
+	<xsl:template name="check.for.xalan">
+	</xsl:template>
+	
 </xsl:stylesheet>

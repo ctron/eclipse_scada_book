@@ -9,7 +9,9 @@
 
 	<property name="type" value="html5"/>
 	<property name="output.dir" location="output/html5" />
-	<property name="xhtml5.stylesheet" location="${docbook.xsl.user.dir}/${type}/chunk.xsl" />
+	<property name="stylesheet" location="${docbook.xsl.user.dir}/${type}/chunk.xsl" />
+	
+	<property name="xslthl.config" location="${docbook.xsl.dir}/highlighting/xslthl-config.xml"/>
 
 	<target name="build" depends="clean, mkdirs, xinclude, copy">
 
@@ -17,20 +19,23 @@
 			in="${docbook.xsl.user.dir}/${type}/titlepage.xml"
 			out="${docbook.xsl.user.dir}/${type}/titlepage.xsl"
 			style="${docbook.xsl.dir}/template/titlepage.xsl">
-			<classpath refid="classpath.saxon" />
+			<classpath refid="classpath.xslt" />
 		</xslt>
 		
-		<xslt style="${xhtml5.stylesheet}" extension=".html" basedir="${input.dir}/generated" destdir="${output.dir}">
-
+		<xslt style="${stylesheet}" extension=".html" basedir="${input.dir}/generated" destdir="${output.dir}">
+			
 			<include name="index.xml" />
 
+			<sysproperty key="xslthl.config" value="file:${xslthl.config}"/>
+			<param name="highlight.source" expression="1"/>
+			
 			<param name="html.stylesheet" expression="style.css" />
 			<param name="docbook.css.source" expression="" />
 			<param name="section.autolabel" expression="1" />
 			<param name="chapter.autolabel" expression="A"/>
 			<param name="chunker.output.encoding" expression="UTF-8"/>
 
-			<classpath refid="classpath.saxon" />
+			<classpath refid="classpath.xslt" />
 		</xslt>
 	</target>
 

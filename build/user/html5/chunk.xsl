@@ -4,12 +4,14 @@
 
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	
 	<xsl:import href="../../docbook-xsl-1.78.1/xhtml5/chunk.xsl" />
+	<xsl:import href="highlight.xsl"/>
 	
 	<xsl:include href="titlepage.xsl"/>
 	
 	<xsl:param name="html.ext">.html</xsl:param>
-	
+
 	<xsl:template name="user.head.content">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	</xsl:template>
