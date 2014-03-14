@@ -8,7 +8,8 @@
 
 	version="5.0">
 
-	<title>The Eclipse SCADA System</title>
+	<title>Eclipse SCADA</title>
+	<subtitle>The definite guide</subtitle>
 
 	<info>
 		<copyright>
@@ -32,7 +33,7 @@
 		</authorgroup>
 
 		<cover>
-			<para role="tagline">The Official Documentation for Eclipse SCADA</para>
+			<para role="tagline">Explaining the Eclipse SCADA system</para>
 			<mediaobject>
 				<imageobject condition="web">
 					<imagedata fileref="images/cover/logo.png" />
@@ -42,22 +43,15 @@
 				</imageobject>
 			</mediaobject>
 		</cover>
-		
+
 		<legalnotice>
 			<para>
-				Permission is granted to copy, distribute and/or modify this
-				document under
-				the
-				terms of the GNU Free Documentation License,
-				Version 1.3 or any later
-				version
-				published by the Free Software
-				Foundation; with no Invariant Sections, no
-				Front-Cover Texts, and no
-				Back-Cover Texts. A copy of the license is
-				included in
-				the section
-				entitled &quot;GNU Free Documentation License&quot;.
+				This work is licensed under the Creative Commons
+				Attribution-NonCommercial-ShareAlike 4.0 International License. To
+				view a copy of this license, visit
+				<link xlink:href="http://creativecommons.org/licenses/by-nc-sa/4.0/">http://creativecommons.org/licenses/by-nc-sa/4.0/
+				</link>
+				.
 			</para>
 		</legalnotice>
 	</info>
@@ -66,6 +60,6 @@
 	<xi:include href="02_concepts/index.xml" />
 	<xi:include href="03_getting_started/index.xml" />
 
-	<xi:include href="fdl.xml" />
+	<xi:include href="legal.xml" />
 
 </book> 
