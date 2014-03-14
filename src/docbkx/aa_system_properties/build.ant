@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="properties" default="default">
+
+    <target name="default">
+		<xslt style="properties.xsl" in="properties.xml" out="index.xml" force="true">
+		</xslt>
+    </target>
+
+</project>

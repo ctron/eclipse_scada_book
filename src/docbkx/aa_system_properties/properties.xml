@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties
+	xmlns="urn:java:systemProperties"
+	xmlns:db="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd"
+>
+
+<property
+	id="vi.debug"
+	type="boolean"
+	default="false"
+	short="Enable some debugging functionality in the HMI"
+	/>
+
+<property
+	id="org.eclipse.scada.configuration.world.lib.deployment.wix.commonsDaemon.nativeBin.source"
+	type="URI"
+	short="A URL to the native launcher binaries of Apache Commons Daemon"
+	>
+	
+	<default>
+	<db:para>
+	<db:link
+		xlink:href="https://www.apache.org/dist/commons/daemon/binaries/windows/commons-daemon-1.0.15-bin-windows.zip">https://www.apache.org/dist/commons/daemon/binaries/windows/commons-daemon-1.0.15-bin-windows.zip
+	</db:link>
+	</db:para>
+	</default>
+	
+	<description>
+	<db:para>
+				The URL to the ZIP file that contains the native launcher
+				binaries for the windows platform of the Apache Commons Daemon
+				project.
+	</db:para>
+	</description>
+	
+</property>
+
+</properties>

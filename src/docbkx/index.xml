@@ -60,6 +60,11 @@
 	<xi:include href="02_concepts/index.xml" />
 	<xi:include href="03_getting_started/index.xml" />
 
+	<appendix>
+		<title>References</title>
+		<xi:include href="aa_system_properties/index.xml" />
+	</appendix>
+
 	<xi:include href="legal.xml" />
 
 </book> 

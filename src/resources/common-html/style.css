@@ -2,6 +2,10 @@ html {
 	font-family: Helvetica, Arial, sans-serif;
 }
 
+.property {
+	font-family: Courier, Courier New, monospace; 
+}
+
 .programlisting {
 	background-color: #F4F4F4;
 	border: 1px solid #AAAAAA;
@@ -9,3 +13,29 @@ html {
 	margin: 1em;
 	border-radius: 1em; 
 }
+
+span.term {
+	font-weight: bold;
+}
+
+.table-contents table {
+	border: 0px;
+	border-bottom: 2pt solid #AAAAAA;
+	background: #F0F0F0;
+	border-spacing: 0px;
+}
+
+.table-contents th {
+	background: #E0E0E0;
+	
+	border: 0px;
+	padding: .5em;
+	
+	border-bottom: 2pt solid #AAAAAA;
+}
+
+.table-contents td {
+	border: 0px;
+	padding: .5em;
+}
+
