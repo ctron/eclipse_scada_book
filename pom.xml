@@ -13,6 +13,9 @@
 
 	<description>Eclipse SCADA - The definite guide</description>
 
+	<properties>
+		<customization.xhtml>src/userxsl/xhtml/docbook.xsl</customization.xhtml>
+	</properties>
 
 	<build>
 
@@ -154,7 +157,7 @@
 							<highlightSource>1</highlightSource>
 							<foCustomization>src/userxsl/fo/docbook.xsl</foCustomization>
 							<htmlCustomization>src/userxsl/html/docbook.xsl</htmlCustomization>
-							<xhtmlCustomization>src/userxsl/xhtml/docbook.xsl</xhtmlCustomization>
+							<xhtmlCustomization>${customization.xhtml}</xhtmlCustomization>
 							<xhtml5Customization>src/userxsl/xhtml5/docbook.xsl</xhtml5Customization>
 							<epub3Customization>src/userxsl/epub3/docbook.xsl</epub3Customization>
 							<hyphenate>true</hyphenate>
