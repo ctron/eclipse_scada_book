@@ -4,6 +4,6 @@
 	<xsl:import href="urn:docbkx:stylesheet" />
 		
 	<xsl:import href="highlight.xsl"/>
-	<xsl:import href="../../../target/docbkx/template/titlepage/titlepage.xhtml.xsl"/>
+	<xsl:import href="../../../target/docbkx/template/titlepage/titlepage.epub3.xsl"/>
 	
 </xsl:stylesheet>

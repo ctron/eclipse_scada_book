@@ -13,8 +13,9 @@
 
 	<description>Eclipse SCADA - The definite guide</description>
 
+
 	<build>
-	
+
 		<plugins>
 
 			<plugin>
@@ -35,7 +36,52 @@
 									<directory>src/resources/common</directory>
 								</resource>
 								<resource>
+									<directory>src/resources/common-html</directory>
+								</resource>
+								<resource>
 									<directory>src/resources/html</directory>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>xhtml-resources</id>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<phase>generate-resources</phase>
+						<configuration>
+							<outputDirectory>${project.build.directory}/docbkx/xhtml</outputDirectory>
+							<resources>
+								<resource>
+									<directory>src/resources/common</directory>
+								</resource>
+								<resource>
+									<directory>src/resources/common-html</directory>
+								</resource>
+								<resource>
+									<directory>src/resources/xhtml</directory>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>xhtml5-resources</id>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<phase>generate-resources</phase>
+						<configuration>
+							<outputDirectory>${project.build.directory}/docbkx/xhtml5</outputDirectory>
+							<resources>
+								<resource>
+									<directory>src/resources/common</directory>
+								</resource>
+								<resource>
+									<directory>src/resources/common-html</directory>
+								</resource>
+								<resource>
+									<directory>src/resources/xhtml5</directory>
 								</resource>
 							</resources>
 						</configuration>
@@ -68,7 +114,7 @@
 				<groupId>com.agilejava.docbkx</groupId>
 				<artifactId>docbkx-maven-plugin</artifactId>
 				<version>2.0.16-SNAPSHOT</version>
-				
+
 				<executions>
 					<execution>
 						<id>titlepage</id>
@@ -78,22 +124,26 @@
 						<phase>generate-sources</phase>
 
 						<configuration>
-							<includes>titlepage/titlepage.xml</includes>
+							<includes>titlepage/titlepage.*.xml</includes>
 						</configuration>
 					</execution>
 
 					<execution>
 						<id>book</id>
 						<goals>
-							<goal>generate-html</goal>
-							<!-- <goal>generate-pdf</goal> -->
-							<!-- <goal>generate-eclipse</goal>  -->
+							<goal>generate-xhtml5</goal>
+							<goal>generate-pdf</goal>
+							<!-- <goal>generate-eclipse</goal> -->
 							<goal>generate-epub3</goal>
 							<goal>generate-webhelp</goal>
+
 						</goals>
 						<phase>compile</phase>
 
 						<configuration>
+
+							<encoding>UTF-8</encoding>
+
 							<chunkedOutput>true</chunkedOutput>
 							<xincludeSupported>true</xincludeSupported>
 
@@ -102,8 +152,11 @@
 
 							<!-- syntax highlighting -->
 							<highlightSource>1</highlightSource>
-							<foCustomization>src/docbkx/docbook-fo.xsl</foCustomization>
+							<foCustomization>src/userxsl/fo/docbook.xsl</foCustomization>
 							<htmlCustomization>src/userxsl/html/docbook.xsl</htmlCustomization>
+							<xhtmlCustomization>src/userxsl/xhtml/docbook.xsl</xhtmlCustomization>
+							<xhtml5Customization>src/userxsl/xhtml5/docbook.xsl</xhtml5Customization>
+							<epub3Customization>src/userxsl/epub3/docbook.xsl</epub3Customization>
 							<hyphenate>true</hyphenate>
 							<hyphenateVerbatim>true</hyphenateVerbatim>
 
@@ -144,8 +197,8 @@
 				</dependencies>
 
 			</plugin>
+
 		</plugins>
 
 	</build>
-
 </project>
