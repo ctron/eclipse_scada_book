@@ -15,6 +15,13 @@
 	/>
 
 <property
+	id="org.eclipse.scada.vi.details.handler.disableWaitShell"
+	type="boolean" 
+	short="Disable the &amp;wait shell&amp;"
+	default="false">
+    </property>
+
+<property
 	id="org.eclipse.scada.configuration.world.lib.deployment.wix.commonsDaemon.nativeBin.source"
 	type="URI"
 	short="A URL to the native launcher binaries of Apache Commons Daemon"

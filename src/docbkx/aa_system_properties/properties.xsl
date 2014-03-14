@@ -28,10 +28,14 @@
 	</para>
 	
 	<variablelist>
-		<xsl:apply-templates mode="toc"/>
+		<xsl:apply-templates mode="toc" select="//sp:property">
+			<xsl:sort select="@id" />
+		</xsl:apply-templates>
 	</variablelist>
 	
-	<xsl:apply-templates mode="detail"/>
+	<xsl:apply-templates mode="detail" select="//sp:property">
+		<xsl:sort select="@id" />
+	</xsl:apply-templates>
 
 </section>
 	</xsl:template>
