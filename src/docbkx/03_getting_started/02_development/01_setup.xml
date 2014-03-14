@@ -109,11 +109,11 @@
 
 			<programlisting language="xml"><![CDATA[...
 <repository>
-	<id>eclipse.scada</id>
-	<url>http://download.eclipse.org/eclipsescada/downloads/org.eclipse.scada/drops/0.1.0/S201403121431/maven/</url>
-	<releases>
-		<enabled>true</enabled>
-	</releases>
+  <id>eclipse.scada</id>
+  <url>http://download.eclipse.org/eclipsescada/downloads/org.eclipse.scada/drops/0.1.0/S201403121431/maven/</url>
+  <releases>
+    <enabled>true</enabled>
+  </releases>
 </repository>
 ...]]></programlisting>
 
@@ -175,11 +175,11 @@
 			The following fragment adds the necessary plugin to the build:
 			<programlisting language="xml"><![CDATA[...
 <plugins>
-	<plugin>
-		<groupId>org.apache.felix</groupId>
-		<artifactId>maven-bundle-plugin</artifactId>
-		<extensions>true</extensions>
-	</plugin>
+  <plugin>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>maven-bundle-plugin</artifactId>
+    <extensions>true</extensions>
+  </plugin>
 </plugins>
 ...]]></programlisting>
 		</para>
