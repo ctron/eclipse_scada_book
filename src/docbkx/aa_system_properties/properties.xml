@@ -7,6 +7,21 @@
 	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd"
 >
 
+<!-- org.eclipse.scada.sec -->
+
+<property
+	id="org.eclipse.scada.sec.callback.defaultTimeout"
+	type="integer"
+	default="20000"
+	short="The time (in milliseconds) after which the callback will be automatically canceled"/>
+	
+<property
+	id="org.eclipse.scada.sec.callback.XMLSignatureCallback.maxKeepKeyOpenTimeout"
+	type="integer"
+	default="300000"
+	short="The maximum amount of time the user may select for holding the signature key open"
+	/>
+
 <property
 	id="vi.debug"
 	type="boolean"

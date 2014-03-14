@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<section
+	xmlns="http://docbook.org/ns/docbook"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+
+	<title>Setting up a development environment</title>
+
+	<para>
+		The following sub section explain in brief detail on how to setup
+		a development environment. Eclipse SCADA is developed using the
+		Eclipse Java
+		IDE (JDT), still it possible to use other IDEs and
+		development environments as well in order to use Eclipse SCADA in your
+		own applications.
+	</para>
+
+	<section>
+		<title>Setting up with the Eclipse IDE</title>
+		<para>…</para>
+	</section>
+
+	<section>
+		<title>Setting up a plain maven project</title>
+
+		<para>
+			Eclipse SCADA is built using Eclipse Tycho. It is a set maven
+			plugins, which
+			extend maven in a way that the Eclipse PDE type
+			projects can be used
+			without much additional changes for maven.
+		</para>
+
+		<para>
+			This works extremely well in the Eclipse PDE enviroment, but if
+			you
+			want
+			to develop a plain maven project you would need to import the
+			artifacts
+			manually, and Eclipse SCADA has a lot
+			<footnote>
+				<para>A the moment of writing it is over 400 OSGi bundles/JAR files.
+				</para>
+			</footnote>
+			of bundles.
+		</para>
+
+		<para>
+			The P2 repositories (which is the output of the Eclipse Tycho
+			build) are
+			converted
+			to plain maven 2 repositories at the end of the
+			build process.
+			Dependencies are generated based on the validating
+			target platform of the build.
+			This might not be an optimal solution,
+			but creates a working setup
+			without much additional effort.
+		</para>
+
+		<para>
+			Dependencies to external projects, also the dependencies to Eclipse
+			Orbit, are
+			replaced with their Maven Central counterparts (as long as
+			they have
+			some). These artifacts are
+			also exlucded from the mirror
+			process and
+			<emphasis>not</emphasis>
+			served from
+			<link xlink:href="http://download.eclipse.org">download.eclipse.org</link>
+			.
+		</para>
+
+		<para>
+			The URI to the maven 2 repositories contains the build id. So there
+			is no
+			<quote>composite</quote>
+			maven repository at the moment.
+		</para>
+
+		<para>
+			The URI is:
+			<filename>http://download.eclipse.org/eclipsescada/downloads/org.eclipse.scada/drops/[version]/[buildId]/maven/
+			</filename>
+		</para>
+
+		<variablelist>
+			<varlistentry>
+				<term>version</term>
+				<listitem>
+					<para>The main version (e.g. 0.1.0)</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>buildId</term>
+				<listitem>
+					<para>The ID of the build (e.g. S201403121431)</para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
+
+		<para>
+			So in order to use
+			<quote>0.1.0-M4</quote>
+			using plain maven, adding the following repository setup will do:
+
+			<programlisting language="xml"><![CDATA[...
+<repository>
+	<id>eclipse.scada</id>
+	<url>http://download.eclipse.org/eclipsescada/downloads/org.eclipse.scada/drops/0.1.0/S201403121431/maven/</url>
+	<releases>
+		<enabled>true</enabled>
+	</releases>
+</repository>
+...]]></programlisting>
+
+			<note>
+				<para>
+					If you reference a nightly build (N), the versions will be
+					<quote>-SNAPSHOT</quote>
+					versions and you will need to also enable snapshots
+					for the
+					repository.
+				</para>
+			</note>
+
+		</para>
+
+		<para>
+			Eclipse SCADA uses Apache Mina for most of its communication
+			protocols. Apache Mina uses the maven plugin
+			<filename>org.apache.felix:maven-bundle-plugin</filename>
+			for providing OSGi bundles. So as soon as you declare a dependency to
+			some Eclipse SCADA module which has a dependency to Apache Mina, you
+			will need
+			to add this plugin to you setup as well.
+		</para>
+
+		<para>
+			The reason behind that is, that the
+			<filename>maven-bundle-plugin</filename>
+			creates its artifacts with the suffix
+			<filename>.jar</filename>
+			, since OSGi bundles are actually JAR files. However it defines the
+			packaging type
+			<filename>bundle</filename>
+			in the maven POM file of Apache Mina. Now as soon as a dependency is
+			declared on an Apache Mina project, Maven tries to resolve that
+			dependency using
+			the suffix
+			<filename>.bundle</filename>
+			, due to the packaging type
+			<filename>bundle</filename>
+			. But that file does not exists, since the correct file extension for
+			OSGi bundles is
+			<filename>.jar</filename>
+			.
+		</para>
+
+		<para>
+			Adding the
+			<filename>maven-bundle-plugin</filename>
+			to the build takes care of this behavior. The plugin automatically
+			rewrites these requests internally from
+			<filename>.bundle</filename>
+			to
+			<filename>.jar</filename>
+			and everything works as expected.
+		</para>
+
+		<para>
+			The following fragment adds the necessary plugin to the build:
+			<programlisting language="xml"><![CDATA[...
+<plugins>
+	<plugin>
+		<groupId>org.apache.felix</groupId>
+		<artifactId>maven-bundle-plugin</artifactId>
+		<extensions>true</extensions>
+	</plugin>
+</plugins>
+...]]></programlisting>
+		</para>
+
+		<para>
+			A complete minimal project might look like:
+			<programlisting language="xml"><xi:include
+					href="sample-project.pom"
+					parse="text"
+					encoding="UTF-8" />
+			</programlisting>
+		</para>
+
+		<para>
+			Also see
+			<link xlink:href="https://wiki.eclipse.org/EclipseSCADA/GettingStarted/WithMaven">https://wiki.eclipse.org/EclipseSCADA/GettingStarted/WithMaven
+			</link>
+			for additional information.
+		</para>
+	</section>
+
+</section>
+

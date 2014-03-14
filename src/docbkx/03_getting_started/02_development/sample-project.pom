@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>org.eclipse.scada</groupId>
+	<artifactId>client-sample1</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	
+	<name>Eclipse SCADA Client Sample #1</name>
+	<description>A sample client</description>
+
+	<repositories>
+		<repository>
+			<id>eclipse.scada</id>
+			<url>http://download.eclipse.org/eclipsescada/downloads/org.eclipse.scada/drops/0.1.0/S201403121431/maven/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.eclipse.scada.core</groupId>
+			<artifactId>org.eclipse.scada.da.client.ngp</artifactId>
+			<version>[0.1.0,)</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+	</dependencies>
+
+	<!--  this is required for Apache Mina -->
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
