@@ -9,7 +9,7 @@
 	<xsl:import href="../../../target/docbkx/template/titlepage/titlepage.xhtml.xsl"/>
 	
 	<xsl:template name="user.head.content">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
 	</xsl:template>
 	
 </xsl:stylesheet>

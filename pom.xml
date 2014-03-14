@@ -160,7 +160,10 @@
 							<goal>generate-pdf</goal>
 							<!-- <goal>generate-eclipse</goal> -->
 							<goal>generate-epub3</goal>
+							<!--
 							<goal>generate-webhelp</goal>
+							does not work with html.ext set
+							 -->
 
 						</goals>
 						<phase>compile</phase>
@@ -174,6 +177,8 @@
 
 							<includes>index.xml</includes>
 							<htmlStylesheet>style.css</htmlStylesheet>
+							
+							<htmlExt>.xhtml</htmlExt>
 
 							<!-- syntax highlighting -->
 							<highlightSource>1</highlightSource>
@@ -190,7 +195,7 @@
 								<!-- <copy todir="${project.build.directory}/docbkx/html" file="src/css/html/style.css" 
 									/> -->
 							</preProcess>
-
+						
 						</configuration>
 
 					</execution>
