@@ -131,7 +131,7 @@
 					<execution>
 						<id>book</id>
 						<goals>
-							<goal>generate-xhtml5</goal>
+							<goal>generate-xhtml</goal>
 							<goal>generate-pdf</goal>
 							<!-- <goal>generate-eclipse</goal> -->
 							<goal>generate-epub3</goal>
