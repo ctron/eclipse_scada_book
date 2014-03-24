@@ -9,10 +9,103 @@
 	<title>Setting up a configuration environment</title>
 
 	<para>
-		The following sub section explain in brief detail on how to setup
-		a development environment for configuration of SCADA projects.
+		Since Eclipse SCADA is based on Java and Eclipse, both have to be
+		installed to get it to run. In this chapter we will show how to install
+		Java, Eclipse and all necessary plugins to get started. 
 	</para>
-
+	
+	<section>
+		<title>Installing Java</title>
+		
+		<para>
+			At the time of writing Java 8 was just released, so the current version
+			which is still in use in conjunction with Eclipse SCADA is Java 7.
+			Java 8 should theoretically work, but it is not tested so far.
+		</para>
+		
+		<section>
+			<title>On Windows</title>
+			
+			<para>
+				The recommended way on Windows is to use the official Java
+				installation package provided by Oracle. The download site
+				is to be found at: <link xlink:href="http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html">http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html</link>.
+				We recommend that you install Java for the same architecture
+				as your system is. That means if you have a 64bit Windows, then also
+				install the 64bit version of Java. If you have a 32bit Windows, you 
+				have to install the 32bit version of Java as well. It is possible 
+				to install the 32bit Version Java on a 64bit Windows, but unless 
+				you have important reasons to do that, we will not recommend it.
+			</para>
+		</section>
+		
+		<section>
+			<title>On Linux</title>
+			
+			<para>
+				The default Java package for most Linux distributions is the OpenJDK.
+				To install the OpenJDK for your flavor of Linux use the package
+				management tool of your distribution and install the package
+				<filename>openjdk-7-jdk</filename> (the name of the package might be 
+				slightly different depending on your distribution, on Red Hat for 
+				instance it is called <filename>java-1.7.0-openjdk-devel</filename>).
+				The important thing is, to install the JDK and not the JRE.
+				If you install Java via the package manager, you will automatically
+				get the correct version for your architecture (32bit or 64bit).
+			</para>
+			
+			<para>
+				Alternatively you can install the official Java Version from Oracle.
+				To switch between the installed versions use the command:
+				<programlisting language="bash"><![CDATA[sudo alternatives --config java]]></programlisting>
+			</para>
+		</section>
+		
+		<section>
+			<title>On MacOS X</title>
+			
+			<para>
+				Please refer to the official documentation found at:
+				<link xlink:href="https://www.java.com/de/download/help/mac_install.xml">https://www.java.com/de/download/help/mac_install.xml</link>
+			</para>
+		</section>
+		
+	</section>
+	
+	<section>
+		<title>Installing Eclipse</title>
+	
+		<para>
+			The current version (0.1.0) of Eclipse SCADA is based on the Kepler 
+			release (4.3). Although the following instructions might (and
+			actually should) work  without change with the future Luna release,
+			we recommend to keep with the Kepler release.
+		</para>
+		
+		<para>
+			Traditionally Eclipse comes as a simple ZIP file, which just has
+			to be extracted to somewhere on the file system and can be run from
+			there. Even though many Linux distributions will include Eclipse
+			in its package repositories, we do not recommend to use those.
+			Just download the Kepler from <link xlink:href="http://www.eclipse.org/downloads/">http://www.eclipse.org/downloads/</link>
+			or, if there is already a newer release available, it can always be
+			downloaded from the archives: <link xlink:href="http://www.eclipse.org/downloads/packages/release/kepler/sr2">http://www.eclipse.org/downloads/packages/release/kepler/sr2</link>.
+			You have to download the same architecture as the Java Version you 
+			installed.
+		</para>
+		
+		<para>
+			Unzip it to a directory of your choice. From there you can now start it.
+		</para>
+	</section>
+	
+	<section>
+		<title>Installing the Eclipse SCADA plugins</title>
+	
+		<para>
+			...
+		</para>
+	</section>
 
 </section>
 
