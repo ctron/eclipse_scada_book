@@ -12,6 +12,7 @@
 	in the Eclipse SCADA wiki.
 	</para>
 	
+	<xi:include href="01_configuration/index.xml"/>
 	<xi:include href="02_development/index.xml"/>
 
 </chapter>
