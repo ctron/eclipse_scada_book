@@ -79,7 +79,9 @@
 			The current version (0.1.0) of Eclipse SCADA is based on the Kepler 
 			release (4.3). Although the following instructions might (and
 			actually should) work  without change with the future Luna release,
-			we recommend to keep with the Kepler release.
+			we recommend to stay with the Kepler release. For Release 0.2.0
+			it is planned to ensure Java 8 compatibility and we will switch
+			to the Luna release.
 		</para>
 		
 		<para>
@@ -103,7 +105,43 @@
 		<title>Installing the Eclipse SCADA plugins</title>
 	
 		<para>
-			...
+			Next step is to install the necessary plugins which contain the actual 
+			Eclipse SCADA components. For this go to "Help > Install New Software". 
+			In the text box "Work with" just enter following URL: 
+			<link xlink:href="http://download.eclipse.org/eclipsescada/updates/release/0.1.0/">http://download.eclipse.org/eclipsescada/updates/release/0.1.0/</link>
+			<footnote>
+				<para>
+					The release will not be ready until End of April, until then
+					please use the milestone build found under
+					<link xlink:href="http://download.eclipse.org/eclipsescada/updates/milestone/0.1.0/">http://download.eclipse.org/eclipsescada/updates/milestone/0.1.0/</link> 
+				</para>
+			</footnote>
+			Then select the "Eclipse SCADA IDE" category and click on "Next".
+			The next screen should contain all the additionally selected 
+			dependencies. Click on "Next" there as well. On the next screen 
+			accept the Licenses and click on "Finish". After the installation 
+			Eclipse requires a restart. Do that.
+		</para>
+		
+		<para>
+			Additionally you can now install the additional openSCADA components. 
+			These contain the OPC and the SNMP adapters. This will be part of 
+			the 0.2.0 release of Eclipse SCADA, but for now they have to be 
+			downloaded from the openSCADA site. To install it just repeat the steps
+			above with the URL <link xlink:href="http://repo.openscada.org/p2/org.openscada/R/1.2.0/">http://repo.openscada.org/p2/org.openscada/R/1.2.0/</link>
+			<footnote>
+				<para>
+					The release will not be ready until End of April, until then
+					please use the integration build found under
+					<link xlink:href="http://repo.openscada.org/p2/org.openscada/I/1.2.0/">http://repo.openscada.org/p2/org.openscada/I/1.2.0/</link>
+				</para>
+			</footnote>
+			and select the "OpenSCADA IDE" category.
+		</para>
+		
+		<para>
+			After a restart of your Eclipse IDE you are ready to start configuring
+			the SCADA system.
 		</para>
 	</section>
 
