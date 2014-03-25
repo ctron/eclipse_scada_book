@@ -141,7 +141,7 @@
 		
 		<para>
 			After a restart of your Eclipse IDE you are ready to start configuring
-			the SCADA system.
+			the SCADA system. For this please read further in <xref linkend="chap_configuration" />.
 		</para>
 	</section>
 
