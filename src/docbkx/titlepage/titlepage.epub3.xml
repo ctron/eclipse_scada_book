@@ -26,7 +26,7 @@
   </t:titlepage-content>
 
   <t:titlepage-separator>
-    <hr/>
+    <xsl:element name="hr" namespace="http://www.w3.org/1999/xhtml"></xsl:element>
   </t:titlepage-separator>
 
   <t:titlepage-before t:side="recto">
@@ -59,7 +59,7 @@
   </t:titlepage-content>
 
   <t:titlepage-separator>
-    <hr/>
+    <xsl:element name="hr" namespace="http://www.w3.org/1999/xhtml"></xsl:element>
   </t:titlepage-separator>
 
   <t:titlepage-before t:side="recto">
@@ -95,7 +95,7 @@
   </t:titlepage-content>
 
   <t:titlepage-separator>
-    <hr/>
+    <xsl:element name="hr" namespace="http://www.w3.org/1999/xhtml"></xsl:element>
   </t:titlepage-separator>
 
   <t:titlepage-before t:side="recto">
@@ -193,7 +193,7 @@
   </t:titlepage-content>
 
   <t:titlepage-separator>
-    <hr/>
+    <xsl:element name="hr" namespace="http://www.w3.org/1999/xhtml"></xsl:element>
   </t:titlepage-separator>
 
   <t:titlepage-before t:side="recto">
@@ -393,7 +393,7 @@
   </t:titlepage-content>
 
   <t:titlepage-separator>
-    <xsl:if test="count(parent::*)='0'"><hr/></xsl:if>
+    <xsl:if test="count(parent::*)='0'"><xsl:element name="hr" namespace="http://www.w3.org/1999/xhtml"></xsl:element></xsl:if>
   </t:titlepage-separator>
 
   <t:titlepage-before t:side="recto">
@@ -424,7 +424,7 @@
   </t:titlepage-content>
 
   <t:titlepage-separator>
-    <xsl:if test="count(parent::*)='0'"><hr/></xsl:if>
+    <xsl:if test="count(parent::*)='0'"><xsl:element name="hr" namespace="http://www.w3.org/1999/xhtml"></xsl:element></xsl:if>
   </t:titlepage-separator>
 
   <t:titlepage-before t:side="recto">
@@ -455,7 +455,7 @@
   </t:titlepage-content>
 
   <t:titlepage-separator>
-    <xsl:if test="count(parent::*)='0'"><hr/></xsl:if>
+    <xsl:if test="count(parent::*)='0'"><xsl:element name="hr" namespace="http://www.w3.org/1999/xhtml"></xsl:element></xsl:if>
   </t:titlepage-separator>
 
   <t:titlepage-before t:side="recto">
@@ -486,7 +486,7 @@
   </t:titlepage-content>
 
   <t:titlepage-separator>
-    <xsl:if test="count(parent::*)='0'"><hr/></xsl:if>
+    <xsl:if test="count(parent::*)='0'"><xsl:element name="hr" namespace="http://www.w3.org/1999/xhtml"></xsl:element></xsl:if>
   </t:titlepage-separator>
 
   <t:titlepage-before t:side="recto">
@@ -517,7 +517,7 @@
   </t:titlepage-content>
 
   <t:titlepage-separator>
-    <xsl:if test="count(parent::*)='0'"><hr/></xsl:if>
+    <xsl:if test="count(parent::*)='0'"><xsl:element name="hr" namespace="http://www.w3.org/1999/xhtml"></xsl:element></xsl:if>
   </t:titlepage-separator>
 
   <t:titlepage-before t:side="recto">
@@ -548,7 +548,7 @@
   </t:titlepage-content>
 
   <t:titlepage-separator>
-    <xsl:if test="count(parent::*)='0'"><hr/></xsl:if>
+    <xsl:if test="count(parent::*)='0'"><xsl:element name="hr" namespace="http://www.w3.org/1999/xhtml"></xsl:element></xsl:if>
   </t:titlepage-separator>
 
   <t:titlepage-before t:side="recto">
@@ -579,7 +579,7 @@
   </t:titlepage-content>
 
   <t:titlepage-separator>
-    <xsl:if test="count(parent::*)='0'"><hr/></xsl:if>
+    <xsl:if test="count(parent::*)='0'"><xsl:element name="hr" namespace="http://www.w3.org/1999/xhtml"></xsl:element></xsl:if>
   </t:titlepage-separator>
 
   <t:titlepage-before t:side="recto">
