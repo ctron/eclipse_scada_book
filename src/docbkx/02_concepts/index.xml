@@ -10,7 +10,8 @@
 	The following sub sections describe the different concepts of Eclipse SCADA
 	</para>
 	
-	<xi:include href="01_communication/index.xml"/>
-	<xi:include href="02_security/index.xml"/>
+    <xi:include href="01_functionality/index.xml"/>
+	<xi:include href="02_communication/index.xml"/>
+	<xi:include href="03_security/index.xml"/>
 
 </chapter>

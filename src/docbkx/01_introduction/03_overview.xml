@@ -6,7 +6,7 @@
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
 
-	<title>Overview</title>
+	<title>Data</title>
 
 	<para>
 		Eclipse SCADA is, as the name says, a SCADA system. SCADA stands for
@@ -56,121 +56,5 @@
 			</varlistentry>
 		</variablelist>
 	</para>
-
-	<section>
-		<title>DA – Data Access</title>
-		<para>
-			The main purpose of the DA modules is to acquire data from
-			various data sources and offer them other modules for processing or
-			visualization. The basic idea is that the data is provided in simple
-			scalar values instead of complex data structures. So instead of
-			having a complex data structure for a component (e.g. a meteo
-			station) that has wind speed, wind direction and several other
-			values, there are simply 3 (or possibly more) analog values. The
-			structure is created by the namespace instead of data structures.
-		</para>
-		<para>
-			The advantage of this approach is that all values can be treated
-			equally when they are processed. It also simplifies the process of
-			subscribing to values.
-		</para>
-		<para>
-			For example if one application is only interested in the wind
-			speed it will only subscribe to that value. There is no need to get
-			the full data structure or to split up that structure.
-		</para>
-		<para>
-			On the other hand there are functionalities like the
-			<quote>level alarm</quote>
-			. It monitors a value, and if it exceeds a defined value range, it
-			will create an alarm. Now since that functionally only works on a
-			single analog value, it can work on data coming from any system,
-			describe any state. No matter if it is wind speed, disk usage or warp
-			core intermix ratio. It always works the same way.
-		</para>
-
-		<section>
-			<title>Data Item</title>
-			<para>
-				The
-				<quote>data item</quote>
-				, is the structure containing that one single value. Other names
-				that are commonly used are
-				<quote>tag</quote>
-				,
-				<quote>data point</quote>
-				.
-			</para>
-			<para>
-				In Eclipse SCADA the data item consists of:
-				<itemizedlist>
-					<listitem>
-						<para>A unique ID</para>
-					</listitem>
-					<listitem>
-						<para>A primary value</para>
-					</listitem>
-					<listitem>
-						<para>An undefined list of a secondary values</para>
-					</listitem>
-				</itemizedlist>
-			</para>
-			<para>
-				Each data item has its unique id inside the instance it is
-				running. This means that behind one communication endpoint, the item
-				is unique. However different communication endpoints (even in the
-				same application), may have items with the same ID. So the
-				combination of communication endpoint plus ID make the item globally
-				unique.
-			</para>
-			<para>
-				The primary value is a variant data type of the following types:
-				<variablelist>
-					<varlistentry>
-						<term>BOOLEAN</term>
-						<listitem>
-							<para>A boolean value (true or false)</para>
-						</listitem>
-					</varlistentry>
-					<varlistentry>
-						<term>INT32</term>
-						<listitem>
-							<para>A 32bit signed integer</para>
-						</listitem>
-					</varlistentry>
-					<varlistentry>
-						<term>
-							INT64
-						</term>
-						<term>
-							LONG
-						</term>
-						<listitem>
-							<para>A 64bit signed integer</para>
-						</listitem>
-					</varlistentry>
-					<varlistentry>
-						<term>DOUBLE</term>
-						<listitem>
-							<para>A 64bit floating point</para>
-						</listitem>
-					</varlistentry>
-					<varlistentry>
-						<term>STRING</term>
-						<listitem>
-							<para>A Unicode string without size limit</para>
-						</listitem>
-					</varlistentry>
-					<varlistentry>
-						<term>NULL</term>
-						<listitem>
-							<para>A data type without a value</para>
-						</listitem>
-					</varlistentry>
-				</variablelist>
-			</para>
-		</section>
-
-	</section>
-
+  
 </section>

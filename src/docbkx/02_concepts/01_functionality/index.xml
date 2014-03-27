@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" 
+	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd"
+	version="5.0">
+
+	<title>Data Types, Data Model &amp; Functionality</title>
+
+	<para>
+	The following sections describe the main functionalities of the Eclipse SCADA system.
+    Most of these functionalities are not specific to Eclipse SCADA, but to SCADA systems
+    in general. Also is there no sharp line between other technologies like <acronym>M2M</acronym>
+    or <acronym>IoT</acronym> systems which also offer connectivity with other devices.
+	</para>
+  
+    <xi:include href="01_core.xml"/>
+	<xi:include href="02_da.xml"/>
+
+</section>

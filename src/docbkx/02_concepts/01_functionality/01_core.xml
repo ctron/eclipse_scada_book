@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<section
+  xmlns="http://docbook.org/ns/docbook"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+
+  <title>Core Data Types</title>
+
+  <para>
+    The Eclipse SCADA system re-used some data types and structures at many interfaces.
+    So they deserve some extra explanation.
+  </para>
+
+  <section>
+    <title>Variant</title>
+    <para>
+      The variant is a single (scalar) value type which can hold exactly one value.
+    </para>
+
+    <para>
+      The following data types are available:
+      <variablelist>
+        <varlistentry>
+          <term>BOOLEAN</term>
+          <listitem>
+            <para>A boolean value (true or false)</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>INT32</term>
+          <listitem>
+            <para>A 32bit signed integer</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>INT64</term>
+          <listitem>
+            <para>A 64bit signed integer</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>DOUBLE</term>
+          <listitem>
+            <para>
+              A 64bit floating point (IEEE 754
+              <footnote>
+                <para>
+                  Also see
+                  <link xlink:href="https://en.wikipedia.org/wiki/IEEE_floating_point">https://en.wikipedia.org/wiki/IEEE_floating_point</link>
+                </para>
+              </footnote>
+              )
+            </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>STRING</term>
+          <listitem>
+            <para>A Unicode string without size limit</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>NULL</term>
+          <listitem>
+            <para>A data type without a value</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </para>
+
+    <section>
+      <title>String representation</title>
+      
+      <para>
+        Variants are represented as a string in the following format: <code>TYPE#VALUE</code>. Where TYPE is one of the types defined above, followed by the
+        character '#' and the value data. In the case of <type>NULL</type>, the '#' sign is still present, but all value data will be ignored.
+      </para>
+    </section>
+
+    <section>
+      <title>Equality</title>
+      <para>
+        Two variants are considered equal if they have the same value. However since the
+        value type of two variants might be different, things are
+        more complicated.
+      </para>
+
+      <para>
+        At the moment the definition of the Variant is a bit awkward and will be reworked in the 0.2.0 release of Eclipse SCADA.
+        The progress can be tracked at <link xlink:href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=431323">bug #431323</link>.
+      </para>
+      
+      <para>
+        The short story is:
+        <itemizedlist>
+          <listitem>
+            <para>If the variant is of the same type the value is compared</para>
+          </listitem>
+          <listitem>
+            <para><acronym>NULL</acronym> is only equal to <acronym>NULL</acronym></para>
+          </listitem>
+          <listitem>
+            <para>Numbers will be compared by their <emphasis>most accurate</emphasis> data type</para>
+          </listitem>
+          <listitem>
+            <para>If one side is a boolean, the other side will be converted to a boolean as well.
+            So <code>INT32#2</code> will be equal to <code>BOOLEAN#true</code>.</para>
+          </listitem>
+          <listitem>
+            <para>If a string is compared to a number, the string will be tried to convert to a number as well.</para>
+          </listitem>
+        </itemizedlist> 
+      </para>
+
+    </section>
+
+  </section>
+
+  <section>
+    <title>Attribute map</title>
+    <para>
+      Attribute maps are used when an unspecified list of additional information is available to one element.
+      An attribute map is an association of
+      <type>String</type>
+      to
+      <type>Variant</type>
+      .
+    </para>
+    <para>
+      In the Java programming language this would be
+      <code language="java"><![CDATA[Map<String,Variant> attributes;]]></code>
+    </para>
+  </section>
+
+</section>
