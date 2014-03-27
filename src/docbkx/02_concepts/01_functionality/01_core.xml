@@ -13,7 +13,7 @@
     So they deserve some extra explanation.
   </para>
 
-  <section>
+  <section xml:id="core.variant">
     <title>Variant</title>
     <para>
       The variant is a single (scalar) value type which can hold exactly one value.
@@ -118,7 +118,7 @@
 
   </section>
 
-  <section>
+  <section xml:id="core.attribute_map">
     <title>Attribute map</title>
     <para>
       Attribute maps are used when an unspecified list of additional information is available to one element.

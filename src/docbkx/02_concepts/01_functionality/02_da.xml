@@ -66,6 +66,65 @@
         unique.
       </para>
      
+      <para>
+      The primary value is a <link linkend="core.variant">Variant</link> type and the secondary values (aka <quote>attributes</quote>)
+      are of the type <link linkend="core.attribute_map">Attribute Map</link>. 
+      </para>
+      
+      <para>
+      While the attributes can actually be anything, there is a list of <quote>well known</quote> attributes:
+      <table>
+        <title>List of well known attributes</title>
+        <tgroup cols="3">
+          <colspec/>
+          <colspec/>
+          <colspec/>
+          
+          <thead>
+            <row>
+              <entry>Name</entry>
+              <entry>Variant Type</entry>
+              <entry>Description</entry>
+            </row>
+          </thead>
+          
+          <tbody>
+            <row>
+              <entry>error</entry>
+              <entry>boolean</entry>
+              <entry>Indicating that the value could not be acquired property. Any value that still might be there is erroneous and should not be considered for
+              further processing.</entry>
+            </row>
+            
+            <row>
+              <entry>alarm</entry>
+              <entry>boolean</entry>
+              <entry>The value is violating some critical monitoring condition.</entry>
+            </row>
+            
+            <row>
+              <entry>warning</entry>
+              <entry>boolean</entry>
+              <entry>The value is violating some non-critical monitoring condition.</entry>
+            </row>
+            
+            <row>
+              <entry>manual</entry>
+              <entry>boolean</entry>
+              <entry>The value was manually overridden at some point.</entry>
+            </row>
+            
+            <row>
+              <entry>blocked</entry>
+              <entry>boolean</entry>
+              <entry>The component is blocked, meaning that all manipulating operations (setpoint, command) will be rejected.</entry>
+            </row>
+            
+          </tbody>
+        </tgroup>
+      </table>
+      </para>
+     
     </section>
 
 </section>
