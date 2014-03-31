@@ -1,235 +1,233 @@
 <project
-	xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-	<modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-	<groupId>eclipse.scada</groupId>
-	<artifactId>book</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
-	<name>Eclipse SCADA Book</name>
+  <groupId>eclipse.scada</groupId>
+  <artifactId>book</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>Eclipse SCADA Book</name>
 
-	<description>Eclipse SCADA - The definite guide</description>
+  <description>Eclipse SCADA - The definite guide</description>
 
-	<properties>
-		<customization.xhtml>src/userxsl/xhtml/docbook.xsl</customization.xhtml>
-	</properties>
+  <properties>
+    <customization.xhtml>src/userxsl/xhtml/docbook.xsl</customization.xhtml>
+  </properties>
 
-	<build>
+  <build>
 
-		<plugins>
+    <plugins>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-				<version>2.6</version>
-				<executions>
-					<execution>
-						<id>html-resources</id>
-						<goals>
-							<goal>copy-resources</goal>
-						</goals>
-						<phase>generate-resources</phase>
-						<configuration>
-							<outputDirectory>${project.build.directory}/docbkx/html</outputDirectory>
-							<resources>
-								<resource>
-									<directory>src/resources/common</directory>
-								</resource>
-								<resource>
-									<directory>src/resources/common-html</directory>
-								</resource>
-								<resource>
-									<directory>src/resources/html</directory>
-								</resource>
-							</resources>
-						</configuration>
-					</execution>
-					<execution>
-						<id>xhtml-resources</id>
-						<goals>
-							<goal>copy-resources</goal>
-						</goals>
-						<phase>generate-resources</phase>
-						<configuration>
-							<outputDirectory>${project.build.directory}/docbkx/xhtml</outputDirectory>
-							<resources>
-								<resource>
-									<directory>src/resources/common</directory>
-								</resource>
-								<resource>
-									<directory>src/resources/common-html</directory>
-								</resource>
-								<resource>
-									<directory>src/resources/xhtml</directory>
-								</resource>
-							</resources>
-						</configuration>
-					</execution>
-					<execution>
-						<id>xhtml5-resources</id>
-						<goals>
-							<goal>copy-resources</goal>
-						</goals>
-						<phase>generate-resources</phase>
-						<configuration>
-							<outputDirectory>${project.build.directory}/docbkx/xhtml5</outputDirectory>
-							<resources>
-								<resource>
-									<directory>src/resources/common</directory>
-								</resource>
-								<resource>
-									<directory>src/resources/common-html</directory>
-								</resource>
-								<resource>
-									<directory>src/resources/xhtml5</directory>
-								</resource>
-							</resources>
-						</configuration>
-					</execution>
-					<execution>
-						<id>epub3-resources</id>
-						<goals>
-							<goal>copy-resources</goal>
-						</goals>
-						<phase>generate-resources</phase>
-						<configuration>
-							<outputDirectory>${project.build.directory}/docbkx/epub3</outputDirectory>
-							<resources>
-								<resource>
-									<directory>src/resources/common</directory>
-									<excludes>
-										<exclude>**/*.eps</exclude>
-									</excludes>
-								</resource>
-								<resource>
-									<directory>src/resources/epub3</directory>
-								</resource>
-							</resources>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.6</version>
+        <executions>
+          <execution>
+            <id>html-resources</id>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <phase>generate-resources</phase>
+            <configuration>
+              <outputDirectory>${project.build.directory}/docbkx/html</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>src/resources/common</directory>
+                </resource>
+                <resource>
+                  <directory>src/resources/common-html</directory>
+                </resource>
+                <resource>
+                  <directory>src/resources/html</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+          <execution>
+            <id>xhtml-resources</id>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <phase>generate-resources</phase>
+            <configuration>
+              <outputDirectory>${project.build.directory}/docbkx/xhtml</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>src/resources/common</directory>
+                </resource>
+                <resource>
+                  <directory>src/resources/common-html</directory>
+                </resource>
+                <resource>
+                  <directory>src/resources/xhtml</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+          <execution>
+            <id>xhtml5-resources</id>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <phase>generate-resources</phase>
+            <configuration>
+              <outputDirectory>${project.build.directory}/docbkx/xhtml5</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>src/resources/common</directory>
+                </resource>
+                <resource>
+                  <directory>src/resources/common-html</directory>
+                </resource>
+                <resource>
+                  <directory>src/resources/xhtml5</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+          <execution>
+            <id>epub3-resources</id>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <phase>generate-resources</phase>
+            <configuration>
+              <outputDirectory>${project.build.directory}/docbkx/epub3</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>src/resources/common</directory>
+                  <excludes>
+                    <exclude>**/*.eps</exclude>
+                  </excludes>
+                </resource>
+                <resource>
+                  <directory>src/resources/epub3</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
 
-			<!-- generate -->
+      <!-- generate -->
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-antrun-plugin</artifactId>
-				<version>1.7</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>run</goal>
-						</goals>
-						<phase>generate-sources</phase>
-					</execution>
-				</executions>
-				<configuration>
-					<target>
-						<ant dir="src/docbkx/aa_system_properties" antfile="build.ant"/>
-					</target>
-				</configuration>
-			</plugin>
-
-
-			<plugin>
-				<groupId>com.agilejava.docbkx</groupId>
-				<artifactId>docbkx-maven-plugin</artifactId>
-				<version>2.0.16-SNAPSHOT</version>
-
-				<executions>
-					<execution>
-						<id>titlepage</id>
-						<goals>
-							<goal>generate-template</goal>
-						</goals>
-						<phase>generate-sources</phase>
-
-						<configuration>
-							<includes>titlepage/titlepage.*.xml</includes>
-						</configuration>
-					</execution>
-
-					<execution>
-						<id>book</id>
-						<goals>
-							<goal>generate-xhtml</goal>
-							<goal>generate-pdf</goal>
-							<!-- <goal>generate-eclipse</goal> -->
-							<goal>generate-epub3</goal>
-							<!--
-							<goal>generate-webhelp</goal>
-							does not work with html.ext set
-							 -->
-
-						</goals>
-						<phase>compile</phase>
-
-						<configuration>
-
-							<encoding>UTF-8</encoding>
-
-							<chunkedOutput>true</chunkedOutput>
-							<xincludeSupported>true</xincludeSupported>
-
-							<includes>index.xml</includes>
-							<htmlStylesheet>style.css</htmlStylesheet>
-							
-							<htmlExt>.xhtml</htmlExt>
-
-							<!-- syntax highlighting -->
-							<highlightSource>1</highlightSource>
-							<foCustomization>src/userxsl/fo/docbook.xsl</foCustomization>
-							<htmlCustomization>src/userxsl/html/docbook.xsl</htmlCustomization>
-							<xhtmlCustomization>${customization.xhtml}</xhtmlCustomization>
-							<xhtml5Customization>src/userxsl/xhtml5/docbook.xsl</xhtml5Customization>
-							<epub3Customization>src/userxsl/epub3/docbook.xsl</epub3Customization>
-							<hyphenate>true</hyphenate>
-							<hyphenateVerbatim>true</hyphenateVerbatim>
-							<generateIndex>1</generateIndex>
-							<sectionAutolabel>1</sectionAutolabel>
-							<preProcess>
-								<!-- <copy todir="${project.build.directory}/docbkx/html" file="src/css/html/style.css" 
-									/> -->
-							</preProcess>
-						
-						</configuration>
-
-					</execution>
-				</executions>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.7</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <phase>generate-sources</phase>
+          </execution>
+        </executions>
+        <configuration>
+          <target>
+            <ant
+              dir="src/docbkx/aa_system_properties"
+              antfile="build.ant" />
+          </target>
+        </configuration>
+      </plugin>
 
 
-				<dependencies>
-					<dependency>
-						<groupId>net.sf.docbook</groupId>
-						<artifactId>docbook-xml</artifactId>
-						<version>5.0-all</version>
-						<classifier>resources</classifier>
-						<type>zip</type>
-						<scope>runtime</scope>
-					</dependency>
+      <plugin>
+        <groupId>com.agilejava.docbkx</groupId>
+        <artifactId>docbkx-maven-plugin</artifactId>
+        <version>2.0.15</version>
 
-					<dependency>
-						<groupId>net.sf.xslthl</groupId>
-						<artifactId>xslthl</artifactId>
-						<version>2.0.1</version>
-						<scope>runtime</scope>
-					</dependency>
-					<dependency>
-						<groupId>net.sf.offo</groupId>
-						<artifactId>fop-hyph</artifactId>
-						<version>1.2</version>
-						<scope>runtime</scope>
-					</dependency>
+        <executions>
+          <execution>
+            <id>titlepage</id>
+            <goals>
+              <goal>generate-template</goal>
+            </goals>
+            <phase>generate-sources</phase>
 
-				</dependencies>
+            <configuration>
+              <includes>titlepage/titlepage.*.xml</includes>
+            </configuration>
+          </execution>
 
-			</plugin>
+          <execution>
+            <id>book</id>
+            <goals>
+              <goal>generate-xhtml</goal>
+              <goal>generate-pdf</goal>
+              <!-- <goal>generate-eclipse</goal> -->
+              <goal>generate-epub3</goal>
+              <!-- <goal>generate-webhelp</goal> does not work with html.ext set -->
 
-		</plugins>
+            </goals>
+            <phase>compile</phase>
 
-	</build>
+            <configuration>
+
+              <encoding>UTF-8</encoding>
+
+              <chunkedOutput>true</chunkedOutput>
+              <xincludeSupported>true</xincludeSupported>
+
+              <includes>index.xml</includes>
+              <htmlStylesheet>style.css</htmlStylesheet>
+
+              <htmlExt>.xhtml</htmlExt>
+
+              <!-- syntax highlighting -->
+              <highlightSource>1</highlightSource>
+              <foCustomization>src/userxsl/fo/docbook.xsl</foCustomization>
+              <htmlCustomization>src/userxsl/html/docbook.xsl</htmlCustomization>
+              <xhtmlCustomization>${customization.xhtml}</xhtmlCustomization>
+              <xhtml5Customization>src/userxsl/xhtml5/docbook.xsl</xhtml5Customization>
+              <epub3Customization>src/userxsl/epub3/docbook.xsl</epub3Customization>
+              <hyphenate>true</hyphenate>
+              <hyphenateVerbatim>true</hyphenateVerbatim>
+              <generateIndex>1</generateIndex>
+              <sectionAutolabel>1</sectionAutolabel>
+              <preProcess>
+                <!-- <copy todir="${project.build.directory}/docbkx/html" file="src/css/html/style.css" /> -->
+              </preProcess>
+
+            </configuration>
+
+          </execution>
+        </executions>
+
+
+        <dependencies>
+          <dependency>
+            <groupId>net.sf.docbook</groupId>
+            <artifactId>docbook-xml</artifactId>
+            <version>5.0-all</version>
+            <classifier>resources</classifier>
+            <type>zip</type>
+            <scope>runtime</scope>
+          </dependency>
+
+          <dependency>
+            <groupId>net.sf.xslthl</groupId>
+            <artifactId>xslthl</artifactId>
+            <version>2.0.1</version>
+            <scope>runtime</scope>
+          </dependency>
+          <dependency>
+            <groupId>net.sf.offo</groupId>
+            <artifactId>fop-hyph</artifactId>
+            <version>1.2</version>
+            <scope>runtime</scope>
+          </dependency>
+
+        </dependencies>
+
+      </plugin>
+
+    </plugins>
+
+  </build>
 </project>
