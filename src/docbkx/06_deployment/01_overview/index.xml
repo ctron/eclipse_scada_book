@@ -22,10 +22,8 @@
       <para>
   Installing the Eclipse SCADA systems requires:
   <itemizedlist>
-    <listitem>
-      <para>Administrative permissions (aka "root access")</para>
-      <para>Java 7 (JRE)</para>
-    </listitem>
+    <listitem><para>Administrative permissions (aka "root access")</para></listitem>
+    <listitem><para>Java 7 (JRE)</para></listitem>
   </itemizedlist>
       </para>
       <para>
