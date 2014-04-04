@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" 
+	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+
+	<title>CentOS 6</title>
+
+  <para>…</para>
+  
+  <section>
+    <title>Repository</title>
+    
+    <para>
+    CentOS uses an "yum" based repository system. It uses it using the "yum" tools.
+    </para>
+    
+    <para>
+    In order to add the Eclipse SCADA repository to your system create a file called
+    <filename>/etc/yum.repos.d/EclipseSCADA.repo</filename> with the following content:
+    <programlisting><xi:include href="EclipseSCADA.repo" parse="text" encoding="UTF-8"/></programlisting>
+    </para>
+    
+    <para>
+    You can verify that the repository was added using the following command:
+    <programlisting language="shell">yum list "org.eclipse.scada*"</programlisting>
+    </para>
+    
+    <para>
+    You should get an output like:
+    <programlisting><![CDATA[Available Packages
+org.eclipse.scada.noarch                                                    0.1.0.M5-1                        EclipseSCADA 
+org.eclipse.scada-centos6.noarch                                            0.1.0.M5-1                        EclipseSCADA 
+org.eclipse.scada-suse.i386                                                 0.1.0.M5-1                        EclipseSCADA 
+org.eclipse.scada-suse.x86_64                                               0.1.0.M5-1                        EclipseSCADA 
+org.eclipse.scada.base.p2-incubation.noarch                                 0.1.0.M5-1                        EclipseSCADA 
+org.eclipse.scada.core.p2-incubation.noarch                                 0.1.0.M5-1                        EclipseSCADA 
+org.eclipse.scada.deploy.p2-incubation.noarch                               0.1.0.M5-1                        EclipseSCADA 
+org.eclipse.scada.deploy.p2director-incubation.i386                         0.1.0.M5-1                        EclipseSCADA 
+org.eclipse.scada.deploy.p2director-incubation.x86_64                       0.1.0.M5-1                        EclipseSCADA 
+org.eclipse.scada.external.p2-incubation.noarch                             0.1.0.M5-1                        EclipseSCADA 
+org.eclipse.scada.p2.noarch                                                 0.1.0.M5-1                        EclipseSCADA 
+org.eclipse.scada.protocols.p2-incubation.noarch                            0.1.0.M5-1                        EclipseSCADA 
+org.eclipse.scada.utils.p2-incubation.noarch                                0.1.0.M5-1                        EclipseSCADA]]></programlisting>
+    </para>
+    
+  </section>
+    
+</section>

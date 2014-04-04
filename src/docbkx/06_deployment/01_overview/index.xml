@@ -53,4 +53,20 @@
       </para>
     </section>
     
+    <section>
+      <title>Processor architecture</title>
+      <para>
+  While most parts of Eclipse SCADA are plain Java and therefore independent of the
+  processor architecture or platform, this is not the whole truth.
+      </para>
+      <para>
+  Some minor parts do depend on the architecture, and may it only be the fact that the
+  resulting MSI package was created for a specific target architecture or one configuration
+  file points to a path called <filename>lib64</filename> instead of <filename>lib</filename>.
+      </para>
+      <para>
+  It is therefore important that on 64bit operating systems, also a 64bit Java virtual machine
+  is being used.<footnote><para>Technically it is still possible to do otherwise. But don't complain if something goes wrong.</para></footnote>
+      </para>
+    
 </section>

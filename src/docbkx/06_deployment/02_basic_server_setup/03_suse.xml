@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" 
+	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+
+	<title><trademark>OpenSUSE</trademark> 12</title>
+  
+    <para>…</para>
+    
+    <section>
+    <title>Repository</title>
+    
+    <para>
+    Suse uses an "yum" based repository system. From the command line it used "zypper".
+    </para>
+    
+    <para>
+    In order to add the Eclipse SCADA repository to your system execute the following commands
+    as <quote>root</quote>.
+    
+    <programlisting language="shell"><![CDATA[zypper addrepo -G http://download.eclipse.org/eclipsescada/repos/milestone/0.1.0/yum/ eclipsescada
+zypper refresh]]></programlisting>    
+    </para>
+    
+    <para>
+    You can verify that the repository was added using the following command:
+    <programlisting language="shell">zypper search "org.eclipse.scada*"</programlisting>
+    There should be at least one package found by this command.
+    </para>
+    
+    </section>
+  
+</section>

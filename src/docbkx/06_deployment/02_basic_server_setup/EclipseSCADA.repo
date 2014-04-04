@@ -1,0 +1,6 @@
+# Eclipse SCADA milestone repository
+
+[EclipseSCADA]
+name=Eclipse SCADA 0.1.0 - Milestone
+baseurl=http://download.eclipse.org/eclipsescada/repos/milestone/0.1.0/yum/
+gpgcheck=0

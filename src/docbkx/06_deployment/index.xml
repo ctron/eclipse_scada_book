@@ -9,5 +9,6 @@
     </para>
     
     <xi:include href="01_overview/index.xml" />
+    <xi:include href="02_basic_server_setup/index.xml" />
 
 </chapter>
