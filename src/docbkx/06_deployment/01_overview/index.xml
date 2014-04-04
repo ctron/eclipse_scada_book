@@ -68,5 +68,7 @@
   It is therefore important that on 64bit operating systems, also a 64bit Java virtual machine
   is being used.<footnote><para>Technically it is still possible to do otherwise. But don't complain if something goes wrong.</para></footnote>
       </para>
+      
+    </section>
     
 </section>

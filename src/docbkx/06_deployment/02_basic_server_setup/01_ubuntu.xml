@@ -6,5 +6,42 @@
 	<title><trademark>Ubuntu</trademark> 12.04 LTS</title>
   
   <para>…</para>
+  
+  <section>
+    <title>Repository</title>
+    
+    <para>
+    Ubuntu uses an "apt" based repository system. On the command line you can use the
+    "apt-get" tool. 
+    </para>
+    
+    <para>
+    In order to add the Eclipse SCADA repository to your system create a file called
+    <filename>/etc/apt/sources.d/eclipse-scada.list </filename> with the following content:
+    <programlisting>deb http://download.eclipse.org/eclipsescada/repos/milestone/0.1.0/apt/ default main</programlisting>
+    </para>
+    
+    <para>If you also plan on using the <quote>ICMP Ping Helper</quote> application, you
+    will need to install if from the Ubuntu Launchpad platform. Add the repository by
+    executing the following command as <quote>root</quote>:
+    <programlisting language="shell">add-apt-repository ppa:eclipsescada/ppa</programlisting>
+    </para>
+    
+    <para>
+    Refresh the apt cache:
+    <programlisting>apt-get update</programlisting>
+    </para>
+    
+    <para>
+    Executing the following command will give verify if adding the repository was successful:
+    <programlisting language="shell">apt-cache search "org.eclipse.scada"</programlisting>
+    If should print out a list of packages:
+    <programlisting><![CDATA[org.eclipse.scada.p2 - Eclipse SCADA base P2 package
+org.eclipse.scada.configuration - Eclipse SCADA base configuration package
+org.eclipse.scada - Eclipse SCADA base package
+org.eclipse.scada.deploy.p2director-incubation - Eclipse SCADA P2 Director]]></programlisting>
+    </para>
+    
+  </section>
     
 </section>
