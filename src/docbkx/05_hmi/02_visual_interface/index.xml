@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" 
+	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+
+	<title>Visual Interface</title>
+  
+    <para>All URIs are relative based on the current resource.</para>
+    
+    <section xml:id="vi_register">
+      <title>Registering a new view instance</title>
+      
+      <para>
+      In order to have a view available in the running client it needs to be registered
+      using the Eclipse extension framework.
+      </para>
+      
+      <para>
+      In the bundle were the <filename>.vi</filename> file resides add a new entry in the
+      <filename>plugin.xml</filename>.
+      </para>
+      
+      <para>
+<programlisting language="xml"><![CDATA[...
+ <extension
+    point="org.eclipse.scada.vi.ui.user.view">
+    <viewInstance
+      defaultInstance="true"
+      name="Logon"
+      zooming="false"
+      mainView="false"
+      resource="resources/views/placeholder.vi"
+      factoryClass="org.eclipse.scada.vi.ui.user.VisualInterfaceFactory"
+      id="org.eclipse.scada.samples.demo1.client.placeholder">
+      <visibility>
+        <reference
+          definitionId="org.eclipse.scada.samples.demo1.client.nosession">
+        </reference>
+        </visibility>
+    </viewInstance>
+ </extension>
+...]]></programlisting>
+    </para>
+    
+  <para>
+  The attribute <varname>resource</varname> points to the file that defines the view.
+  The attribute <varname>factoryClass</varname> defines the class that will implement
+  the view. If this is a default <filename>.vi</filename> file, the value must be
+  <classname>org.eclipse.scada.vi.ui.user.VisualInterfaceFactory</classname>.
+  </para>
+  
+  <para>
+  The attribute <varname>id</varname> must be unique in the while application.
+  </para>
+      
+    </section>
+    
+    <section>
+      <title>Create a new visual interface file</title>
+      
+      <para>
+      Inside the Eclipse IDE create a new file <guimenu>File</guimenu> / <guisubmenu>New </guisubmenu> / <guimenuitem>Other…</guimenuitem>. 
+      </para>
+      
+      <para>
+      Choose <guilabel>VisualInterface Model</guilabel> from the list.
+      </para>
+      
+      <para>Register the file as described in <xref linkend="vi_register"/></para>
+    </section>
+    
+    <xi:include href="model.xml"/>
+    
+</section>

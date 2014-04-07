@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="properties" default="default">
+
+    <target name="default">
+		<xslt
+			style="ecore.xsl"
+			in="VisualInterface.ecore"
+			out="model.xml"
+			force="true"
+			classpathref="saxon9.jar"
+			>
+			<factory name="net.sf.saxon.TransformerFactoryImpl"></factory>
+		</xslt>
+    </target>
+
+</project>

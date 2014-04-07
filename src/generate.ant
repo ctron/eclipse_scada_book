@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="generate" default="default">
+	
+	<import file="paths.ant"/>
+	
     <!-- ================================= 
           target: default              
          ================================= -->
-    <target name="default">
-		<ant 
-			dir="docbkx/aa_system_properties"
-    		antfile="build.ant"
-			>
-		</ant>    	
+	<target name="default">
+		<ant dir="docbkx/aa_system_properties" antfile="generate.ant" inheritrefs="true"/>
+    	<ant dir="docbkx/05_hmi/02_visual_interface" antfile="generate.ant" inheritrefs="true"/>
     </target>
 </project>
