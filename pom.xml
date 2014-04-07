@@ -159,8 +159,8 @@
         <configuration>
           <target>
             <ant
-              dir="src/docbkx/aa_system_properties"
-              antfile="build.ant" />
+              dir="src"
+              antfile="generate.ant" />
           </target>
         </configuration>
       </plugin>

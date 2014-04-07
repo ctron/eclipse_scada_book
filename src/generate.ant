@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="generate" default="default">
+    <!-- ================================= 
+          target: default              
+         ================================= -->
+    <target name="default">
+		<ant 
+			dir="docbkx/aa_system_properties"
+    		antfile="build.ant"
+			>
+		</ant>    	
+    </target>
+</project>
