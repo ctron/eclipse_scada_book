@@ -8,7 +8,6 @@
 			in="VisualInterface.ecore"
 			out="model.xml"
 			force="true"
-			classpathref="saxon9.jar"
 			>
 			<factory name="net.sf.saxon.TransformerFactoryImpl"></factory>
 		</xslt>
