@@ -14,6 +14,7 @@
   <description>Eclipse SCADA - The definite guide</description>
 
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <customization.xhtml>src/userxsl/xhtml/docbook.xsl</customization.xhtml>
   </properties>
 
