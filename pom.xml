@@ -163,6 +163,13 @@
               antfile="generate.ant" />
           </target>
         </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>net.sf.saxon</groupId>
+            <artifactId>Saxon-HE</artifactId>
+            <version>9.5.1-5</version>
+          </dependency>
+        </dependencies>
       </plugin>
 
 
@@ -245,7 +252,7 @@
             <version>2.0.1</version>
             <scope>runtime</scope>
           </dependency>
-          
+
           <dependency>
             <groupId>net.sf.offo</groupId>
             <artifactId>fop-hyph</artifactId>
