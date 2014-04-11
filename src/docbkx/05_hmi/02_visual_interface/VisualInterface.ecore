@@ -125,11 +125,34 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="0"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Alignment">
-    <eLiterals name="LEFT" value="1"/>
-    <eLiterals name="CENTER"/>
-    <eLiterals name="RIGHT" value="2"/>
-    <eLiterals name="TOP" value="3"/>
-    <eLiterals name="BOTTOM" value="4"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The alignment of an element."/>
+    </eAnnotations>
+    <eLiterals name="LEFT" value="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Align to the left."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="CENTER">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Align to the center."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="RIGHT" value="2">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Align to the right."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="TOP" value="3">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Align to the top."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="BOTTOM" value="4">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Align to the bottom."/>
+      </eAnnotations>
+    </eLiterals>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Orientation">
     <eLiterals name="NORTH"/>

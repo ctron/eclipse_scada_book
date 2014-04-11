@@ -11,36 +11,66 @@
     xmlns:ecdt="urn:ecore:data:type"
 	>
 
+  <xsl:output indent="yes" encoding="UTF-8"/>
+  
+  <xsl:param name="modelPrefix">model</xsl:param>
+
+  <xsl:template match="details[@key='documentation']">
+    <xsl:value-of select="@value"/>
+  </xsl:template>
+  
+  <xsl:template name="documentation">
+    <xsl:apply-templates select="eAnnotations[@source='http://www.eclipse.org/emf/2002/GenModel']/details[@key='documentation']">
+    </xsl:apply-templates>
+  </xsl:template>
+
+  <xsl:template name="localType">
+    <xsl:param name="typeName"></xsl:param>
+    <link>
+        <xsl:attribute name="linkend">
+          <xsl:value-of select="$modelPrefix"/>_<xsl:value-of select="substring-after($typeName, '#//')"/>
+        </xsl:attribute>
+        <xsl:value-of select="substring-after($typeName, '#//')"/>
+      </link>
+  </xsl:template>
+
   <xsl:template name="dataType">
    <xsl:choose>
+    <xsl:when test="starts-with(@eType, '#//')">
+      <xsl:call-template name="localType">
+        <xsl:with-param name="typeName" select="@eType"/>
+      </xsl:call-template>
+    </xsl:when>
     <xsl:when test="@eType='ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt'">integer</xsl:when>
     <xsl:when test="@eType='ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong'">long</xsl:when>
     <xsl:when test="@eType='ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat'">float</xsl:when>
     <xsl:when test="@eType='ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble'">double</xsl:when>
     <xsl:when test="@eType='ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean'">boolean</xsl:when>
     <xsl:when test="@eType='ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString'">string</xsl:when>
+    <xsl:when test="@eType='ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject'">Boolean</xsl:when>
+    <xsl:when test="@eType='ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject'">Double</xsl:when>
+    <xsl:when test="@eType='ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject'">Integer</xsl:when>
+    <xsl:when test="@eType='ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject'">Long</xsl:when>
     <xsl:otherwise><xsl:value-of select="@eType"/></xsl:otherwise>
    </xsl:choose>
   </xsl:template>
 	
   <xsl:template name="cardinality">
    <xsl:choose>
+    <xsl:when test="not(@lowerBound) and not(@upperBound)">[0..1]</xsl:when>
     <xsl:when test="@lowerBound='1' and @upperBound='-1'">[1..*]</xsl:when> 
     <xsl:when test="@upperBound='-1'">[0..*]</xsl:when>
     <xsl:when test="@lowerBound='1'">[1..1]</xsl:when>
    </xsl:choose>
   </xsl:template>
    
-   <xsl:variable name="ecoreTypeMap" select="document('')/*/ecdt:map/*/*"/>
-  
-	<xsl:output indent="yes" encoding="UTF-8"/>
-	
     <xsl:template match="eStructuralFeatures">
     <row>
       <entry><xsl:value-of select="@name"/></entry>
       <entry><xsl:call-template name="dataType"/></entry>
       <entry><xsl:call-template name="cardinality"/></entry>
       <entry><xsl:value-of select="@defaultValueLiteral"/></entry>
+      <entry><xsl:call-template name="documentation"/></entry>
     </row>
     </xsl:template>
   
@@ -48,7 +78,7 @@
     <row>
       <entry><xsl:value-of select="@name"/></entry>
       <entry><xsl:value-of select="@value"/></entry>
-      <entry></entry>
+      <entry><xsl:call-template name="documentation"/></entry>
     </row>
     </xsl:template>
     
@@ -57,7 +87,7 @@
         <para>The class has the following supertypes:
         <itemizedlist>
         <xsl:for-each select="tokenize(@eSuperTypes,' ')">
-          <listitem><para><xsl:value-of select="."/></para></listitem>
+          <listitem><para><xsl:call-template name="localType"><xsl:with-param name="typeName" select="."/></xsl:call-template></para></listitem>
         </xsl:for-each>
         </itemizedlist>
         </para>
@@ -66,7 +96,9 @@
   
     <xsl:template match="eClassifiers[@xsi:type='ecore:EEnum']">
     <section>
+      <xsl:attribute name="xml:id" select="concat($modelPrefix, '_', @name)"/>
       <title><xsl:value-of select="@name"/></title>
+      <para><xsl:call-template name="documentation"/></para>
       <para>
         <table>
 	      <title>Literals of enum <xsl:value-of select="@name"/></title>
@@ -96,6 +128,7 @@
     
     <xsl:template match="eClassifiers[@xsi:type='ecore:EClass']">
     <section>
+      <xsl:attribute name="xml:id" select="concat($modelPrefix, '_', @name)"/>
       <title><xsl:value-of select="@name"/></title>
       <xsl:if test="@abstract='true'">
       <para>This class is abstract.</para>
@@ -107,10 +140,12 @@
       <para>
       </para>
       
+      <para><xsl:call-template name="documentation"/></para>
+      
       <xsl:if test="count(eStructuralFeatures)>0">
       <table>
         <title>Structural features of <xsl:value-of select="@name"/></title>
-        <tgroup cols="4">
+        <tgroup cols="5">
             <colspec />
             <colspec />
             <colspec />
@@ -120,6 +155,7 @@
                 <entry>Type</entry>
                 <entry>Cardinality</entry>
                 <entry>Default</entry>
+                <entry>Description</entry>
               </row>
             </thead>
             

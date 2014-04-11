@@ -13,8 +13,9 @@
    <section>
       <title>Enums</title>
       <para>This section describes the enums of the model.</para>
-      <section>
+      <section xml:id="vi_Alignment">
          <title>Alignment</title>
+         <para>The alignment of an element.</para>
          <para>
             <table>
                <title>Literals of enum Alignment</title>
@@ -30,38 +31,42 @@
                      </row>
                   </thead>
                   <tbody>
-                     <row>
+    
+      The alignment of an element.
+    
+    <row>
                         <entry>LEFT</entry>
                         <entry>1</entry>
-                        <entry/>
+                        <entry>Align to the left.</entry>
                      </row>
                      <row>
                         <entry>CENTER</entry>
                         <entry/>
-                        <entry/>
+                        <entry>Align to the center.</entry>
                      </row>
                      <row>
                         <entry>RIGHT</entry>
                         <entry>2</entry>
-                        <entry/>
+                        <entry>Align to the right.</entry>
                      </row>
                      <row>
                         <entry>TOP</entry>
                         <entry>3</entry>
-                        <entry/>
+                        <entry>Align to the top.</entry>
                      </row>
                      <row>
                         <entry>BOTTOM</entry>
                         <entry>4</entry>
-                        <entry/>
+                        <entry>Align to the bottom.</entry>
                      </row>
                   </tbody>
                </tgroup>
             </table>
          </para>
       </section>
-      <section>
+      <section xml:id="vi_Orientation">
          <title>Orientation</title>
+         <para/>
          <para>
             <table>
                <title>Literals of enum Orientation</title>
@@ -102,8 +107,9 @@
             </table>
          </para>
       </section>
-      <section>
+      <section xml:id="vi_SystemCursorType">
          <title>SystemCursorType</title>
+         <para/>
          <para>
             <table>
                <title>Literals of enum SystemCursorType</title>
@@ -134,8 +140,9 @@
             </table>
          </para>
       </section>
-      <section>
+      <section xml:id="vi_GridAlignment">
          <title>GridAlignment</title>
+         <para/>
          <para>
             <table>
                <title>Literals of enum GridAlignment</title>
@@ -180,12 +187,13 @@
    <section>
       <title>Classes</title>
       <para>This sections describes the classes of the model.</para>
-      <section>
+      <section xml:id="vi_Symbol">
          <title>Symbol</title>
+         <para/>
          <para/>
          <table>
             <title>Structural features of Symbol</title>
-            <tgroup cols="4">
+            <tgroup cols="5">
                <colspec/>
                <colspec/>
                <colspec/>
@@ -195,36 +203,46 @@
                      <entry>Type</entry>
                      <entry>Cardinality</entry>
                      <entry>Default</entry>
+                     <entry>Description</entry>
                   </row>
                </thead>
                <tbody>
                   <row>
                      <entry>root</entry>
-                     <entry>#//Primitive</entry>
+                     <entry>
+                        <link linkend="vi_Primitive">Primitive</link>
+                     </entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
                   <row>
                      <entry>properties</entry>
-                     <entry>#//StringToStringMap</entry>
+                     <entry>
+                        <link linkend="vi_StringToStringMap">StringToStringMap</link>
+                     </entry>
                      <entry>[0..*]</entry>
+                     <entry/>
                      <entry/>
                   </row>
                   <row>
                      <entry>onInit</entry>
                      <entry>string</entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
                   <row>
                      <entry>onDispose</entry>
                      <entry>string</entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
                   <row>
                      <entry>onUpdate</entry>
                      <entry>string</entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
@@ -233,43 +251,55 @@
                      <entry>string</entry>
                      <entry>[0..*]</entry>
                      <entry/>
+                     <entry/>
                   </row>
                   <row>
                      <entry>cursors</entry>
-                     <entry>#//Cursor</entry>
+                     <entry>
+                        <link linkend="vi_Cursor">Cursor</link>
+                     </entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
                   <row>
                      <entry>backgroundColor</entry>
                      <entry>string</entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
                   <row>
                      <entry>designSize</entry>
-                     <entry>#//Dimension</entry>
+                     <entry>
+                        <link linkend="vi_Dimension">Dimension</link>
+                     </entry>
+                     <entry>[0..1]</entry>
                      <entry/>
-                     <entry/>
+                     <entry>The size as intended by the designer. May be used for layouting as preferred size.</entry>
                   </row>
                   <row>
                      <entry>connections</entry>
-                     <entry>#//Connection</entry>
+                     <entry>
+                        <link linkend="vi_Connection">Connection</link>
+                     </entry>
                      <entry>[0..*]</entry>
+                     <entry/>
                      <entry/>
                   </row>
                </tbody>
             </tgroup>
          </table>
       </section>
-      <section>
+      <section xml:id="vi_Primitive">
          <title>Primitive</title>
          <para>This class is abstract.</para>
          <para>This class is an interface.</para>
          <para/>
+         <para/>
          <table>
             <title>Structural features of Primitive</title>
-            <tgroup cols="4">
+            <tgroup cols="5">
                <colspec/>
                <colspec/>
                <colspec/>
@@ -279,12 +309,14 @@
                      <entry>Type</entry>
                      <entry>Cardinality</entry>
                      <entry>Default</entry>
+                     <entry>Description</entry>
                   </row>
                </thead>
                <tbody>
                   <row>
                      <entry>name</entry>
                      <entry>string</entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
@@ -292,33 +324,39 @@
             </tgroup>
          </table>
       </section>
-      <section>
+      <section xml:id="vi_Container">
          <title>Container</title>
          <para>This class is abstract.</para>
          <para>This class is an interface.</para>
          <para>The class has the following supertypes:
         <itemizedlist>
                <listitem>
-                  <para>#//Primitive</para>
+                  <para>
+                     <link linkend="vi_Primitive">Primitive</link>
+                  </para>
                </listitem>
             </itemizedlist>
          </para>
          <para/>
+         <para/>
       </section>
-      <section>
+      <section xml:id="vi_Shape">
          <title>Shape</title>
          <para>This class is abstract.</para>
          <para>The class has the following supertypes:
         <itemizedlist>
                <listitem>
-                  <para>#//Figure</para>
+                  <para>
+                     <link linkend="vi_Figure">Figure</link>
+                  </para>
                </listitem>
             </itemizedlist>
          </para>
          <para/>
+         <para/>
          <table>
             <title>Structural features of Shape</title>
-            <tgroup cols="4">
+            <tgroup cols="5">
                <colspec/>
                <colspec/>
                <colspec/>
@@ -328,6 +366,7 @@
                      <entry>Type</entry>
                      <entry>Cardinality</entry>
                      <entry>Default</entry>
+                     <entry>Description</entry>
                   </row>
                </thead>
                <tbody>
@@ -336,16 +375,19 @@
                      <entry>float</entry>
                      <entry>[1..1]</entry>
                      <entry>1</entry>
+                     <entry/>
                   </row>
                   <row>
                      <entry>antialias</entry>
-                     <entry>ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject</entry>
+                     <entry>Boolean</entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
                   <row>
                      <entry>alpha</entry>
-                     <entry>ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject</entry>
+                     <entry>Double</entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
@@ -354,41 +396,49 @@
                      <entry>boolean</entry>
                      <entry>[1..1]</entry>
                      <entry>true</entry>
+                     <entry/>
                   </row>
                   <row>
                      <entry>outline</entry>
                      <entry>boolean</entry>
                      <entry>[1..1]</entry>
                      <entry>true</entry>
+                     <entry/>
                   </row>
                </tbody>
             </tgroup>
          </table>
       </section>
-      <section>
+      <section xml:id="vi_Rectangle">
          <title>Rectangle</title>
          <para>The class has the following supertypes:
         <itemizedlist>
                <listitem>
-                  <para>#//Shape</para>
+                  <para>
+                     <link linkend="vi_Shape">Shape</link>
+                  </para>
                </listitem>
             </itemizedlist>
          </para>
          <para/>
+         <para/>
       </section>
-      <section>
+      <section xml:id="vi_Text">
          <title>Text</title>
          <para>The class has the following supertypes:
         <itemizedlist>
                <listitem>
-                  <para>#//Figure</para>
+                  <para>
+                     <link linkend="vi_Figure">Figure</link>
+                  </para>
                </listitem>
             </itemizedlist>
          </para>
          <para/>
+         <para/>
          <table>
             <title>Structural features of Text</title>
-            <tgroup cols="4">
+            <tgroup cols="5">
                <colspec/>
                <colspec/>
                <colspec/>
@@ -398,6 +448,7 @@
                      <entry>Type</entry>
                      <entry>Cardinality</entry>
                      <entry>Default</entry>
+                     <entry>Description</entry>
                   </row>
                </thead>
                <tbody>
@@ -406,40 +457,55 @@
                      <entry>string</entry>
                      <entry>[1..1]</entry>
                      <entry/>
+                     <entry/>
                   </row>
                   <row>
                      <entry>labelAlignment</entry>
-                     <entry>#//Alignment</entry>
-                     <entry/>
+                     <entry>
+                        <link linkend="vi_Alignment">Alignment</link>
+                     </entry>
+                     <entry>[0..1]</entry>
                      <entry>CENTER</entry>
+                     <entry/>
                   </row>
                   <row>
                      <entry>iconAlignment</entry>
-                     <entry>#//Alignment</entry>
-                     <entry/>
+                     <entry>
+                        <link linkend="vi_Alignment">Alignment</link>
+                     </entry>
+                     <entry>[0..1]</entry>
                      <entry>CENTER</entry>
+                     <entry/>
                   </row>
                   <row>
                      <entry>textAlignment</entry>
-                     <entry>#//Alignment</entry>
-                     <entry/>
+                     <entry>
+                        <link linkend="vi_Alignment">Alignment</link>
+                     </entry>
+                     <entry>[0..1]</entry>
                      <entry>CENTER</entry>
+                     <entry/>
                   </row>
                   <row>
                      <entry>textPlacement</entry>
-                     <entry>#//Orientation</entry>
-                     <entry/>
+                     <entry>
+                        <link linkend="vi_Orientation">Orientation</link>
+                     </entry>
+                     <entry>[0..1]</entry>
                      <entry>EAST</entry>
+                     <entry/>
                   </row>
                   <row>
                      <entry>fontName</entry>
                      <entry>string</entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
                   <row>
                      <entry>fontSize</entry>
                      <entry>integer</entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
@@ -448,23 +514,26 @@
                      <entry>boolean</entry>
                      <entry>[1..1]</entry>
                      <entry>false</entry>
+                     <entry/>
                   </row>
                   <row>
                      <entry>fontItalic</entry>
                      <entry>boolean</entry>
                      <entry>[1..1]</entry>
                      <entry>false</entry>
+                     <entry/>
                   </row>
                </tbody>
             </tgroup>
          </table>
       </section>
-      <section>
+      <section xml:id="vi_Child">
          <title>Child</title>
+         <para/>
          <para/>
          <table>
             <title>Structural features of Child</title>
-            <tgroup cols="4">
+            <tgroup cols="5">
                <colspec/>
                <colspec/>
                <colspec/>
@@ -474,18 +543,23 @@
                      <entry>Type</entry>
                      <entry>Cardinality</entry>
                      <entry>Default</entry>
+                     <entry>Description</entry>
                   </row>
                </thead>
                <tbody>
                   <row>
                      <entry>element</entry>
-                     <entry>#//Primitive</entry>
+                     <entry>
+                        <link linkend="vi_Primitive">Primitive</link>
+                     </entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
                   <row>
                      <entry>name</entry>
                      <entry>string</entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
@@ -493,19 +567,22 @@
             </tgroup>
          </table>
       </section>
-      <section>
+      <section xml:id="vi_XYChild">
          <title>XYChild</title>
          <para>The class has the following supertypes:
         <itemizedlist>
                <listitem>
-                  <para>#//Child</para>
+                  <para>
+                     <link linkend="vi_Child">Child</link>
+                  </para>
                </listitem>
             </itemizedlist>
          </para>
          <para/>
+         <para/>
          <table>
             <title>Structural features of XYChild</title>
-            <tgroup cols="4">
+            <tgroup cols="5">
                <colspec/>
                <colspec/>
                <colspec/>
@@ -515,38 +592,48 @@
                      <entry>Type</entry>
                      <entry>Cardinality</entry>
                      <entry>Default</entry>
+                     <entry>Description</entry>
                   </row>
                </thead>
                <tbody>
                   <row>
                      <entry>position</entry>
-                     <entry>#//Position</entry>
+                     <entry>
+                        <link linkend="vi_Position">Position</link>
+                     </entry>
                      <entry>[1..1]</entry>
+                     <entry/>
                      <entry/>
                   </row>
                   <row>
                      <entry>dimension</entry>
-                     <entry>#//Dimension</entry>
+                     <entry>
+                        <link linkend="vi_Dimension">Dimension</link>
+                     </entry>
+                     <entry>[0..1]</entry>
                      <entry/>
-                     <entry/>
+                     <entry>An optional dimension for the XYLayout. If not set the preferred dimension of the child will be used.</entry>
                   </row>
                </tbody>
             </tgroup>
          </table>
       </section>
-      <section>
+      <section xml:id="vi_XYContainer">
          <title>XYContainer</title>
          <para>The class has the following supertypes:
         <itemizedlist>
                <listitem>
-                  <para>#//Container</para>
+                  <para>
+                     <link linkend="vi_Container">Container</link>
+                  </para>
                </listitem>
             </itemizedlist>
          </para>
          <para/>
+         <para/>
          <table>
             <title>Structural features of XYContainer</title>
-            <tgroup cols="4">
+            <tgroup cols="5">
                <colspec/>
                <colspec/>
                <colspec/>
@@ -556,25 +643,30 @@
                      <entry>Type</entry>
                      <entry>Cardinality</entry>
                      <entry>Default</entry>
+                     <entry>Description</entry>
                   </row>
                </thead>
                <tbody>
                   <row>
                      <entry>children</entry>
-                     <entry>#//XYChild</entry>
+                     <entry>
+                        <link linkend="vi_XYChild">XYChild</link>
+                     </entry>
                      <entry>[0..*]</entry>
+                     <entry/>
                      <entry/>
                   </row>
                </tbody>
             </tgroup>
          </table>
       </section>
-      <section>
+      <section xml:id="vi_Position">
          <title>Position</title>
+         <para/>
          <para/>
          <table>
             <title>Structural features of Position</title>
-            <tgroup cols="4">
+            <tgroup cols="5">
                <colspec/>
                <colspec/>
                <colspec/>
@@ -584,6 +676,7 @@
                      <entry>Type</entry>
                      <entry>Cardinality</entry>
                      <entry>Default</entry>
+                     <entry>Description</entry>
                   </row>
                </thead>
                <tbody>
@@ -592,66 +685,35 @@
                      <entry>double</entry>
                      <entry>[1..1]</entry>
                      <entry/>
+                     <entry/>
                   </row>
                   <row>
                      <entry>y</entry>
                      <entry>double</entry>
                      <entry>[1..1]</entry>
                      <entry/>
-                  </row>
-               </tbody>
-            </tgroup>
-         </table>
-      </section>
-      <section>
-         <title>Line</title>
-         <para>The class has the following supertypes:
-        <itemizedlist>
-               <listitem>
-                  <para>#//Shape</para>
-               </listitem>
-            </itemizedlist>
-         </para>
-         <para/>
-         <table>
-            <title>Structural features of Line</title>
-            <tgroup cols="4">
-               <colspec/>
-               <colspec/>
-               <colspec/>
-               <thead>
-                  <row>
-                     <entry>Name</entry>
-                     <entry>Type</entry>
-                     <entry>Cardinality</entry>
-                     <entry>Default</entry>
-                  </row>
-               </thead>
-               <tbody>
-                  <row>
-                     <entry>points</entry>
-                     <entry>#//Position</entry>
-                     <entry>[0..*]</entry>
                      <entry/>
                   </row>
                </tbody>
             </tgroup>
          </table>
       </section>
-      <section>
-         <title>Figure</title>
-         <para>This class is abstract.</para>
+      <section xml:id="vi_Line">
+         <title>Line</title>
          <para>The class has the following supertypes:
         <itemizedlist>
                <listitem>
-                  <para>#//Primitive</para>
+                  <para>
+                     <link linkend="vi_Shape">Shape</link>
+                  </para>
                </listitem>
             </itemizedlist>
          </para>
          <para/>
+         <para/>
          <table>
-            <title>Structural features of Figure</title>
-            <tgroup cols="4">
+            <title>Structural features of Line</title>
+            <tgroup cols="5">
                <colspec/>
                <colspec/>
                <colspec/>
@@ -661,42 +723,96 @@
                      <entry>Type</entry>
                      <entry>Cardinality</entry>
                      <entry>Default</entry>
+                     <entry>Description</entry>
+                  </row>
+               </thead>
+               <tbody>
+                  <row>
+                     <entry>points</entry>
+                     <entry>
+                        <link linkend="vi_Position">Position</link>
+                     </entry>
+                     <entry>[0..*]</entry>
+                     <entry/>
+                     <entry/>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section xml:id="vi_Figure">
+         <title>Figure</title>
+         <para>This class is abstract.</para>
+         <para>The class has the following supertypes:
+        <itemizedlist>
+               <listitem>
+                  <para>
+                     <link linkend="vi_Primitive">Primitive</link>
+                  </para>
+               </listitem>
+            </itemizedlist>
+         </para>
+         <para/>
+         <para/>
+         <table>
+            <title>Structural features of Figure</title>
+            <tgroup cols="5">
+               <colspec/>
+               <colspec/>
+               <colspec/>
+               <thead>
+                  <row>
+                     <entry>Name</entry>
+                     <entry>Type</entry>
+                     <entry>Cardinality</entry>
+                     <entry>Default</entry>
+                     <entry>Description</entry>
                   </row>
                </thead>
                <tbody>
                   <row>
                      <entry>foregroundColor</entry>
                      <entry>string</entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
                   <row>
                      <entry>backgroundColor</entry>
                      <entry>string</entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
                   <row>
                      <entry>size</entry>
-                     <entry>#//Dimension</entry>
+                     <entry>
+                        <link linkend="vi_Dimension">Dimension</link>
+                     </entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
                   <row>
                      <entry>onClick</entry>
                      <entry>string</entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
                   <row>
                      <entry>onDoubleClick</entry>
                      <entry>string</entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
                   <row>
                      <entry>cursor</entry>
-                     <entry>#//Cursor</entry>
+                     <entry>
+                        <link linkend="vi_Cursor">Cursor</link>
+                     </entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
@@ -705,22 +821,26 @@
                      <entry>boolean</entry>
                      <entry>[1..1]</entry>
                      <entry>true</entry>
+                     <entry/>
                   </row>
                   <row>
                      <entry>border</entry>
                      <entry>string</entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
                   <row>
                      <entry>opaque</entry>
-                     <entry>ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject</entry>
+                     <entry>Boolean</entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
                   <row>
                      <entry>toolTip</entry>
                      <entry>string</entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
@@ -728,19 +848,22 @@
             </tgroup>
          </table>
       </section>
-      <section>
+      <section xml:id="vi_SymbolReference">
          <title>SymbolReference</title>
          <para>The class has the following supertypes:
         <itemizedlist>
                <listitem>
-                  <para>#//Primitive</para>
+                  <para>
+                     <link linkend="vi_Primitive">Primitive</link>
+                  </para>
                </listitem>
             </itemizedlist>
          </para>
          <para/>
+         <para/>
          <table>
             <title>Structural features of SymbolReference</title>
-            <tgroup cols="4">
+            <tgroup cols="5">
                <colspec/>
                <colspec/>
                <colspec/>
@@ -750,6 +873,7 @@
                      <entry>Type</entry>
                      <entry>Cardinality</entry>
                      <entry>Default</entry>
+                     <entry>Description</entry>
                   </row>
                </thead>
                <tbody>
@@ -758,22 +882,28 @@
                      <entry>string</entry>
                      <entry>[1..1]</entry>
                      <entry/>
+                     <entry/>
                   </row>
                   <row>
                      <entry>zoom</entry>
-                     <entry>ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject</entry>
+                     <entry>Double</entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
                   <row>
                      <entry>properties</entry>
-                     <entry>#//StringToStringMap</entry>
+                     <entry>
+                        <link linkend="vi_StringToStringMap">StringToStringMap</link>
+                     </entry>
                      <entry>[0..*]</entry>
+                     <entry/>
                      <entry/>
                   </row>
                   <row>
                      <entry>onCreateProperties</entry>
                      <entry>string</entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
@@ -781,12 +911,13 @@
             </tgroup>
          </table>
       </section>
-      <section>
+      <section xml:id="vi_StringToStringMap">
          <title>StringToStringMap</title>
+         <para/>
          <para/>
          <table>
             <title>Structural features of StringToStringMap</title>
-            <tgroup cols="4">
+            <tgroup cols="5">
                <colspec/>
                <colspec/>
                <colspec/>
@@ -796,6 +927,7 @@
                      <entry>Type</entry>
                      <entry>Cardinality</entry>
                      <entry>Default</entry>
+                     <entry>Description</entry>
                   </row>
                </thead>
                <tbody>
@@ -804,10 +936,12 @@
                      <entry>string</entry>
                      <entry>[1..1]</entry>
                      <entry/>
+                     <entry/>
                   </row>
                   <row>
                      <entry>value</entry>
                      <entry>string</entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
@@ -815,12 +949,13 @@
             </tgroup>
          </table>
       </section>
-      <section>
+      <section xml:id="vi_Dimension">
          <title>Dimension</title>
+         <para/>
          <para/>
          <table>
             <title>Structural features of Dimension</title>
-            <tgroup cols="4">
+            <tgroup cols="5">
                <colspec/>
                <colspec/>
                <colspec/>
@@ -830,6 +965,7 @@
                      <entry>Type</entry>
                      <entry>Cardinality</entry>
                      <entry>Default</entry>
+                     <entry>Description</entry>
                   </row>
                </thead>
                <tbody>
@@ -838,70 +974,41 @@
                      <entry>double</entry>
                      <entry>[1..1]</entry>
                      <entry>0</entry>
+                     <entry/>
                   </row>
                   <row>
                      <entry>height</entry>
                      <entry>double</entry>
                      <entry>[1..1]</entry>
                      <entry>0</entry>
-                  </row>
-               </tbody>
-            </tgroup>
-         </table>
-      </section>
-      <section>
-         <title>Cursor</title>
-         <para>This class is abstract.</para>
-         <para/>
-      </section>
-      <section>
-         <title>SystemCursor</title>
-         <para>The class has the following supertypes:
-        <itemizedlist>
-               <listitem>
-                  <para>#//Cursor</para>
-               </listitem>
-            </itemizedlist>
-         </para>
-         <para/>
-         <table>
-            <title>Structural features of SystemCursor</title>
-            <tgroup cols="4">
-               <colspec/>
-               <colspec/>
-               <colspec/>
-               <thead>
-                  <row>
-                     <entry>Name</entry>
-                     <entry>Type</entry>
-                     <entry>Cardinality</entry>
-                     <entry>Default</entry>
-                  </row>
-               </thead>
-               <tbody>
-                  <row>
-                     <entry>type</entry>
-                     <entry>#//SystemCursorType</entry>
-                     <entry>[1..1]</entry>
                      <entry/>
                   </row>
                </tbody>
             </tgroup>
          </table>
       </section>
-      <section>
-         <title>GridContainer</title>
+      <section xml:id="vi_Cursor">
+         <title>Cursor</title>
+         <para>This class is abstract.</para>
+         <para/>
+         <para/>
+      </section>
+      <section xml:id="vi_SystemCursor">
+         <title>SystemCursor</title>
          <para>The class has the following supertypes:
         <itemizedlist>
                <listitem>
-                  <para>#//Container</para>
+                  <para>
+                     <link linkend="vi_Cursor">Cursor</link>
+                  </para>
                </listitem>
             </itemizedlist>
          </para>
          <para/>
+         <para/>
          <table>
-            <title>Structural features of GridContainer</title>
-            <tgroup cols="4">
+            <title>Structural features of SystemCursor</title>
+            <tgroup cols="5">
                <colspec/>
                <colspec/>
                <colspec/>
@@ -911,25 +1018,73 @@
                      <entry>Type</entry>
                      <entry>Cardinality</entry>
                      <entry>Default</entry>
+                     <entry>Description</entry>
+                  </row>
+               </thead>
+               <tbody>
+                  <row>
+                     <entry>type</entry>
+                     <entry>
+                        <link linkend="vi_SystemCursorType">SystemCursorType</link>
+                     </entry>
+                     <entry>[1..1]</entry>
+                     <entry/>
+                     <entry/>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section xml:id="vi_GridContainer">
+         <title>GridContainer</title>
+         <para>The class has the following supertypes:
+        <itemizedlist>
+               <listitem>
+                  <para>
+                     <link linkend="vi_Container">Container</link>
+                  </para>
+               </listitem>
+            </itemizedlist>
+         </para>
+         <para/>
+         <para/>
+         <table>
+            <title>Structural features of GridContainer</title>
+            <tgroup cols="5">
+               <colspec/>
+               <colspec/>
+               <colspec/>
+               <thead>
+                  <row>
+                     <entry>Name</entry>
+                     <entry>Type</entry>
+                     <entry>Cardinality</entry>
+                     <entry>Default</entry>
+                     <entry>Description</entry>
                   </row>
                </thead>
                <tbody>
                   <row>
                      <entry>columns</entry>
                      <entry>integer</entry>
-                     <entry/>
+                     <entry>[0..1]</entry>
                      <entry>1</entry>
+                     <entry/>
                   </row>
                   <row>
                      <entry>equalWidth</entry>
                      <entry>boolean</entry>
-                     <entry/>
+                     <entry>[0..1]</entry>
                      <entry>false</entry>
+                     <entry/>
                   </row>
                   <row>
                      <entry>children</entry>
-                     <entry>#//GridChild</entry>
+                     <entry>
+                        <link linkend="vi_GridChild">GridChild</link>
+                     </entry>
                      <entry>[0..*]</entry>
+                     <entry/>
                      <entry/>
                   </row>
                   <row>
@@ -937,42 +1092,49 @@
                      <entry>integer</entry>
                      <entry>[1..1]</entry>
                      <entry>5</entry>
+                     <entry/>
                   </row>
                   <row>
                      <entry>verticalSpacing</entry>
                      <entry>integer</entry>
                      <entry>[1..1]</entry>
                      <entry>5</entry>
+                     <entry/>
                   </row>
                   <row>
                      <entry>marginWidth</entry>
                      <entry>integer</entry>
                      <entry>[1..1]</entry>
                      <entry>5</entry>
+                     <entry/>
                   </row>
                   <row>
                      <entry>marginHeight</entry>
                      <entry>integer</entry>
                      <entry>[1..1]</entry>
                      <entry>5</entry>
+                     <entry/>
                   </row>
                </tbody>
             </tgroup>
          </table>
       </section>
-      <section>
+      <section xml:id="vi_BorderContainer">
          <title>BorderContainer</title>
          <para>The class has the following supertypes:
         <itemizedlist>
                <listitem>
-                  <para>#//Container</para>
+                  <para>
+                     <link linkend="vi_Container">Container</link>
+                  </para>
                </listitem>
             </itemizedlist>
          </para>
          <para/>
+         <para/>
          <table>
             <title>Structural features of BorderContainer</title>
-            <tgroup cols="4">
+            <tgroup cols="5">
                <colspec/>
                <colspec/>
                <colspec/>
@@ -982,13 +1144,17 @@
                      <entry>Type</entry>
                      <entry>Cardinality</entry>
                      <entry>Default</entry>
+                     <entry>Description</entry>
                   </row>
                </thead>
                <tbody>
                   <row>
                      <entry>children</entry>
-                     <entry>#//BorderChild</entry>
+                     <entry>
+                        <link linkend="vi_BorderChild">BorderChild</link>
+                     </entry>
                      <entry>[0..*]</entry>
+                     <entry/>
                      <entry/>
                   </row>
                   <row>
@@ -996,30 +1162,35 @@
                      <entry>integer</entry>
                      <entry>[1..1]</entry>
                      <entry>0</entry>
+                     <entry/>
                   </row>
                   <row>
                      <entry>horizontalSpacing</entry>
                      <entry>integer</entry>
                      <entry>[1..1]</entry>
                      <entry>0</entry>
+                     <entry/>
                   </row>
                </tbody>
             </tgroup>
          </table>
       </section>
-      <section>
+      <section xml:id="vi_BorderChild">
          <title>BorderChild</title>
          <para>The class has the following supertypes:
         <itemizedlist>
                <listitem>
-                  <para>#//Child</para>
+                  <para>
+                     <link linkend="vi_Child">Child</link>
+                  </para>
                </listitem>
             </itemizedlist>
          </para>
          <para/>
+         <para/>
          <table>
             <title>Structural features of BorderChild</title>
-            <tgroup cols="4">
+            <tgroup cols="5">
                <colspec/>
                <colspec/>
                <colspec/>
@@ -1029,32 +1200,39 @@
                      <entry>Type</entry>
                      <entry>Cardinality</entry>
                      <entry>Default</entry>
+                     <entry>Description</entry>
                   </row>
                </thead>
                <tbody>
                   <row>
                      <entry>alignment</entry>
-                     <entry>#//Alignment</entry>
+                     <entry>
+                        <link linkend="vi_Alignment">Alignment</link>
+                     </entry>
                      <entry>[1..1]</entry>
                      <entry>CENTER</entry>
+                     <entry/>
                   </row>
                </tbody>
             </tgroup>
          </table>
       </section>
-      <section>
+      <section xml:id="vi_GridChild">
          <title>GridChild</title>
          <para>The class has the following supertypes:
         <itemizedlist>
                <listitem>
-                  <para>#//Child</para>
+                  <para>
+                     <link linkend="vi_Child">Child</link>
+                  </para>
                </listitem>
             </itemizedlist>
          </para>
          <para/>
+         <para/>
          <table>
             <title>Structural features of GridChild</title>
-            <tgroup cols="4">
+            <tgroup cols="5">
                <colspec/>
                <colspec/>
                <colspec/>
@@ -1064,74 +1242,90 @@
                      <entry>Type</entry>
                      <entry>Cardinality</entry>
                      <entry>Default</entry>
+                     <entry>Description</entry>
                   </row>
                </thead>
                <tbody>
                   <row>
                      <entry>horizontalAlignment</entry>
-                     <entry>#//GridAlignment</entry>
+                     <entry>
+                        <link linkend="vi_GridAlignment">GridAlignment</link>
+                     </entry>
                      <entry>[1..1]</entry>
                      <entry>BEGINNING</entry>
+                     <entry/>
                   </row>
                   <row>
                      <entry>verticalAlignment</entry>
-                     <entry>#//GridAlignment</entry>
+                     <entry>
+                        <link linkend="vi_GridAlignment">GridAlignment</link>
+                     </entry>
                      <entry>[1..1]</entry>
                      <entry>BEGINNING</entry>
+                     <entry/>
                   </row>
                   <row>
                      <entry>grabHorizontalSpace</entry>
                      <entry>boolean</entry>
                      <entry>[1..1]</entry>
                      <entry>false</entry>
+                     <entry/>
                   </row>
                   <row>
                      <entry>grabVerticalSpace</entry>
                      <entry>boolean</entry>
                      <entry>[1..1]</entry>
                      <entry>false</entry>
+                     <entry/>
                   </row>
                   <row>
                      <entry>spanCols</entry>
                      <entry>integer</entry>
                      <entry>[1..1]</entry>
                      <entry>0</entry>
+                     <entry/>
                   </row>
                   <row>
                      <entry>spanRows</entry>
-                     <entry>ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject</entry>
-                     <entry/>
+                     <entry>Integer</entry>
+                     <entry>[0..1]</entry>
                      <entry>0</entry>
+                     <entry/>
                   </row>
                   <row>
                      <entry>widthHint</entry>
-                     <entry>ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject</entry>
+                     <entry>Integer</entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
                   <row>
                      <entry>heightHint</entry>
-                     <entry>ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject</entry>
+                     <entry>Integer</entry>
                      <entry>[1..1]</entry>
+                     <entry/>
                      <entry/>
                   </row>
                </tbody>
             </tgroup>
          </table>
       </section>
-      <section>
+      <section xml:id="vi_FigureContainer">
          <title>FigureContainer</title>
          <para>The class has the following supertypes:
         <itemizedlist>
                <listitem>
-                  <para>#//Figure</para>
+                  <para>
+                     <link linkend="vi_Figure">Figure</link>
+                  </para>
                </listitem>
             </itemizedlist>
          </para>
          <para/>
+         <para/>
          <table>
             <title>Structural features of FigureContainer</title>
-            <tgroup cols="4">
+            <tgroup cols="5">
                <colspec/>
                <colspec/>
                <colspec/>
@@ -1141,12 +1335,16 @@
                      <entry>Type</entry>
                      <entry>Cardinality</entry>
                      <entry>Default</entry>
+                     <entry>Description</entry>
                   </row>
                </thead>
                <tbody>
                   <row>
                      <entry>content</entry>
-                     <entry>#//Primitive</entry>
+                     <entry>
+                        <link linkend="vi_Primitive">Primitive</link>
+                     </entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
@@ -1154,19 +1352,22 @@
             </tgroup>
          </table>
       </section>
-      <section>
+      <section xml:id="vi_Image">
          <title>Image</title>
          <para>The class has the following supertypes:
         <itemizedlist>
                <listitem>
-                  <para>#//Figure</para>
+                  <para>
+                     <link linkend="vi_Figure">Figure</link>
+                  </para>
                </listitem>
             </itemizedlist>
          </para>
          <para/>
+         <para/>
          <table>
             <title>Structural features of Image</title>
-            <tgroup cols="4">
+            <tgroup cols="5">
                <colspec/>
                <colspec/>
                <colspec/>
@@ -1176,49 +1377,60 @@
                      <entry>Type</entry>
                      <entry>Cardinality</entry>
                      <entry>Default</entry>
+                     <entry>Description</entry>
                   </row>
                </thead>
                <tbody>
                   <row>
                      <entry>uri</entry>
                      <entry>string</entry>
+                     <entry>[0..1]</entry>
                      <entry/>
                      <entry/>
                   </row>
                   <row>
                      <entry>imageAlignment</entry>
-                     <entry>#//Alignment</entry>
-                     <entry/>
+                     <entry>
+                        <link linkend="vi_Alignment">Alignment</link>
+                     </entry>
+                     <entry>[0..1]</entry>
                      <entry>CENTER</entry>
+                     <entry/>
                   </row>
                </tbody>
             </tgroup>
          </table>
       </section>
-      <section>
+      <section xml:id="vi_Ellipse">
          <title>Ellipse</title>
          <para>The class has the following supertypes:
         <itemizedlist>
                <listitem>
-                  <para>#//Shape</para>
+                  <para>
+                     <link linkend="vi_Shape">Shape</link>
+                  </para>
                </listitem>
             </itemizedlist>
          </para>
          <para/>
+         <para/>
       </section>
-      <section>
+      <section xml:id="vi_Arc">
          <title>Arc</title>
          <para>The class has the following supertypes:
         <itemizedlist>
                <listitem>
-                  <para>#//Shape</para>
+                  <para>
+                     <link linkend="vi_Shape">Shape</link>
+                  </para>
                </listitem>
             </itemizedlist>
          </para>
          <para/>
+         <para/>
          <table>
             <title>Structural features of Arc</title>
-            <tgroup cols="4">
+            <tgroup cols="5">
                <colspec/>
                <colspec/>
                <colspec/>
@@ -1228,6 +1440,7 @@
                      <entry>Type</entry>
                      <entry>Cardinality</entry>
                      <entry>Default</entry>
+                     <entry>Description</entry>
                   </row>
                </thead>
                <tbody>
@@ -1235,6 +1448,7 @@
                      <entry>start</entry>
                      <entry>integer</entry>
                      <entry>[1..1]</entry>
+                     <entry/>
                      <entry/>
                   </row>
                   <row>
@@ -1242,17 +1456,19 @@
                      <entry>integer</entry>
                      <entry>[1..1]</entry>
                      <entry/>
+                     <entry/>
                   </row>
                </tbody>
             </tgroup>
          </table>
       </section>
-      <section>
+      <section xml:id="vi_Connection">
          <title>Connection</title>
+         <para/>
          <para/>
          <table>
             <title>Structural features of Connection</title>
-            <tgroup cols="4">
+            <tgroup cols="5">
                <colspec/>
                <colspec/>
                <colspec/>
@@ -1262,38 +1478,48 @@
                      <entry>Type</entry>
                      <entry>Cardinality</entry>
                      <entry>Default</entry>
+                     <entry>Description</entry>
                   </row>
                </thead>
                <tbody>
                   <row>
                      <entry>start</entry>
-                     <entry>#//Primitive</entry>
+                     <entry>
+                        <link linkend="vi_Primitive">Primitive</link>
+                     </entry>
                      <entry>[1..1]</entry>
+                     <entry/>
                      <entry/>
                   </row>
                   <row>
                      <entry>end</entry>
-                     <entry>#//Primitive</entry>
+                     <entry>
+                        <link linkend="vi_Primitive">Primitive</link>
+                     </entry>
                      <entry>[1..1]</entry>
+                     <entry/>
                      <entry/>
                   </row>
                </tbody>
             </tgroup>
          </table>
       </section>
-      <section>
+      <section xml:id="vi_StackContainer">
          <title>StackContainer</title>
          <para>The class has the following supertypes:
         <itemizedlist>
                <listitem>
-                  <para>#//Container</para>
+                  <para>
+                     <link linkend="vi_Container">Container</link>
+                  </para>
                </listitem>
             </itemizedlist>
          </para>
          <para/>
+         <para/>
          <table>
             <title>Structural features of StackContainer</title>
-            <tgroup cols="4">
+            <tgroup cols="5">
                <colspec/>
                <colspec/>
                <colspec/>
@@ -1303,13 +1529,17 @@
                      <entry>Type</entry>
                      <entry>Cardinality</entry>
                      <entry>Default</entry>
+                     <entry>Description</entry>
                   </row>
                </thead>
                <tbody>
                   <row>
                      <entry>children</entry>
-                     <entry>#//Primitive</entry>
+                     <entry>
+                        <link linkend="vi_Primitive">Primitive</link>
+                     </entry>
                      <entry>[0..*]</entry>
+                     <entry/>
                      <entry/>
                   </row>
                </tbody>

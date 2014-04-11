@@ -11,6 +11,7 @@
 			classpathref="saxon9.jar"
 			>
 			<factory name="net.sf.saxon.TransformerFactoryImpl"></factory>
+			<param name="modelPrefix" expression="vi"/>
 		</xslt>
     </target>
 
