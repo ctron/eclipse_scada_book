@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <section xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" 
-	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd"
+    xml:id="vi">
 
 	<title>Visual Interface</title>
   
@@ -67,6 +68,30 @@
       </para>
       
       <para>Register the file as described in <xref linkend="vi_register"/></para>
+    </section>
+    
+    <section>
+      <title>Styles</title>
+      
+      <section>
+        <title>Line size</title>
+        
+        <para>
+        When a line size of 1 is used and the view is allowed to zoom, also
+        the line size will be zoomed. In most cases this is not intended if
+        you have a line that is one pixel wide. In this case you most likely
+        want to have a line that always stays the smallest size possible (one pixel).
+        </para>
+        <para>
+        This is also known as a <quote>hairline</quote> and  
+        can be achieved by setting line size of <constant>0.0</constant>.
+        Lines of size <constant>0</constant> (invisible lines) can be achieved by using a
+        negative amount (e.g. "-1") as line size.
+        </para> 
+      </section>
+      
+      <xi:include href="borders.xml"/>
+      
     </section>
     
     <xi:include href="model.xml"/>

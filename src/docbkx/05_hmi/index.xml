@@ -6,8 +6,20 @@
 	<title>Human-Machine Interface</title>
 
 	<para>
-	...
+	Eclipse SCADA has currently two main ways of visualizing information.
+    Both are part of a rich client concept based on the
+    Eclipse Rich Client Platform (<acronym>RCP</acronym>).  
 	</para>
+  
+  <para>
+  The <quote>Visual Interface</quote> (aka <acronym>VI</acronym>) is a dashboard like
+  2D vector visualization framework. See <xref linkend="vi"/>.
+  </para>
+  
+  <para>
+  The second one, the <quote>Detail Views</quote> are dialog like, form based,
+  more structured and simpler views. See <xref linkend="detailViews"/>.
+  </para>
   
   <xi:include href="01_overview/index.xml"/>
   <xi:include href="02_visual_interface/index.xml"/>

@@ -1,0 +1,163 @@
+<section
+  xmlns="http://docbook.org/ns/docbook"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd"
+  xml:id="vi.style.borders">
+
+  <title>Borders</title>
+
+  <para>
+    Several visual elements may specify a border. The border definition has a special syntax.
+  </para>
+
+  <section>
+    <title>Simple</title>
+    <para>A simple integer specifies a solid x-Pixel border in the default color.</para>
+  </section>
+
+  <section>
+    <title>Type</title>
+
+    <para>A specific border can be created by prefixing the border type.</para>
+    <programlisting>
+      TYPE:[argument1=value1,argument2=value2]
+    </programlisting>
+    <para>If the border type has a simple value argument the argument can simply be specified without brackets:</para>
+    <programlisting>
+      TYPE:simpleValue
+    </programlisting>
+
+    <section>
+      <title>LINE:</title>
+      <para>The line border type is a simple line.</para>
+      <informaltable>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>lineSize (simple value)</td>
+          <td>The line size in pixels (might get scaled)</td>
+        </tr>
+        <tr>
+          <td>color</td>
+          <td>Line color in hex notation</td>
+        </tr>
+      </informaltable>
+    </section>
+
+    <section>
+      <title>GROUP:</title>
+      <para>A draw2d group border</para>
+      <informaltable>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>text (simple value)</td>
+          <td>The text of the group border</td>
+        </tr>
+        <tr>
+          <td>textColor</td>
+          <td>The color of the text</td>
+        </tr>
+      </informaltable>
+    </section>
+
+    <section>
+      <title>TITLE:</title>
+      <para>A draw2d title border</para>
+      <informaltable>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>text (simple value)</td>
+          <td>The text of the group border</td>
+        </tr>
+        <tr>
+          <td>textColor</td>
+          <td>The color of the text</td>
+        </tr>
+        <tr>
+          <td>backgroundColor</td>
+          <td>The color of the background</td>
+        </tr>
+      </informaltable>
+    </section>
+
+    <section>
+      <title>MARGIN:</title>
+      <para>A margin border</para>
+      <informaltable>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>inset (simple value)</td>
+          <td>The inset of the margin border</td>
+        </tr>
+      </informaltable>
+    </section>
+
+  </section>
+
+  <section>
+    <title>Compound</title>
+    <para>
+      A compound border can be created by adding multiple border definitions in the following syntax:
+    </para>
+    <programlisting>
+      COMPOUND:[TYPE:a|TYPE:b]
+    </programlisting>
+  </section>
+  
+  <section>
+    <title>Examples</title>
+    
+    <informaltable>
+    
+      <thead>
+        <tr>
+          <th>Border</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      
+      <tr>
+        <td><userinput>1</userinput></td>
+        <td>This will generate a 1 pixel, black, solid line border</td>
+      </tr>
+      
+      <tr>
+        <td><userinput>LINE:1</userinput></td>
+        <td>This will also generate a 1 pixel, black, solid line border</td>
+      </tr>
+      
+      <tr>
+        <td><userinput>LINE:[lineSize=1,color=#FF0000]</userinput></td>
+        <td>This will create a 1 pixel, red, solid line border</td>
+      </tr>
+      
+      <tr>
+        <td><userinput>GROUP:Name</userinput></td>
+        <td>Creates a group style border with a label of <quote>Name</quote></td>
+      </tr>
+      
+      <tr>
+        <td><userinput>COMPOUNT:[GROUP:Name|LINE:[lineSize=2,color=#00FF00]]</userinput></td>
+        <td>
+        This will create a group border with the label <quote>Name</quote> and inside
+        that a solid line border, 2 pixel, green.
+        </td>
+      </tr>
+          
+    </informaltable>
+  </section>
+
+</section>
