@@ -7,6 +7,24 @@
 	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd"
 >
 
+<!-- specials -->
+
+<property
+  id="vi.debug"
+  type="boolean"
+  default="false"
+  short="Enables the Visual Interface debugging stuff in the client.">
+  
+  <description>
+  <db:para>
+  This properties enabled various debugging functionalities of the visual interface modules.
+  For example will this switch enable a small icon in the toolbar that allows you to reload
+  the file when it was edited in the IDE.
+  </db:para>
+  </description>
+  
+</property>
+
 <!-- org.eclipse.scada.sec -->
 
 <property
