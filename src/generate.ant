@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="generate" default="default">
 	
-	<import file="paths.ant"/>
+	<path id="saxon9.jar">
+		<path location="../lib/saxon9he.jar"/>
+	</path>
 	
-    <!-- ================================= 
+    <!-- =========/project>======================== 
           target: default              
          ================================= -->
 	<target name="default">
