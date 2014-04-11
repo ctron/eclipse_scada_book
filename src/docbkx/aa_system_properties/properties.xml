@@ -41,13 +41,6 @@
 	/>
 
 <property
-	id="vi.debug"
-	type="boolean"
-	default="false"
-	short="Enable some debugging functionality in the HMI"
-	/>
-
-<property
 	id="org.eclipse.scada.vi.details.handler.disableWaitShell"
 	type="boolean" 
 	short="Disable the &amp;wait shell&amp;"
