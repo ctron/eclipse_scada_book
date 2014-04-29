@@ -18,6 +18,8 @@ span.term {
 	font-weight: bold;
 }
 
+/* table */
+
 .table-contents table {
 	border: 0px;
 	border-bottom: 2pt solid #AAAAAA;
@@ -39,3 +41,25 @@ span.term {
 	padding: .5em;
 }
 
+/* informaltable */
+
+.informaltable table {
+	border: 0px;
+	border-bottom: 2pt solid #AAAAAA;
+	background: #F0F0F0;
+	border-spacing: 0px;
+}
+
+.informaltable th {
+	background: #E0E0E0;
+	
+	border: 0px;
+	padding: .5em;
+	
+	border-bottom: 2pt solid #AAAAAA;
+}
+
+.informaltable td {
+	border: 0px;
+	padding: .5em;
+}
