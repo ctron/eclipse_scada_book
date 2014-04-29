@@ -25,6 +25,68 @@
   
 </property>
 
+<!-- org.eclipse.scada.utils -->
+
+<proerty
+    id="org.eclipse.scada.utils.script.ScriptExecutor.disableCompile"
+    type="boolean"
+    default="false"
+    short="Allow disabling the use of compiled scripts"
+    />
+    
+<property
+    id="org.eclipse.scada.utils.concurrent.noDefaultLogger"
+    type="boolean"
+    default="false"
+    short="Allow disabling the fallback to a default logger for uncaught exceptions"
+    />
+    
+<property
+    id="org.eclipse.scada.defaultStringInterner"
+    type="custom"
+    default="null"
+    short="A default fallback which string interner type to use">
+    <description>
+    <db:para>
+    This value defines the default string interner to use when no specific one is set. The default is unset,
+    so the implementation specific default will be used. This property simply allows to override all internal
+    defaults at once. 
+    </db:para>
+    <db:para>
+    The possible values are:
+    <db:variablelist>
+      <db:varlistentry>
+        <db:term>weak</db:term>
+        <db:listitem>A weak reference interner. It will hold the items as long as they are not garbage collected.</db:listitem>
+      </db:varlistentry>
+      <db:varlistentry>
+        <db:term>strong</db:term>
+        <db:listitem>A string reference interner. It will hold the items forever.</db:listitem>
+      </db:varlistentry>
+      <db:varlistentry>
+        <db:term>java</db:term>
+        <db:listitem>Will use the java String.intern method.</db:listitem>
+      </db:varlistentry>
+    </db:variablelist>
+    </db:para>
+    <db:para>If the value is unknown or undefined then no string interning will take place.</db:para>
+    </description>
+</property>
+
+<!-- org.eclipsescada.ca.file -->
+
+<property
+    id="org.eclipse.scada.ca.file.stringInternerType"
+    type="custom"
+    default="weak"
+    short="The string interner type to use for elements read from the CA"
+    >
+    <description>
+    <db:para>Defines the string interner to use for keys and values read from the CA storage.
+    Can be overridden by <db:xref linkend="properties_org.eclipse.scada.defaultStringInterner"/> </db:para>
+    </description>
+</property>
+
 <!-- org.eclipse.scada.sec -->
 
 <property
