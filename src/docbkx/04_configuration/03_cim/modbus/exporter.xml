@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" 
+	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+
+	<title>Modbus Exporter</title>
+
+  <para>
+  The modbus exporter allows exporting values from a master server instance using the Modbus TCP
+  protocol. In this case Eclipse SCADA acts as a Modbus TCP Slave.
+	</para>
+  
+  <note>
+    <para>The default modbus TCP port number is 502. While it is technically possible to use
+    this port number, it is below 1024, which makes it a privilged port on most Unix based systems.</para>
+    <para>Therefore it is recommended to use a different port, one greater than 1024. Otherwise
+    the Eclipse SCADA software stack has to be run with <filename>root</filename> privileges.</para>
+  </note>
+  
+  <section><title>Selector Script</title>
+  
+  <para>
+  The Modbus Exporter interceptor element requires a script which performs the selection and
+  configuration of items. Each item can be exported multiple times.
+  </para>
+  
+  <para>
+  The script will be called with two global variables set:
+  </para>
+  
+  <variablelist>
+    <varlistentry>
+      <term>item</term>
+      <listitem>
+        <para>The Item that was generated for this master server. This can be used to evaluate
+        wether and how to export the item. For example can the name be used to determine if
+        the item should be exposed using modbus and at which register address.</para>
+      </listitem>
+    </varlistentry>
+    
+    <varlistentry>
+      <term>MODBUS</term>
+      <listitem>
+      <para>A context object which provides functions to actually export the items.
+      The object is of the type <classname>org.eclipse.scada.configuration.modbus.lib.internal.ModbusProcessor</classname>.
+      </para>
+      </listitem>
+      </varlistentry>
+  </variablelist>
+  
+  <para>
+  The main function of the <varname>MODBUS</varname> object is the <function>doExport</function> function.
+  If has the following signature:
+  <funcsynopsis>
+    <funcprototype>
+      <funcdef>void <function>doExport</function></funcdef>
+      <paramdef>int <parameter>port</parameter></paramdef>
+      <paramdef>int <parameter>slaveId</parameter></paramdef>
+      <paramdef>int <parameter>offset</parameter></paramdef>
+      <paramdef>TypeBuilder <parameter>typeBuilder</parameter></paramdef>
+    </funcprototype>
+  </funcsynopsis>
+  </para>
+  
+  <para>
+  The following type builder instances are part of the <varname>MODBUS</varname> object instance:
+  <informaltable>
+    <thead>
+      <tr><th>Symbol</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>DOUBLE</td><td>64bit floating point integer</td></tr>
+      <tr><td>UNSINGED_INT_16</td><td>16bit unsigned integer</td></tr>
+      <tr><td>UNSINGED_INT_32</td><td>32bit unsigned integer</td></tr>
+      <tr><td>SINGED_INT_16</td><td>16bit signed integer</td></tr>
+      <tr><td>SINGED_INT_32</td><td>32bit signed integer</td></tr>
+    </tbody>
+  </informaltable>
+  </para>
+  
+  </section>
+  
+  <section><title>Script examples</title>
+  
+  <para>
+  The following code snippet exports the item named <quote>ES.DEMO.ARDUINO001.LUX.V</quote>
+  as 64bit floating point, at register #0, slave ID is 1, on TCP port 1502. The value is scaled by 0.1.
+  </para>
+  
+  <programlisting language="JavaScript"><xi:include href="modbus1.js" parse="text" encoding="UTF-8"/></programlisting>
+  
+  </section>
+  
+</section>

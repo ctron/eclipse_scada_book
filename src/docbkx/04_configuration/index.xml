@@ -9,5 +9,7 @@
 	<para>
 	...
 	</para>
+  
+    <xi:include href="03_cim/index.xml"/>  
 	
 </chapter>
