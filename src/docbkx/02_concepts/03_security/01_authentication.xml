@@ -13,7 +13,7 @@ wants to perform an operation. Selecting a user and verifying the identity is th
 </para>
 
 <para>
-openSCADA uses a simple TCP client/server communication concept with the NGP and NET protocol. After the TCP
+Eclipse SCADA uses a simple TCP client/server communication concept with the NGP and NET protocol. After the TCP
 connection has been established the client side sends its user credentials to the server side. The server verifies
 and remembers the authenticated user for the lifetime of the TCP connection or closes the TCP connection immediately.
 Data subscription and control operation can only be performed after the user has been authenticated.
@@ -25,7 +25,7 @@ See also the section "authorization".
 </para>
 
 <para>
-There are two ways of authenticating a user in openSCADA. The first, simple, mechanism is used for connector
+There are two ways of authenticating a user in Eclipse SCADA. The first, simple, mechanism is used for connector
 modules (aka drivers). Each driver checks for a specific username and password combination during the logon
 process described above. The server checks for the system property
 <property>org.eclipse.scada.core.server.common.ServiceCommon.password</property> if is is set
