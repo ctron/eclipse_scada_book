@@ -63,3 +63,15 @@ span.term {
 	border: 0px;
 	padding: .5em;
 }
+
+/* note */
+
+div.note {
+	background: #FCFCFF;
+	border-radius: 1em; 
+	padding-left: 1em;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin: 1em;
+	border: 1px solid #AAAACC;
+}
