@@ -91,4 +91,29 @@
   
   </section>
   
+  <section><title>Register layout</title>
+  <para>
+  The layout of the registeres follows a certain structure.
+  </para>
+  <informaltable>
+    <thead>
+      <tr><th>Register</th><th>size (registers)</th><th>Type</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>0</td><td>1</td><td>WORD</td>
+        <td>Bit encoded state information</td>
+      </tr>
+      <tr>
+        <td>1</td><td>4</td><td>INT64</td>
+        <td>Unix timestamp (milliseconds, UTC)</td>
+      </tr>
+      <tr>
+        <td>5</td><td>depends on type</td><td>specified data type</td>
+        <td>Value</td>
+      </tr>
+    </tbody>
+  </informaltable>
+  </section>
+  
 </section>
