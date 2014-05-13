@@ -18,7 +18,7 @@
     <para>
     In order to add the Eclipse SCADA repository to your system create a file called
     <filename>/etc/apt/sources.d/eclipse-scada.list </filename> with the following content:
-    <programlisting>deb http://download.eclipse.org/eclipsescada/repos/milestone/0.1.0/apt/ default main</programlisting>
+    <programlisting>deb http://download.eclipse.org/eclipsescada/repos/release/0.1.0/apt/ default main</programlisting>
     </para>
     
     <para>If you also plan on using the <quote>ICMP Ping Helper</quote> application, you

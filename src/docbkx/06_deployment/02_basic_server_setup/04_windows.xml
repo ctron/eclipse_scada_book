@@ -3,8 +3,19 @@
 	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" 
 	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
 
-	<title><trademark>Windows</trademark></title>
+  <title><trademark>Windows</trademark></title>
   
-  <para>…</para>
+  <para>
+  The common driver package can be downloaded from Eclipse SCADA at
+  <link xlink:href="http://www.eclipse.org/downloads/download.php?file=/eclipsescada/downloads/org.eclipse.scada/drops/0.1.0/R201405060718/msi/common_driver_0.1.0_x86.msi">http://www.eclipse.org/downloads/download.php?file=/eclipsescada/downloads/org.eclipse.scada/drops/0.1.0/R201405060718/msi/common_driver_0.1.0_x86.msi</link> for 32bit
+  and at
+  <link xlink:href="http://www.eclipse.org/downloads/download.php?file=/eclipsescada/downloads/org.eclipse.scada/drops/0.1.0/R201405060718/msi/common_driver_0.1.0_x64.msi">http://www.eclipse.org/downloads/download.php?file=/eclipsescada/downloads/org.eclipse.scada/drops/0.1.0/R201405060718/msi/common_driver_0.1.0_x64.msi</link> for 64bit.
+  </para>
+  
+  <para>
+  The main application modules are provisioned by the configurator IDE on the Windows platform since
+  Windows does not provide a software repository mechanism like YUM or APT. So the result from
+  the configuration run on Windows will be ready-to-run MSI files.
+  </para> 
   
 </section>

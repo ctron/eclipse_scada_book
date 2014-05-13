@@ -109,13 +109,6 @@
 			Eclipse SCADA components. For this go to "Help > Install New Software". 
 			In the text box "Work with" just enter following URL: 
 			<link xlink:href="http://download.eclipse.org/eclipsescada/updates/release/0.1.0/">http://download.eclipse.org/eclipsescada/updates/release/0.1.0/</link>
-			<footnote>
-				<para>
-					The release will not be ready until End of April, until then
-					please use the milestone build found under
-					<link xlink:href="http://download.eclipse.org/eclipsescada/updates/milestone/0.1.0/">http://download.eclipse.org/eclipsescada/updates/milestone/0.1.0/</link> 
-				</para>
-			</footnote>
 			Then select the "Eclipse SCADA IDE" category and click on "Next".
 			The next screen should contain all the additionally selected 
 			dependencies. Click on "Next" there as well. On the next screen 
@@ -131,7 +124,7 @@
 			above with the URL <link xlink:href="http://repo.openscada.org/p2/org.openscada/R/1.2.0/">http://repo.openscada.org/p2/org.openscada/R/1.2.0/</link>
 			<footnote>
 				<para>
-					The release will not be ready until End of April, until then
+					The release will not be ready until End of May, until then
 					please use the integration build found under
 					<link xlink:href="http://repo.openscada.org/p2/org.openscada/I/1.2.0/">http://repo.openscada.org/p2/org.openscada/I/1.2.0/</link>
 				</para>
