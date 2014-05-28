@@ -51,6 +51,23 @@
     </description>
 </property>
 
+<!-- org.eclipse.scada.core.client.ngp.disableSharedConnector -->
+
+<property
+    id="org.eclipse.scada.core.client.ngp.disableSharedProcessor"
+    type="boolean"
+    default="false"
+    short="Disable the shared use of IO processors"
+    >
+    <description>
+    <db:para>
+    Starting with Eclipse SCADA 0.2.0 client connections will also use a shared IO processor to
+    reduce the number of system resources by default. Setting this value to <db:literal>true</db:literal>
+    will revert to the behavior of Eclipse SCADA 0.1.0 and openSCADA 1.1.0. 
+    </db:para>
+    </description>
+</property>
+
 <!-- org.eclipse.scada.utils -->
 
 <property
