@@ -25,9 +25,35 @@
   
 </property>
 
+
+<!-- org.eclipse.scada.core.client.common.cacheAddress -->
+
+<property
+	id="org.eclipse.scada.core.client.common.cacheAddress"
+    type="boolean"
+    default="false"
+    short="Allow caching the IP address that was looked up from the hostname"
+    >
+    <description>
+    <db:para>
+    If this setting is set to <db:literal>true</db:literal> then the connection will
+    keep the IP address it got from looking up the DNS name and re-use it without querying
+    the DNS again.
+    </db:para>
+    <db:para>
+    Caching the value might bring a quicker re-connect, since the DNS lookup can be skipped
+    for following connects. However is also means that if the IP address of a hostname changes
+    the connection is unable to detect the change.
+    </db:para>
+    <db:para>
+    If an IP address is specified for connecting, this setting is irrelevant.
+    </db:para>
+    </description>
+</property>
+
 <!-- org.eclipse.scada.utils -->
 
-<proerty
+<property
     id="org.eclipse.scada.utils.script.ScriptExecutor.disableCompile"
     type="boolean"
     default="false"
