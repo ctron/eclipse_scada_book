@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" 
+	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+
+	<title>Recipes</title>
+
+  <para>
+  Recipes control the transformation steps between different models. The main tasks are to load,
+  transform and store models. Recipes are like a list of operations, what to load, what
+  to process and finally what to store. 
+  </para>
+  
+  <section>
+  <title>Definition</title>
+  
+  <para>
+  The main element of a recipe is the <literal>Definition</literal>. It has an Id and a name
+  and can import other definitions. The name is actually a human readable name, where the Id must
+  be a unique system identifier.
+  </para>
+  
+  </section>
+  
+  <section><title>Task</title>
+  <para>
+  The <literal>Definition</literal> consists of <literal>Task</literal>s. Each task has again
+  a name and an <literal>Order</literal> attribute, which is used to sort the tasks. The actual
+  order of the <literal>Task</literal> elements cannot be used, since the definition might import
+  other tasks from other definitions that will be sorted into the list of tasks.
+  </para>
+  </section>
+  
+  <section><title>Execute</title>
+  <para>
+  The main element of the Tasks element is <literal>Execute</literal>. It defines what code
+  is actually executed at that position. The Execute element has the <literal>name</literal>
+  attribute which defines what is being executed.
+  </para>
+  
+  <para>
+  The syntax is:
+  
+  <code>bundle-class://bundle-name/className#method</code>
+  
+  If the bundle name should also be used as package prefix, then the class name can be
+  prefixed with a ".".
+  
+  For example:
+  <code>bundle-class://org.eclipse.scada.configuration.utils/.LoadModel#load</code>
+  Will load the class <classname>org.eclipse.scada.configuration.utils.LoadModel</classname> and
+  execute the method <function>load</function>.
+   
+  </para>
+  </section>
+  
+  <section><title>Recipe handlers</title>
+  
+  <para>
+  The following recipe handlers come with Eclipse SCADA and can be used by the Execute element:
+  </para>
+  
+  <section><title>Load models</title>
+  <para>
+    <code>bundle-class://org.eclipse.scada.configuration.utils/.LoadModel#load</code>
+  </para>
+  <para>
+    Load a model from a resource into the local context.
+  </para>
+  
+  <para>
+  Input: String - "uri" - the relative or absolute URI of what to load.
+  </para>
+  
+  <para>
+  Output: model - the loaded model.
+  </para>
+  </section>
+  
+  <section><title>Hostname mapping</title>
+  <para>
+  <code>bundle-class://org.eclipse.scada.configuration.world.lib/.deployment.NodeMappingHandler</code>
+  </para>
+  <para>
+  Process all Nodes and extra targets and replace the hostnames with the ones defined in the mapping model.
+  </para>
+  
+  <para>
+  Input: Model - worldModel - the final world model
+  </para>
+  <para>
+  Input: Model - nodeMappings - the node mappings model
+  </para>
+  <para>
+  Input: String - additionalTargets - additional ECore Class names and attributes that well be replaced.
+  The syntax is <code>EMFClassName:feature1,feature2;EMFClassName2:feature1,feature2</code>
+  </para>
+  
+  </section>
+  
+  </section>
+	
+</section>

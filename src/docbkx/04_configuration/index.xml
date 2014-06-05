@@ -7,9 +7,31 @@
 	<title>Configuration</title>
 
 	<para>
-	...
+	Eclipse SCADA consists of many different configuration options. Therefore the whole
+    configuration process is split up into several parts.
 	</para>
   
-    <xi:include href="03_cim/index.xml"/>  
+  <para>
+  The first layer is the actual configuration required by the different software components.
+  This can be custom XML files, system properties or the CA mechanism. 
+  </para>
+  
+  <para>
+  The second layer is the <quote>world model</quote>, which wraps up all different configurations
+  of the first layer and capture it in an EMF model, unless the first layer already is an EMF model.
+  </para>
+  
+  <para>
+  The third layer is the <quote>component/infrastructure model</quote>. It defines the system
+  infrastructure (nodes, applications, etc, …) and the different components (sensor value, namespace, etc, …).
+  </para>
+  
+  <para>
+  In addition there are tool models that aid in processing the configuration. Like the recipes or the
+  globalization model. 
+  </para>
+  
+    <xi:include href="03_cim/index.xml"/>
+    <xi:include href="04_recipes/index.xml"/>    
 	
 </chapter>
