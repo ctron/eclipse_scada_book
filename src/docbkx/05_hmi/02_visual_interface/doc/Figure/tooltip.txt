@@ -1,0 +1,1 @@
+A text which will be show as a tooltip when the mouse cursor hovers the element.

@@ -73,7 +73,7 @@
     <section>
       <title>Styles</title>
       
-      <section>
+      <section xml:id="vi_linesize">
         <title>Line size</title>
         
         <para>
@@ -90,10 +90,20 @@
         </para> 
       </section>
       
+      <section xml:id="vi_style_color">
+      <title>Colors</title>
+      <para>
+      If VI are represented as RGB colors in the hex notation. As known from HTML. But other than
+      HTML, VI requires the color information to be always 6 characters long.
+      </para>
+      <para>For example: <code>#FF0000</code>, would be red.</para>
+      </section>
+      
       <xi:include href="borders.xml"/>
       
     </section>
     
+    <xi:include href="scripting.xml"/>
     <xi:include href="model.xml"/>
     
 </section>

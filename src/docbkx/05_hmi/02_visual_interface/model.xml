@@ -15,7 +15,7 @@
       <para>This section describes the enums of the model.</para>
       <section xml:id="vi_Alignment">
          <title>Alignment</title>
-         <para>The alignment of an element.</para>
+         <para/>
          <para>
             <table>
                <title>Literals of enum Alignment</title>
@@ -31,33 +31,30 @@
                      </row>
                   </thead>
                   <tbody>
-    
-      The alignment of an element.
-    
-    <row>
+                     <row>
                         <entry>LEFT</entry>
                         <entry>1</entry>
-                        <entry>Align to the left.</entry>
+                        <entry/>
                      </row>
                      <row>
                         <entry>CENTER</entry>
                         <entry/>
-                        <entry>Align to the center.</entry>
+                        <entry/>
                      </row>
                      <row>
                         <entry>RIGHT</entry>
                         <entry>2</entry>
-                        <entry>Align to the right.</entry>
+                        <entry/>
                      </row>
                      <row>
                         <entry>TOP</entry>
                         <entry>3</entry>
-                        <entry>Align to the top.</entry>
+                        <entry/>
                      </row>
                      <row>
                         <entry>BOTTOM</entry>
                         <entry>4</entry>
-                        <entry>Align to the bottom.</entry>
+                        <entry/>
                      </row>
                   </tbody>
                </tgroup>
@@ -128,12 +125,12 @@
                      <row>
                         <entry>ARROW</entry>
                         <entry>1</entry>
-                        <entry/>
+                        <entry>The system default hand cursor.</entry>
                      </row>
                      <row>
                         <entry>HAND</entry>
                         <entry/>
-                        <entry/>
+                        <entry>The system default arrow cursor.</entry>
                      </row>
                   </tbody>
                </tgroup>
@@ -267,7 +264,13 @@
                      <entry>string</entry>
                      <entry>[0..1]</entry>
                      <entry/>
-                     <entry/>
+                     <entry>
+                        <phrase xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+The background color of the symbol. If unset it will be inherited from the parent symbol.
+
+Also see <xref linkend="vi_style_color"/>.
+</phrase>
+                     </entry>
                   </row>
                   <row>
                      <entry>designSize</entry>
@@ -782,7 +785,13 @@
                      <entry>string</entry>
                      <entry>[0..1]</entry>
                      <entry/>
-                     <entry/>
+                     <entry>
+                        <phrase xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+The background color of the figure. If unset it will be inherited from the parent figure.
+
+Also see <xref linkend="vi_style_color"/>.
+</phrase>
+                     </entry>
                   </row>
                   <row>
                      <entry>size</entry>
@@ -798,14 +807,28 @@
                      <entry>string</entry>
                      <entry>[0..1]</entry>
                      <entry/>
-                     <entry/>
+                     <entry>
+                        <phrase xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+
+A code fragment which is executed when the mouse clicks the figure element.
+
+Also see <xref linkend="vi_scripting"/>.
+</phrase>
+                     </entry>
                   </row>
                   <row>
                      <entry>onDoubleClick</entry>
                      <entry>string</entry>
                      <entry>[0..1]</entry>
                      <entry/>
-                     <entry/>
+                     <entry>
+                        <phrase xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+
+A code fragment which is executed when the mouse double clicks the figure element.
+
+Also see <xref linkend="vi_scripting"/>.
+</phrase>
+                     </entry>
                   </row>
                   <row>
                      <entry>cursor</entry>
@@ -828,7 +851,12 @@
                      <entry>string</entry>
                      <entry>[0..1]</entry>
                      <entry/>
-                     <entry/>
+                     <entry>
+                        <phrase xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+This defines the border style of the figure element. The syntax of the border definition is described in
+<xref linkend="vi_style_borders"/>.
+</phrase>
+                     </entry>
                   </row>
                   <row>
                      <entry>opaque</entry>
@@ -839,6 +867,55 @@
                   </row>
                   <row>
                      <entry>toolTip</entry>
+                     <entry>string</entry>
+                     <entry>[0..1]</entry>
+                     <entry/>
+                     <entry/>
+                  </row>
+                  <row>
+                     <entry>onMouseIn</entry>
+                     <entry>string</entry>
+                     <entry>[0..1]</entry>
+                     <entry/>
+                     <entry>
+                        <phrase xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+
+A code fragment which is executed when the mouse enters the figure element.
+
+Also see <xref linkend="vi_scripting"/>.
+</phrase>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>onMouseOut</entry>
+                     <entry>string</entry>
+                     <entry>[0..1]</entry>
+                     <entry/>
+                     <entry>
+                        <phrase xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+
+A code fragment which is executed when the mouse leaves the figure element.
+
+Also see <xref linkend="vi_scripting"/>.
+</phrase>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>onMouseMove</entry>
+                     <entry>string</entry>
+                     <entry>[0..1]</entry>
+                     <entry/>
+                     <entry/>
+                  </row>
+                  <row>
+                     <entry>onMouseHover</entry>
+                     <entry>string</entry>
+                     <entry>[0..1]</entry>
+                     <entry/>
+                     <entry/>
+                  </row>
+                  <row>
+                     <entry>onMouseDrag</entry>
                      <entry>string</entry>
                      <entry>[0..1]</entry>
                      <entry/>

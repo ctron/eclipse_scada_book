@@ -1,0 +1,63 @@
+<section
+  xmlns="http://docbook.org/ns/docbook"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd"
+  xml:id="vi_scripting">
+
+  <title>Scripting</title>
+
+  <para>
+    The visual interface can be made dynamic using JavaScript fragments. Several elements allow
+    triggering events or call methods which me be implemented using JavaScript code fragments.
+  </para>
+  
+  <para>
+    Internally the JavaScript engine of the Java Virtual Machine will be used. Depending in the
+    version of the Java virtual machine this can be <quote>Rhino</quote> (e.g. with Java 7)
+    or <quote>Nashorn</quote> (e.g. with Java 8). Both variants are JavaScript, but for example
+    the <code>importPackage</code> method will only be available in <quote>Rhino</quote>.
+  </para>
+  
+  <note><para>Which JavaScript engine is actually used depends on which Java virtual machine
+  runs the final application.</para>
+  </note>
+  
+  <section><title>Script context</title>
+  <para></para>
+  </section>
+  
+  <section><title>Life Cycle</title>
+  <para></para>
+  </section>
+  
+  <section><title>Element controllers</title>
+  <para>
+  Each VI element (e.g. Rectangle, Image, …) is controlled by a corresponding controller class.
+  The controller class realizes the actual element in the application. Also can the controller class
+  be accessed from the script fragments and be used to manipulate the actual realized graphical element. 
+  </para>
+  
+  <programlisting language="JavaScript"><![CDATA[var text = controller.getElement ( "myTextElement" );
+text.setText ( "Hello World" );
+text.setForegroundColor ( "#FF0000");
+]]></programlisting>
+
+  <para>
+  Each element has a <quote>name</quote> attribute which must be unique for each symbol.
+  The <varname>controller</varname> variable can be used to retrieve the controller of the element,
+  by name, from the symbol controller. All public method of the controller can be called from
+  the JavaScript fragment.
+  </para>
+  
+  <para>
+  In order to see a mapping table of which element is controlled by which controller, and to
+  see a documentation of the controllers, open the Eclipse help system and navigate to
+  <guimenu>Eclipse SCADA HMI</guimenu> / <guisubmenu>Reference</guisubmenu> / <guimenuitem>Scripting</guimenuitem>.
+  </para>
+  
+  </section>
+  
+
+</section>

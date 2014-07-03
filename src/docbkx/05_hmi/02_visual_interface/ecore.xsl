@@ -15,15 +15,34 @@
   
   <xsl:param name="modelPrefix">model</xsl:param>
 
-  <xsl:template match="details[@key='documentation']">
+  <xsl:template match="details[@key='documentation']" mode="doc" >
     <xsl:value-of select="@value"/>
   </xsl:template>
-  
+   
   <xsl:template name="documentation">
-    <xsl:apply-templates select="eAnnotations[@source='http://www.eclipse.org/emf/2002/GenModel']/details[@key='documentation']">
+    <xsl:apply-templates select="eAnnotations[@source='http://www.eclipse.org/emf/2002/GenModel']/details[@key='documentation']" mode="doc">
     </xsl:apply-templates>
   </xsl:template>
-
+  
+  <xsl:template name="includeExternal">
+    <!-- include an external document if available -->
+    <xsl:param name="file"/>
+    <xsl:message select="$file"/>
+    <xsl:choose>
+      <xsl:when test="doc-available(concat($file,'.xml'))">
+        <xsl:message select="concat('   Including: ',$file,'.xml')"/>
+        <xsl:copy-of select="document(concat($file,'.xml'))"/>
+      </xsl:when>
+      <xsl:when test="unparsed-text-available(concat($file,'.txt'))">
+      <xsl:message select="concat('   Including: ',$file,'.txt')"/>
+        <xsl:copy-of select="unparsed-text(concat($file,'.txt'),'UTF-8')"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:call-template name="documentation"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+  
   <xsl:template name="localType">
     <xsl:param name="typeName"></xsl:param>
     <link>
@@ -70,7 +89,7 @@
       <entry><xsl:call-template name="dataType"/></entry>
       <entry><xsl:call-template name="cardinality"/></entry>
       <entry><xsl:value-of select="@defaultValueLiteral"/></entry>
-      <entry><xsl:call-template name="documentation"/></entry>
+      <entry><xsl:call-template name="includeExternal"><xsl:with-param name="file" select="concat('doc/',../@name,'/',@name)"/></xsl:call-template></entry>
     </row>
     </xsl:template>
   
@@ -78,7 +97,7 @@
     <row>
       <entry><xsl:value-of select="@name"/></entry>
       <entry><xsl:value-of select="@value"/></entry>
-      <entry><xsl:call-template name="documentation"/></entry>
+      <entry><xsl:call-template name="includeExternal"><xsl:with-param name="file" select="concat('doc/',../@name,'/',@name)"/></xsl:call-template></entry>
     </row>
     </xsl:template>
     
@@ -117,7 +136,7 @@
             
            <tbody>
             
-            <xsl:apply-templates/>
+           <xsl:apply-templates/>
             
            </tbody>
            </tgroup>

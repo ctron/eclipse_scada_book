@@ -1,0 +1,10 @@
+<phrase
+  xmlns="http://docbook.org/ns/docbook"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+The background color of the symbol. If unset it will be inherited from the parent symbol.
+
+Also see <xref linkend="vi_style_color"/>.
+</phrase>
