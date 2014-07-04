@@ -8,6 +8,8 @@
   <xsl:import href="../html/highlight.xsl"/>
   <xsl:import href="../../../target/docbkx/template/titlepage/titlepage.xhtml.xsl"/>
   
+  <xsl:param name="section.label.includes.component.label">1</xsl:param>
+  
   <xsl:template name="user.head.content">
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
   </xsl:template>

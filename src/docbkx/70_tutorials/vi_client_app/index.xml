@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<section
+  xmlns="http://docbook.org/ns/docbook"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude" 
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+
+  <title>Creating a standalone application setup for the visual interface (VI)</title>
+  
+  <para>
+  This tutorial creates a standalone Eclipse RCP application which contains:
+  <itemizedlist>
+    <listitem><para>A basic Eclipse RCP application setup</para></listitem>
+    <listitem><para>An Eclipse SCADA connection context</para></listitem>
+    <listitem><para>Alarm system configuration (views, menus)</para></listitem>
+    <listitem><para>Basic view screens (logon, logoff)</para></listitem>
+    <listitem><para>A small visualization for data coming from <filename>scada.eclipse.org</filename></para></listitem>
+  </itemizedlist>
+  </para>
+  
+  <section><title>Prerequisites</title>
+  
+    <para>
+    You will need to have Java 7 and the Eclipse IDE installed. See <xref linkend="setup_ide_java"/> and
+    <xref linkend="setup_ide_eclipse"/> for further information.
+    </para>
+    
+    <note><para>
+    This tutorial is based on functionality which is only available in the 0.2.x branch which is
+    currently under development. The feature is available in 0.2.x builds after the <date>2014-07-05</date>.
+    Therefore you might need to use a nightly or milestone version.
+    </para></note>
+    
+    <para>
+    Also is a version of Apache Maven 3.x required in order to perform the actual client build.
+    If is possible to use a standalone version or to use the <quote>m2eclipse</quote> Maven
+    integration of Eclipse. Also see <link xlink:href="https://www.eclipse.org/m2e/"/>.
+    </para>
+  
+  </section>
+  
+  <section><title>Setting up the target platform</title>
+  <para>If you want to run the client from the IDE itself, you will need to set up a target platform.</para>
+  <para>…</para>
+  </section>
+  
+  <section><title>Installing a nightly/milestone version of the Configurator</title>
+    <para>
+    In order to install a nightly or milestone version of the Eclipse SCADA configurator you need to
+    open the software installation dialog <menuchoice><guimenu>Help</guimenu><guimenuitem>Install New Software</guimenuitem></menuchoice>
+    and enter the appropriate URL into the <quote>Work with</quote> field and press enter.
+    The URL will automatically be tested and added.
+    </para>
+    
+    <informaltable>
+      <tr><th>Channel</th><th>URL</th></tr>
+      <tr><td>Milestone 0.2.x</td><td><link xlink:href="http://download.eclipse.org/eclipsescada/updates/milestone/0.2/"/></td></tr>
+      <tr><td>Nightly 0.2.x</td><td><link xlink:href="http://download.eclipse.org/eclipsescada/updates/nightly/0.2/"/></td></tr>
+    </informaltable>
+    
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/tutorials/client_app/01_install1.png" />
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    
+    <note><para>
+    If Eclipse asks for a restart at the end of the installation process, do perform a restart of
+    the Eclipse IDE.
+    </para></note>
+    
+    <note><para>Eclipse might warn you that the content is not signed when you install
+    a nightly version. This is ok, since nightly versions do not get signed. Only milestone
+    and release version will be signed.</para></note>
+    
+  </section>
+  
+  <section><title>Creating a new project</title>
+  
+  <para>
+  The first step is to create a new project. Open the new project wizard using
+  <menuchoice><guimenu>New</guimenu><guimenuitem>Project…</guimenuitem></menuchoice>.
+  </para>
+  
+  <screenshot>
+  <mediaobject><imageobject><imagedata fileref="images/tutorials/client_app/02_wizard1.png"/></imageobject></mediaobject>
+  </screenshot>
+  
+  <para>Select the <quote>Plug-in Project</quote> wizard, since we will create a new Eclipse
+  RCP project. Press <guibutton>Next</guibutton> to continue.</para>
+  
+  <screenshot>
+  <mediaobject><imageobject><imagedata fileref="images/tutorials/client_app/02_wizard2.png"/></imageobject></mediaobject>
+  </screenshot>
+  
+  <para>Enter a project name. It is recommended to provide a hierarchical name, since the
+  same name will be used for as package name. Press <guibutton>Next</guibutton> to continue.</para>
+  
+  <screenshot>
+  <mediaobject><imageobject><imagedata fileref="images/tutorials/client_app/02_wizard3.png"/></imageobject></mediaobject>
+  </screenshot>
+  
+  <para>
+  Switch the option to create a new 3.x rich client application to <guilabel>Yes</guilabel>.
+   Press <guibutton>Next</guibutton> to continue.
+  </para>
+  
+  <screenshot>
+  <mediaobject><imageobject><imagedata fileref="images/tutorials/client_app/02_wizard4.png"/></imageobject></mediaobject>
+  </screenshot>
+  
+  <para>
+  From the list of templates select the <quote>Eclipse SCADA Client Application</quote> template.
+  </para>
+  
+  <screenshot>
+  <mediaobject><imageobject><imagedata fileref="images/tutorials/client_app/02_wizard5.png"/></imageobject></mediaobject>
+  </screenshot>
+  
+  <para>
+  If you don't plan to set up a local master server, you can use the one provided at
+  <filename>scada.eclipse.org</filename>. Finish the wizard by pressing the <guibutton>Finish</guibutton> button.
+  </para>
+  
+  <screenshot>
+  <mediaobject><imageobject><imagedata fileref="images/tutorials/client_app/02_wizard6.png"/></imageobject></mediaobject>
+  </screenshot>
+  
+  <para>
+  The wizard will now create a set of projects. First of all the RCP application project. Then
+  a parent build project, which hosts overall build configurations. The a feature project which
+  defines the target product content, and finally the product build project.
+  </para> 
+  
+  <screenshot>
+  <mediaobject><imageobject><imagedata fileref="images/tutorials/client_app/03_ide1.png"/></imageobject></mediaobject>
+  </screenshot>
+  
+  </section>
+  
+  <section><title>Running</title>
+  <para>…</para>
+  </section>
+  
+  <section><title>Building</title>
+  <para>
+  The full client build can be done with Maven Tycho. All the necessary files are already created by
+  the wizard. You only need a working internet connection, or a way for maven to download the required
+  artifacts.
+  </para>
+  
+  <section><title>Using the command line</title>
+  
+  <para>You can trigger the build using the command line. The tutorial assumes that the maven command
+  <filename>mvn</filename> is in your path. Otherwise you need to prefix the commands from the tutorial
+  with your full path to the maven executable.
+  </para>
+  
+  <programlisting language="bourne">cd path/to/com.my.sample.application-parent
+mvn verify</programlisting>
+
+  <para>
+  This will build the full client application. There is no need to <quote>install</quote> it. The output
+  files will be located under <filename>path/to/com.my.sample.application-product</filename> under
+  <filename>target/product</filename>.
+  </para>
+  
+  </section>
+  
+  </section>
+  
+  <section><title>What to do next?</title>
+  <para>
+  First of all you can extend the application by editing the resources, add more visual elements
+  provide more detail.
+  </para>
+  <para>
+  Second, it might be a good idea to split up the one module to multiple modules.
+  The <filename>plugin.xml</filename> holds all references to the user interface elements, but this
+  file can be split up and moved to a second <quote>plugin</quote> project. The new project
+  is a simple Eclipse plugin project. In this case it is not a full <quote>rich client application</quote>.
+  </para>
+  </section>
+	
+</section>

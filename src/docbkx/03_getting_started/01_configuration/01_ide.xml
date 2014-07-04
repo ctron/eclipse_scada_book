@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <section
-	xmlns="http://docbook.org/ns/docbook"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:xlink="http://www.w3.org/1999/xlink"
-	xmlns:xi="http://www.w3.org/2001/XInclude"
-	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+  xmlns="http://docbook.org/ns/docbook"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd"
+  xml:id="setup_ide">
 
 	<title>Setting up a configuration environment</title>
 
@@ -14,7 +15,7 @@
 		Java, Eclipse and all necessary plugins to get started. 
 	</para>
 	
-	<section>
+	<section xml:id="setup_ide_java">
 		<title>Installing Java</title>
 		
 		<para>
@@ -72,7 +73,7 @@
 		
 	</section>
 	
-	<section>
+	<section xml:id="setup_ide_eclipse">
 		<title>Installing Eclipse</title>
 	
 		<para>
@@ -106,9 +107,10 @@
 	
 		<para>
 			Next step is to install the necessary plugins which contain the actual 
-			Eclipse SCADA components. For this go to "Help > Install New Software". 
+			Eclipse SCADA components. For this go to
+            <menuchoice><guimenu>Help</guimenu><guimenuitem>Install New Software</guimenuitem></menuchoice>. 
 			In the text box "Work with" just enter following URL: 
-			<link xlink:href="http://download.eclipse.org/eclipsescada/updates/release/0.1.0/">http://download.eclipse.org/eclipsescada/updates/release/0.1.0/</link>
+			<link xlink:href="http://download.eclipse.org/eclipsescada/updates/release/0.1.0/"/>
 			Then select the "Eclipse SCADA IDE" category and click on "Next".
 			The next screen should contain all the additionally selected 
 			dependencies. Click on "Next" there as well. On the next screen 
@@ -118,15 +120,15 @@
 		
 		<para>
 			Additionally you can now install the additional openSCADA components. 
-			These contain the OPC and the SNMP adapters. This will be part of 
+			These contain the OPC and the SNMP adapters. This may be part of 
 			the 0.2.0 release of Eclipse SCADA, but for now they have to be 
 			downloaded from the openSCADA site. To install it just repeat the steps
-			above with the URL <link xlink:href="http://repo.openscada.org/p2/org.openscada/R/1.2.0/">http://repo.openscada.org/p2/org.openscada/R/1.2.0/</link>
+			above with the URL <link xlink:href="http://repo.openscada.org/p2/org.openscada/R/1.2.0/"/>
 			<footnote>
 				<para>
 					The release will not be ready until End of May, until then
 					please use the integration build found under
-					<link xlink:href="http://repo.openscada.org/p2/org.openscada/I/1.2.0/">http://repo.openscada.org/p2/org.openscada/I/1.2.0/</link>
+					<link xlink:href="http://repo.openscada.org/p2/org.openscada/I/1.2.0/"/>
 				</para>
 			</footnote>
 			and select the "OpenSCADA IDE" category.

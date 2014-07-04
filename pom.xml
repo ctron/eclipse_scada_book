@@ -224,7 +224,7 @@
             <configuration>
 
               <encoding>UTF-8</encoding>
-              <keepBaseUrl>true</keepBaseUrl>
+              <foLocalBaseUrl>true</foLocalBaseUrl>
 
               <chunkedOutput>true</chunkedOutput>
               <xincludeSupported>true</xincludeSupported>
