@@ -28,6 +28,30 @@
         <version>2.6</version>
         <executions>
           <execution>
+            <id>fo-resources</id>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <phase>generate-resources</phase>
+            <configuration>
+              <outputDirectory>${project.build.directory}/docbkx/pdf</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>src/resources/common</directory>
+                  <excludes>
+                    <exclude>**/.*</exclude>
+                  </excludes>
+                </resource>
+                <resource>
+                  <directory>src/resources/fo</directory>
+                  <excludes>
+                    <exclude>**/.*</exclude>
+                  </excludes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+          <execution>
             <id>html-resources</id>
             <goals>
               <goal>copy-resources</goal>
@@ -170,7 +194,7 @@
       <plugin>
         <groupId>com.agilejava.docbkx</groupId>
         <artifactId>docbkx-maven-plugin</artifactId>
-        <version>2.0.15</version>
+        <version>2.0.16-SNAPSHOT</version>
 
         <executions>
           <execution>
@@ -200,6 +224,7 @@
             <configuration>
 
               <encoding>UTF-8</encoding>
+              <keepBaseUrl>true</keepBaseUrl>
 
               <chunkedOutput>true</chunkedOutput>
               <xincludeSupported>true</xincludeSupported>
@@ -216,8 +241,10 @@
               <xhtmlCustomization>${customization.xhtml}</xhtmlCustomization>
               <xhtml5Customization>src/userxsl/xhtml5/docbook.xsl</xhtml5Customization>
               <epub3Customization>src/userxsl/epub3/docbook.xsl</epub3Customization>
+              
               <hyphenate>true</hyphenate>
               <hyphenateVerbatim>true</hyphenateVerbatim>
+              
               <generateIndex>1</generateIndex>
               <sectionAutolabel>1</sectionAutolabel>
               <preProcess>

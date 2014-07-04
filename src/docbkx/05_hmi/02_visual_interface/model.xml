@@ -5,7 +5,8 @@
          xmlns:xi="http://www.w3.org/2001/XInclude"
          xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
          xmlns:ecdt="urn:ecore:data:type"
-         xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+         xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd"
+         xml:id="model_vi">
    <title>Model definition – http://eclipse.org/SCADA/VisualInterface</title>
    <para>
 	This section describes the model <constant>http://eclipse.org/SCADA/VisualInterface</constant>.

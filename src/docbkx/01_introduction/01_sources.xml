@@ -12,13 +12,13 @@
 		<itemizedlist>
 			<listitem>
 				<para>
-					<link xlink:href="http://www.eclipse.org/eclipsescada/">http://www.eclipse.org/eclipsescada</link>
+					<link xlink:href="http://www.eclipse.org/eclipsescada/"/>
 					– The Eclipse SCADA homepage
 				</para>
 			</listitem>
 			<listitem>
 				<para>
-					<link xlink:href="http://openscada.org">http://openscada.org</link>
+					<link xlink:href="http://openscada.org"/>
 					– The openSCADA homepage holds some information about the system
 					that became Eclipse SCADA. There is also the wiki, news group and
 					blog.
@@ -26,14 +26,13 @@
 			</listitem>
 			<listitem>
 				<para>
-					<link xlink:href="https://wiki.eclipse.org/EclipseSCADA">https://wiki.eclipse.org/EclipseSCADA</link>
+					<link xlink:href="https://wiki.eclipse.org/EclipseSCADA"/>
 					– The Eclipse SCADA Wiki page
 				</para>
 			</listitem>
 			<listitem>
 				<para>
-					<link xlink:href="http://download.eclipse.org/eclipsescada/">http://download.eclipse.org/eclipsescada
-					</link>
+					<link xlink:href="http://download.eclipse.org/eclipsescada/"/>
 					– The download area of Eclipse SCADA
 				</para>
 			</listitem>

@@ -24,12 +24,155 @@
   runs the final application.</para>
   </note>
   
+  <para>
+  See also:
+  <itemizedlist>
+    <listitem><para>For more information about the script engine <quote>Nashorn</quote> – 
+    <link xlink:href="https://wiki.openjdk.java.net/display/Nashorn/Main"/>
+    </para></listitem>
+  </itemizedlist>
+  </para>
+  
   <section><title>Script context</title>
-  <para></para>
+  <para>
+  Each symbol has its own script context. If a symbol uses a symbol reference to include
+  another symbol, then this included symbol does not share the script context, but also has its
+  own script context.
+  </para>
+  <para>
+  This means that functions which are created in a script context will not be shared between symbols.
+  Neither will global variables or other elements be shared.
+  </para>
+  <para>
+  The script context contains the following global variables when a script gets called. Other script
+  executors might add additional variables to the context. 
+  </para>
+  
+  <table>
+    <title>VI script context</title>
+    <tgroup cols="3">
+      
+      <thead>
+        <row>
+          <entry>Variable name</entry><entry>Description</entry>
+        </row>
+      </thead>
+      
+      <tbody>
+      
+        <row>
+          <entry>controller</entry><entry>The instance of the symbol controller</entry>
+        </row>
+        
+        <row>
+          <entry>data</entry><entry>The symbol data manager</entry>
+        </row>
+        
+        <row>
+          <entry>viewManager</entry><entry>The view manager</entry>
+        </row>
+        
+        <row>
+          <entry>styleGenerator</entry><entry>The style controller instance</entry>
+        </row>
+        
+        <row>
+          <entry>GSON</entry>
+          <entry>
+          <para>
+          A predefined GSON parser which is used to encode/decode complex objects
+          (like Maps) to a format that can be interchanged between the JavaScript and the Java
+          code.
+          </para>
+          <para>
+          Also see <link xlink:href="https://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/Gson.html"/>.
+          </para>
+          </entry>
+          <entry>
+           
+          </entry>
+        </row>
+      
+      </tbody>
+      
+    </tgroup>
+    
+  </table>
+  
+  <para>
+  Each script context also has a default output stream. This stream is directed to an Eclipse Console
+  view, which is available for every view instance. Consoles are shared between symbols for each view
+  instance. The console view is a normal Eclipse view, which can be opened in the Eclipse IDE using
+  <menuchoice><guimenu>Window</guimenu><guisubmenu>Show View</guisubmenu><guimenuitem>Other…</guimenuitem></menuchoice>
+  .
+  </para>
+  
+  </section>
+  
+  <section xml:id="vi_properties"><title>Properties</title>
+  <para>
+  Each symbol has a set of properties which is a key value map. Key and value are both of the type
+  <type>String</type>. Symbols can include other symbols and child symbols inherit the properties
+  of their parent symbol, but they can override the value. Internally this is realized using the
+  Java <link xlink:href="http://docs.oracle.com/javase/7/docs/api/java/util/Properties.html">Properties</link> class.
+  </para>
+  
+  <para>
+  Properties can be accessed from the script using the <varname>controller</varname> instance and the
+  method <function>getProperty</function>.
+  </para>
+  
+  <funcsynopsis>
+    <funcprototype>
+      <?dbhtml funcsynopsis-style='ansi'?>
+      <funcdef>Object <function>getProperty</function></funcdef>
+      <paramdef>String <parameter>name</parameter></paramdef>
+    </funcprototype>
+  </funcsynopsis> 
+  
+  <funcsynopsis>
+    <funcprototype>
+      <?dbhtml funcsynopsis-style='ansi'?>
+      <funcdef>Object <function>getProperty</function></funcdef>
+      <paramdef>String <parameter>name</parameter></paramdef>
+      <paramdef>String <parameter>defaultValue</parameter></paramdef>
+    </funcprototype>
+  </funcsynopsis>
+  
   </section>
   
   <section><title>Life Cycle</title>
-  <para></para>
+  <para>
+  When a symbol is loaded first all the script modules which are defined at the symbol level
+  are loaded in the order they are defined. This is done for all symbols in the hierarchy.
+  </para>
+  
+  <para>
+  After the symbol tree has been instantiated the whole view will be initialized (started)
+  by calling the <property>onInit</property> script of each symbol. Outer symbols will be called
+  first. Normally the script will register data with the data controller. If data data changes this will
+  trigger a call of <property>onUpdate</property>.
+  </para>
+
+  <para>
+  When the view gets disposed and the symbol has a <property>onDispose</property> script defined,
+  then this script will be called. First the other symbols, then the inner symbols.
+  </para>  
+  
+  <para>
+  There is no need to unregister items in the <property>onDispose</property> script, which got registered
+  in the <property>onInit</property> or other scripts. Registered items will always be unregistered when
+  the symbol gets disposed. So normally the <property>onDispose</property> script is unused.
+  </para>
+  
+  <para>
+  When a symbol is referenced, meaning a symbol is included into another symbol, then the 
+  script <property>onCreateProperties</property> of the symbol reference will be called. This method
+  has the chance to extend the properties set which will be passed on the child symbol. It will be
+  called after the script modules have been loaded but before the <property>onInit</property> script
+  was executed. Also see <xref linkend="vi_properties"/>.
+  </para>
+  
   </section>
   
   <section><title>Element controllers</title>
@@ -39,13 +182,30 @@
   be accessed from the script fragments and be used to manipulate the actual realized graphical element. 
   </para>
   
-  <programlisting language="JavaScript"><![CDATA[var text = controller.getElement ( "myTextElement" );
+  <para>
+  The method <function>getElement</function> retrieves the controller of an element.
+  </para>
+  
+  <funcsynopsis>
+    <funcprototype>
+      <?dbhtml funcsynopsis-style='ansi'?>
+      <funcdef>Object <function>getElement</function></funcdef>
+      <paramdef>String <parameter>elementName</parameter></paramdef>
+    </funcprototype>
+  </funcsynopsis> 
+  
+  <para>
+  The following sample shows how to get the element names <quote>myTextElement</quote> and
+  set the properties <property>text</property> and <property>foregroundColor</property>.
+  </para>
+  
+  <programlisting language="javascript"><![CDATA[var text = controller.getElement ( "myTextElement" );
 text.setText ( "Hello World" );
 text.setForegroundColor ( "#FF0000");
 ]]></programlisting>
 
   <para>
-  Each element has a <quote>name</quote> attribute which must be unique for each symbol.
+  Each element has a <property>name</property> attribute which must be unique for each symbol.
   The <varname>controller</varname> variable can be used to retrieve the controller of the element,
   by name, from the symbol controller. All public method of the controller can be called from
   the JavaScript fragment.
@@ -54,7 +214,7 @@ text.setForegroundColor ( "#FF0000");
   <para>
   In order to see a mapping table of which element is controlled by which controller, and to
   see a documentation of the controllers, open the Eclipse help system and navigate to
-  <guimenu>Eclipse SCADA HMI</guimenu> / <guisubmenu>Reference</guisubmenu> / <guimenuitem>Scripting</guimenuitem>.
+  <menuchoice><guimenu>Eclipse SCADA HMI</guimenu><guisubmenu>Reference</guisubmenu><guimenuitem>Scripting</guimenuitem></menuchoice>.
   </para>
   
   </section>

@@ -12,110 +12,108 @@
     Several visual elements may specify a border. The border definition has a special syntax.
   </para>
 
-<section>
-  <title>Border Syntax</title>
+  <section>
+    <title>Border Syntax</title>
+  
+      <para>A simple integer specifies a solid x-Pixel border in the default color.</para>
+  
+      <para>A specific border style can be created by prefixing the border type.</para>
+      <programlisting>TYPE:[property1=value1,property2=value2]</programlisting>
+      <para>If the border type has a simple value argument the argument can simply be specified without brackets:</para>
+      <programlisting>TYPE:simpleValue</programlisting>
+  
+  </section>
 
-    <para>A simple integer specifies a solid x-Pixel border in the default color.</para>
+  <section>
+    <title>Solid line border</title>
+    <para>The line border type is a simple line. The type id is <code>LINE:</code></para>
+    <para>The following properties are supported:</para>
+    <informaltable>
+      <tr>
+        <th>Name</th>
+        <th>Simple value</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>lineWidth</td>
+        <td>X</td>
+        <td>The line size in pixels (might get scaled)</td>
+      </tr>
+      <tr>
+        <td>color</td>
+        <td></td>
+        <td>Line color in hex notation</td>
+      </tr>
+    </informaltable>
+  </section>
 
-    <para>A specific border style can be created by prefixing the border type.</para>
-    <programlisting>TYPE:[property1=value1,property2=value2]</programlisting>
-    <para>If the border type has a simple value argument the argument can simply be specified without brackets:</para>
-    <programlisting>TYPE:simpleValue</programlisting>
+  <section>
+    <title>Group border</title>
+    <para>A draw2d group border. The type id is <code>GROUP:</code></para>
+    <para>The following properties are supported:</para>
+    <informaltable>
+      <tr>
+        <th>Name</th>
+        <th>Simple value</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>text</td>
+        <td>X</td>
+        <td>The text of the group border</td>
+      </tr>
+      <tr>
+        <td>textColor</td>
+        <td>The color of the text</td>
+      </tr>
+    </informaltable>
+  </section>
 
-    <section>
-      <title>Solid line border</title>
-      <para>The line border type is a simple line.</para>
-      <para>The type id is <code>LINE:</code></para>
-      <para>The following properties are supported:</para>
-      <informaltable>
-        <tr>
-          <th>Name</th>
-          <th>Simple value</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td>lineWidth</td>
-          <td>X</td>
-          <td>The line size in pixels (might get scaled)</td>
-        </tr>
-        <tr>
-          <td>color</td>
-          <td></td>
-          <td>Line color in hex notation</td>
-        </tr>
-      </informaltable>
-    </section>
+  <section>
+    <title>Title border</title>
+    <para>A draw2d title border. The type id is <code>TITLE:</code></para>
+    <para>The following properties are supported:</para>
+    <informaltable>
+      <tr>
+        <th>Name</th>
+        <th>Simple value</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>text (simple value)</td>
+        <td>X</td>
+        <td>The text of the group border</td>
+      </tr>
+      <tr>
+        <td>textColor</td>
+        <td></td>
+        <td>The color of the text</td>
+      </tr>
+      <tr>
+        <td>backgroundColor</td>
+        <td></td>
+        <td>The color of the background</td>
+      </tr>
+    </informaltable>
+  </section>
 
-    <section>
-      <title>Group border</title>
-      <para>A draw2d group border</para>
-      <para>The type id is <code>GROUP:</code></para>
-      <para>The following properties are supported:</para>
-      <informaltable>
-        <tr>
-          <th>Name</th>
-          <th>Simple value</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td>text</td>
-          <td>X</td>
-          <td>The text of the group border</td>
-        </tr>
-        <tr>
-          <td>textColor</td>
-          <td>The color of the text</td>
-        </tr>
-      </informaltable>
-    </section>
-
-    <section>
-      <title>Title border</title>
-      <para>A draw2d title border</para>
-      <para>The type id is <code>TITLE:</code></para>
-      <para>The following properties are supported:</para>
-      <informaltable>
-        <tr>
-          <th>Name</th>
-          <th>Simple value</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td>text (simple value)</td>
-          <td>X</td>
-          <td>The text of the group border</td>
-        </tr>
-        <tr>
-          <td>textColor</td>
-          <td></td>
-          <td>The color of the text</td>
-        </tr>
-        <tr>
-          <td>backgroundColor</td>
-          <td></td>
-          <td>The color of the background</td>
-        </tr>
-      </informaltable>
-    </section>
-
-    <section>
-      <title>Margin border</title>
-      <para>A margin border.</para>
-      <para>The type id is <code>MARGIN:</code></para>
-      <para>The following properties are supported:</para>
-      <informaltable>
-        <tr>
-          <th>Name</th>
-          <th>Simple value</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td>inset</td>
-          <td>X</td>
-          <td>The inset of the margin border</td>
-        </tr>
-      </informaltable>
-    </section>
+  <section>
+    <title>Margin border</title>
+    <para>A margin border. The type id is <code>MARGIN:</code></para>
+    <para>The following properties are supported:</para>
+    <informaltable>
+      <tr>
+        <th>Name</th>
+        <th>Simple value</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>inset</td>
+        <td>X</td>
+        <td>The inset of the margin border</td>
+      </tr>
+    </informaltable>
+  </section>
 
   
   <section>
@@ -125,7 +123,6 @@
     </para>
     <para>The syntax of this border style is:</para>
     <programlisting>COMPOUND:[TYPE:a|TYPE:b]</programlisting>
-  </section>
   </section>
   
   <section>

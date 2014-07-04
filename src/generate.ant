@@ -5,7 +5,7 @@
 		<path location="../lib/saxon9he.jar"/>
 	</path>
 	
-    <!-- =========/project>======================== 
+    <!-- ================================= 
           target: default              
          ================================= -->
 	<target name="default">

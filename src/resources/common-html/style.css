@@ -75,3 +75,8 @@ div.note {
 	margin: 1em;
 	border: 1px solid #AAAACC;
 }
+
+/* gui menu */
+span.guisubmenu, span.guimenu, span.guimenuitem {
+	background-color: #F0F0F0;
+}

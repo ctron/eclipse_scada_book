@@ -1,0 +1,38 @@
+<section
+  xmlns="http://docbook.org/ns/docbook"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd"
+  xml:id="vi_editing">
+
+  <title>Editing</title>
+
+  <para>
+  The model describing the symbols and views is an Ecore model, which is documented in
+  <xref linkend="model_vi"/>. Eclipse SCADA Provides a set of tools (Wizards, Editors) in order
+  to ease the development symbols. However it still is possible to edit the symbols with a
+  plain text or XML editor.
+  </para>
+  
+  <section>
+  <title>Preview</title>
+  <para>
+  In order to see a preview of the complete view, including embedded symbols the
+  <quote>Visual Interface Preview</quote> editor has to be opened. This can be done
+  using the context menu of the appropriate file and
+  <menuchoice><guimenu>Open with</guimenu><guimenuitem>Visual Interface Preview</guimenuitem></menuchoice>.
+  </para>
+  
+  <screenshot>
+    <title>Screenshot of preview menu entry</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/vi/preview_menu.png"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+  
+  </section>
+
+</section>

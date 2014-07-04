@@ -60,7 +60,7 @@
       <title>Create a new visual interface file</title>
       
       <para>
-      Inside the Eclipse IDE create a new file <guimenu>File</guimenu> / <guisubmenu>New </guisubmenu> / <guimenuitem>Other…</guimenuitem>. 
+      Inside the Eclipse IDE create a new file <menuchoice><guimenu>File</guimenu><guisubmenu>New </guisubmenu><guimenuitem>Other…</guimenuitem></menuchoice>. 
       </para>
       
       <para>
@@ -104,6 +104,7 @@
     </section>
     
     <xi:include href="scripting.xml"/>
+    <xi:include href="editing.xml"/>
     <xi:include href="model.xml"/>
     
 </section>
