@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" 
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd"
+  xml:id="sample_hive"
+  >
+
+  <title>Sample Hive</title>
+
+  <programlisting language="java"><xi:include href="SampleHive.java" parse="text" encoding="UTF-8"/></programlisting>
+
+  <para>
+  This sample hive features one item named <quote>mem1</quote> which can be read and written. Data
+  that gets written on the item will immediately be available as a change. However when the
+  application is restarted the information will be lost and the item will again be initialized
+  with <constant>null</constant>.
+  </para>
+
+</section>

@@ -1,0 +1,76 @@
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" 
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd"
+  xml:id="core_export_modbus_prog"
+  >
+
+  <title>Explicit exporting</title>
+  
+  <para>
+  In order to explicitly export a Hive instance first of all a hive instance is required. A simple hive
+  example can be found in section <xref linkend="sample_hive"/>.
+  </para>
+  
+  <para>
+  In order to export the Hive instance using the Modbus Export the StaticModbusExport Builder class
+  has to be used.
+  </para>
+  
+  <programlisting language="java"><![CDATA[import org.eclipse.scada.da.server.exporter.modbus.ModbusExport;
+import org.eclipse.scada.da.server.exporter.modbus.StaticModbusExport;
+import org.eclipse.scada.da.server.exporter.modbus.StaticModbusExport.Builder;
+import org.eclipse.scada.da.server.exporter.modbus.io.UnsignedIntegerType;
+import org.eclipse.scada.da.server.exporter.modbus.io.UnsignedShortIntegerType;
+
+…
+
+// create the builder for creating the static modbus exporter
+final Builder builder = new StaticModbusExport.Builder ( this.hive );
+
+// add exports
+/*
+ * note that the export the same item using two data types (16bit and 32bit)
+ */
+int offset = 0;
+builder.addExport ( "mem1", offset, UnsignedShortIntegerType.INSTANCE );
+offset += UnsignedShortIntegerType.LENGTH;
+builder.addExport ( "mem1", offset, UnsignedIntegerType.INSTANCE );
+
+// create and start the modbus exporter
+this.modbusExporter = builder.build ();]]></programlisting>
+  
+  
+  <para>
+  The builder instance can be used to set all necessary options and parameters.
+  Once the configuration is complete the <methodname>build</methodname> method must be called.
+  It will create and start the new export instance. It is important to dispose the
+  instance when it is no longer needed. If this application <quote>runs forever</quote>
+  there is no need to clean up.
+  </para>
+  
+  <para>
+  The method <methodname>addExport</methodname> registers an item from the hive to be exported
+  using the modbus interface. The offset is, contrary to modbus, in bytes and using a zero based
+  index. Although it is technically possible to start an export with a odd number (e.g. 1 or 5) it
+  is not recommended, since this would mean that the whole export is not word/register aligned.
+  Eclipse SCADA itself can read such data using the memory model definition, but many other modbus
+  based tools cannot.
+  </para>
+  
+  <para>
+  Also is it important not to overlap registers/bytes when adding exports. At the moment
+  there is no check for overlapping exports. The length of a data type can always be checked
+  using the method <methodsynopsis><type>int</type> <methodname>SourceType.getLength</methodname><void/></methodsynopsis>. 
+  Some types also have a <constant>LENGTH</constant> constant defined.
+  </para>
+  
+  <para>
+  For more information about the register layout see <xref linkend="modbus_exporter_register_layout"/>.
+  </para>
+  
+  <para>
+  See also the page on the wiki <link xlink:href="https://wiki.eclipse.org/EclipseSCADA/Tutorials/StaticModbusExport"/>
+  and the sample project in GIT <link xlink:href="http://git.eclipse.org/c/eclipsescada/org.eclipse.scada.samples.git/tree/org.eclipse.scada.examples.modbus.exporter"/>
+  </para>
+  
+</section>

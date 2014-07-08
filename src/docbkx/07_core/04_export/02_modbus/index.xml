@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" 
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+
+  <title>Modbus Exporter</title>
+  
+  <para>
+  The modbus exporter allows exporting DA data from Eclipse SCADA over the Modbus TCP protocol.
+  See also <link xlink:href="http://www.simplymodbus.ca/TCP.htm"/>.
+  </para>
+  
+  <para>
+  In this case Eclipse SCADA is a Modbus TCP Slave, which is a TCP server. This means that
+  Eclipse SCADA is waiting for incoming TCP connections from Modbus TCP Master applications.
+  </para>
+  
+  <para>
+  There are two ways using this exporter. One is the explicit way, by programmatically creating
+  a Hive instance and exporting it. See also <xref linkend="core_export_modbus_prog"/>.
+  </para>
+  
+  <para>
+  The second variant is by activating the Modbus exporter service in an OSGi based application using
+  the OSGi Hive instance. This setup can easily be done using the Configurator IDE enabling
+  the Modbus exporter on a Master server instance.
+  </para>
+  
+  <xi:include href="programmatically.xml"/>
+  <xi:include href="register_layout.xml"/>  
+        
+</section>

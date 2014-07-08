@@ -75,6 +75,7 @@
 	<xi:include href="04_configuration/index.xml" />
 	<xi:include href="05_hmi/index.xml" />
     <xi:include href="06_deployment/index.xml" />
+    <xi:include href="07_core/index.xml" />
     
     <xi:include href="70_tutorials/index.xml" />
 

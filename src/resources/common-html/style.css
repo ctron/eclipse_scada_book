@@ -21,8 +21,8 @@ span.term {
 /* table */
 
 .table-contents table {
-	border: 0px;
-	border-bottom: 2pt solid #AAAAAA;
+	xx-border: 0px;
+	xx-border-bottom: 2pt solid #AAAAAA;
 	background: #F0F0F0;
 	border-spacing: 0px;
 }
@@ -30,16 +30,22 @@ span.term {
 .table-contents th {
 	background: #E0E0E0;
 	
-	border: 0px;
+	xx-border: 0px;
 	padding: .5em;
 	
-	border-bottom: 2pt solid #AAAAAA;
+	xx-border-bottom: 2pt solid #AAAAAA;
 }
 
 .table-contents td {
-	border: 0px;
+	xx-border: 0px;
 	padding: .5em;
 }
+
+.table-contents tr:nth-child(even) {
+	background: #F9F9F9;
+}
+
+.table
 
 /* informaltable */
 

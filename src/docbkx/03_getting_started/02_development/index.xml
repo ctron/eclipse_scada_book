@@ -8,5 +8,6 @@
 	
 	<xi:include href="01_setup.xml"/>
 	<xi:include href="02_client.xml"/>
+    <xi:include href="03_hive.xml"/>
 
 </section>

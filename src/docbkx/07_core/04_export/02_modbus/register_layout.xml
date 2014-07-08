@@ -1,0 +1,75 @@
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" 
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd"
+  xml:id="modbus_exporter_register_layout"
+  >
+  
+  <title>Register layout</title>
+  
+  <para>
+  All registers are addressed zero based. 0 is the first register, 1 is the second register.
+  The registers are relative addresses to the start of the mapped entry.
+  </para>
+  
+  <para>
+  The register layout is for the modbus export is fixed and depends on the data type. The following
+  data types are defined:
+  </para>
+  
+  <section><title>16bit signed integer</title>
+  <para>
+  
+  <table colsep="1" rowsep="1">
+    <title>Register layout of 16bit signed integer modbus export</title>
+    <tgroup cols="3">
+      <colspec/>
+      <colspec/>
+      <colspec/>
+      
+      <thead><row><entry>Register</entry><entry>Type</entry><entry>Description</entry></row></thead>
+      
+      <tbody>
+      
+        <row>
+          <entry>0</entry>
+          <entry><xref linkend="modbus_exporter_state"/></entry>
+          <entry>State Information</entry>
+        </row>
+        
+        <row>
+          <entry rowsep="0">1</entry>
+          <entry morerows="3" valign="top"><xref linkend="modbus_exporter_timestamp"/></entry>
+          <entry morerows="3" valign="top">Timestamp</entry>
+        </row>
+        
+        <row><entry rowsep="0">2</entry></row><row><entry rowsep="0">3</entry></row><row><entry>4</entry></row>
+        
+        <row>
+          <entry>5</entry>
+          <entry><xref linkend="modbus_exporter_state"/></entry>
+          <entry>Value</entry>
+        </row>
+      
+      </tbody>
+      
+    </tgroup>
+  </table>
+  
+  </para>
+  </section>
+  
+  <section xml:id="modbus_exporter_state"><title>Status information</title>
+  <para>
+  The status information is a 16bit value and encoded as follows:
+  </para>
+  
+  <para>FIXME: To be written!</para>
+  </section>
+  
+  <section xml:id="modbus_exporter_timestamp"><title>Timestamp</title>
+  <para>
+  Timestamps are exported as Unix timestamp in milliseconds, based on UTC. It is a 64bit integer value.
+  </para>
+  </section>
+  
+</section>
