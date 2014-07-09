@@ -5,4 +5,5 @@
   <xsl:import href="urn:docbkx:stylesheet/highlight.xsl"/>
 	
   <xsl:param name="keep.relative.image.uris">1</xsl:param>
+  
 </xsl:stylesheet>

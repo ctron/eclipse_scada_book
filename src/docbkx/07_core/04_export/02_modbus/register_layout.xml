@@ -22,9 +22,7 @@
   <table colsep="1" rowsep="1">
     <title>Register layout of 16bit signed integer modbus export</title>
     <tgroup cols="3">
-      <colspec/>
-      <colspec/>
-      <colspec/>
+      <colspec/><colspec/><colspec/>
       
       <thead><row><entry>Register</entry><entry>Type</entry><entry>Description</entry></row></thead>
       
@@ -46,9 +44,176 @@
         
         <row>
           <entry>5</entry>
-          <entry><xref linkend="modbus_exporter_state"/></entry>
-          <entry>Value</entry>
+          <entry>16bit signed integer</entry>
+          <entry>The actual value. This register is writable using function code 6 and 16.</entry>
         </row>
+      
+      </tbody>
+      
+    </tgroup>
+  </table>
+  
+  </para>
+  </section>
+  
+  <section><title>16bit unsigned integer</title>
+  <para>
+  
+  <table colsep="1" rowsep="1">
+    <title>Register layout of 16bit unsigned integer modbus export</title>
+    <tgroup cols="3">
+      <colspec/><colspec/><colspec/>
+      
+      <thead><row><entry>Register</entry><entry>Type</entry><entry>Description</entry></row></thead>
+      
+      <tbody>
+      
+        <row>
+          <entry>0</entry>
+          <entry><xref linkend="modbus_exporter_state"/></entry>
+          <entry>State Information</entry>
+        </row>
+        
+        <row>
+          <entry rowsep="0">1</entry>
+          <entry morerows="3" valign="top"><xref linkend="modbus_exporter_timestamp"/></entry>
+          <entry morerows="3" valign="top">Timestamp</entry>
+        </row>
+        
+        <row><entry rowsep="0">2</entry></row><row><entry rowsep="0">3</entry></row><row><entry>4</entry></row>
+        
+        <row>
+          <entry>5</entry>
+          <entry>16bit unsigned integer</entry>
+          <entry>The actual value. This register is writable using function code 6 and 16.</entry>
+        </row>
+      
+      </tbody>
+      
+    </tgroup>
+  </table>
+  
+  </para>
+  </section>
+  
+  
+  <section><title>32bit signed integer</title>
+  <para>
+  
+  <table colsep="1" rowsep="1">
+    <title>Register layout of 32bit signed integer modbus export</title>
+    <tgroup cols="3">
+      <colspec/><colspec/><colspec/>
+      
+      <thead><row><entry>Register</entry><entry>Type</entry><entry>Description</entry></row></thead>
+      
+      <tbody>
+      
+        <row>
+          <entry>0</entry>
+          <entry><xref linkend="modbus_exporter_state"/></entry>
+          <entry>State Information</entry>
+        </row>
+        
+        <row>
+          <entry rowsep="0">1</entry>
+          <entry morerows="3" valign="top"><xref linkend="modbus_exporter_timestamp"/></entry>
+          <entry morerows="3" valign="top">Timestamp</entry>
+        </row>
+        
+        <row><entry rowsep="0">2</entry></row><row><entry rowsep="0">3</entry></row><row><entry>4</entry></row>
+        
+        <row>
+          <entry rowsep="0">5</entry>
+          <entry morerows="1" valign="top">32bit signed integer</entry>
+          <entry morerows="1" valign="top">The actual value. These registers are writable using function code 16.</entry>
+        </row>
+        
+        <row><entry rowsep="0">6</entry></row>
+      
+      </tbody>
+      
+    </tgroup>
+  </table>
+  
+  </para>
+  </section>
+  
+  <section><title>32bit unsigned integer</title>
+  <para>
+  
+  <table colsep="1" rowsep="1">
+    <title>Register layout of 32bit unsigned integer modbus export</title>
+    <tgroup cols="3">
+      <colspec/><colspec/><colspec/>
+      
+      <thead><row><entry>Register</entry><entry>Type</entry><entry>Description</entry></row></thead>
+      
+      <tbody>
+      
+        <row>
+          <entry>0</entry>
+          <entry><xref linkend="modbus_exporter_state"/></entry>
+          <entry>State Information</entry>
+        </row>
+        
+        <row>
+          <entry rowsep="0">1</entry>
+          <entry morerows="3" valign="top"><xref linkend="modbus_exporter_timestamp"/></entry>
+          <entry morerows="3" valign="top">Timestamp</entry>
+        </row>
+        
+        <row><entry rowsep="0">2</entry></row><row><entry rowsep="0">3</entry></row><row><entry>4</entry></row>
+        
+        <row>
+          <entry rowsep="0">5</entry>
+          <entry morerows="1" valign="top">32bit unsigned integer</entry>
+          <entry morerows="1" valign="top">The actual value. These registers are writable using function code 16.</entry>
+        </row>
+        
+        <row><entry rowsep="0">6</entry></row>
+      
+      </tbody>
+      
+    </tgroup>
+  </table>
+  
+  </para>
+  </section>
+  
+  <section><title>IEEE 754 64bit floating point</title>
+  <para>
+  
+  <table colsep="1" rowsep="1">
+    <title>Register layout of 32bit unsigned integer modbus export</title>
+    <tgroup cols="3">
+      <colspec/><colspec/><colspec/>
+      
+      <thead><row><entry>Register</entry><entry>Type</entry><entry>Description</entry></row></thead>
+      
+      <tbody>
+      
+        <row>
+          <entry>0</entry>
+          <entry><xref linkend="modbus_exporter_state"/></entry>
+          <entry>State Information</entry>
+        </row>
+        
+        <row>
+          <entry rowsep="0">1</entry>
+          <entry morerows="3" valign="top"><xref linkend="modbus_exporter_timestamp"/></entry>
+          <entry morerows="3" valign="top">Timestamp</entry>
+        </row>
+        
+        <row><entry rowsep="0">2</entry></row><row><entry rowsep="0">3</entry></row><row><entry>4</entry></row>
+        
+        <row>
+          <entry rowsep="0">5</entry>
+          <entry morerows="3" valign="top">IEEE 754 64bit floating point</entry>
+          <entry morerows="3" valign="top">The actual value. These registers are writable using function code 16.</entry>
+        </row>
+        
+        <row><entry rowsep="0">6</entry></row><row><entry rowsep="0">7</entry></row><row><entry rowsep="0">8</entry></row>
       
       </tbody>
       
@@ -61,9 +226,13 @@
   <section xml:id="modbus_exporter_state"><title>Status information</title>
   <para>
   The status information is a 16bit value and encoded as follows:
+<programlisting><![CDATA[  MSB           LSB
+  00000000-00000000
+                  X   = Bit 1 - Alarm (1=alarm, 0=no alarm)
+                 X    = Bit 2 - Warning (1=warning, 0=no warning)
+                X     = Bit 3 - Manual override (1=active, 0=not active)
+               X      = Bit 4 - Blocked (1=blocked, 0=not blocked)]]></programlisting>
   </para>
-  
-  <para>FIXME: To be written!</para>
   </section>
   
   <section xml:id="modbus_exporter_timestamp"><title>Timestamp</title>
