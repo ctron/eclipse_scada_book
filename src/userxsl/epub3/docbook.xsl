@@ -7,6 +7,17 @@
   <xsl:import href="../../../target/docbkx/template/titlepage/titlepage.epub3.xsl"/>
 	
   <xsl:param name="toc.section.depth">3</xsl:param>
+  
   <xsl:param name="section.label.includes.component.label">1</xsl:param>
+  
+  <xsl:param name="table.borders.with.css">1</xsl:param>
+  <xsl:param name="default.table.frame">none</xsl:param>
+  
+  <xsl:param name="table.frame.border.style">solid</xsl:param>
+  <xsl:param name="table.frame.border.thickness">2pt</xsl:param>
+  <xsl:param name="table.frame.border.color">#AAAAAA</xsl:param>
+  
+  <xsl:param name="table.cell.border.color">white</xsl:param>
+  <xsl:param name="table.cell.border.thickness">2.5pt</xsl:param>
   
 </xsl:stylesheet>

@@ -21,52 +21,32 @@ span.term {
 /* table */
 
 .table-contents table {
-	xx-border: 0px;
-	xx-border-bottom: 2pt solid #AAAAAA;
 	background: #F0F0F0;
 	border-spacing: 0px;
 }
 
 .table-contents th {
 	background: #E0E0E0;
-	
-	xx-border: 0px;
 	padding: .5em;
-	
-	xx-border-bottom: 2pt solid #AAAAAA;
 }
 
 .table-contents td {
-	xx-border: 0px;
 	padding: .5em;
 }
-
-.table-contents tr:nth-child(even) {
-	background: #F9F9F9;
-}
-
-.table
 
 /* informaltable */
 
 .informaltable table {
-	border: 0px;
-	border-bottom: 2pt solid #AAAAAA;
 	background: #F0F0F0;
 	border-spacing: 0px;
 }
 
 .informaltable th {
 	background: #E0E0E0;
-	
-	border: 0px;
 	padding: .5em;
-	
-	border-bottom: 2pt solid #AAAAAA;
 }
 
 .informaltable td {
-	border: 0px;
 	padding: .5em;
 }
 
@@ -83,6 +63,7 @@ div.note {
 }
 
 /* gui menu */
+
 span.guisubmenu, span.guimenu, span.guimenuitem {
 	background-color: #F0F0F0;
 }

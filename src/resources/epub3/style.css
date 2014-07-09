@@ -6,6 +6,38 @@ span.term {
 	font-family: Courier, Courier New, monospace; 
 }
 
+/* table */
+
+.table-contents table {
+	background: #F0F0F0;
+	border-spacing: 0px;
+}
+
+.table-contents th {
+	background: #E0E0E0;
+	padding: .5em;
+}
+
+.table-contents td {
+	padding: .5em;
+}
+
+/* informaltable */
+
+.informaltable table {
+	background: #F0F0F0;
+	border-spacing: 0px;
+}
+
+.informaltable th {
+	background: #E0E0E0;
+	padding: .5em;
+}
+
+.informaltable td {
+	padding: .5em;
+}
+
 /* note */
 
 div.note {
