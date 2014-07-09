@@ -201,7 +201,7 @@
   
   <programlisting language="javascript"><![CDATA[var text = controller.getElement ( "myTextElement" );
 text.setText ( "Hello World" );
-text.setForegroundColor ( "#FF0000");
+text.setForegroundColor ( "#FF0000" );
 ]]></programlisting>
 
   <para>

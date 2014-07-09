@@ -62,7 +62,7 @@
     <screenshot>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="images/tutorials/client_app/01_install1.png" />
+          <imagedata scalefit="1" width="100%"  contentdepth="100%" fileref="images/tutorials/client_app/01_install1.png" />
         </imageobject>
       </mediaobject>
     </screenshot>
@@ -86,21 +86,21 @@
   </para>
   
   <screenshot>
-  <mediaobject><imageobject><imagedata fileref="images/tutorials/client_app/02_wizard1.png"/></imageobject></mediaobject>
+  <mediaobject><imageobject><imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/tutorials/client_app/02_wizard1.png"/></imageobject></mediaobject>
   </screenshot>
   
   <para>Select the <quote>Plug-in Project</quote> wizard, since we will create a new Eclipse
   RCP project. Press <guibutton>Next</guibutton> to continue.</para>
   
   <screenshot>
-  <mediaobject><imageobject><imagedata fileref="images/tutorials/client_app/02_wizard2.png"/></imageobject></mediaobject>
+  <mediaobject><imageobject><imagedata scalefit="1" width="100%" fileref="images/tutorials/client_app/02_wizard2.png"/></imageobject></mediaobject>
   </screenshot>
   
   <para>Enter a project name. It is recommended to provide a hierarchical name, since the
   same name will be used for as package name. Press <guibutton>Next</guibutton> to continue.</para>
   
   <screenshot>
-  <mediaobject><imageobject><imagedata fileref="images/tutorials/client_app/02_wizard3.png"/></imageobject></mediaobject>
+  <mediaobject><imageobject><imagedata scalefit="1" width="100%" fileref="images/tutorials/client_app/02_wizard3.png"/></imageobject></mediaobject>
   </screenshot>
   
   <para>
@@ -109,7 +109,7 @@
   </para>
   
   <screenshot>
-  <mediaobject><imageobject><imagedata fileref="images/tutorials/client_app/02_wizard4.png"/></imageobject></mediaobject>
+  <mediaobject><imageobject><imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/tutorials/client_app/02_wizard4.png"/></imageobject></mediaobject>
   </screenshot>
   
   <para>
@@ -117,7 +117,7 @@
   </para>
   
   <screenshot>
-  <mediaobject><imageobject><imagedata fileref="images/tutorials/client_app/02_wizard5.png"/></imageobject></mediaobject>
+  <mediaobject><imageobject><imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/tutorials/client_app/02_wizard5.png"/></imageobject></mediaobject>
   </screenshot>
   
   <para>
@@ -126,7 +126,7 @@
   </para>
   
   <screenshot>
-  <mediaobject><imageobject><imagedata fileref="images/tutorials/client_app/02_wizard6.png"/></imageobject></mediaobject>
+  <mediaobject><imageobject><imagedata scalefit="1" width="100%" contentdepth="100%"  fileref="images/tutorials/client_app/02_wizard6.png"/></imageobject></mediaobject>
   </screenshot>
   
   <para>
@@ -136,7 +136,7 @@
   </para> 
   
   <screenshot>
-  <mediaobject><imageobject><imagedata fileref="images/tutorials/client_app/03_ide1.png"/></imageobject></mediaobject>
+  <mediaobject><imageobject><imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/tutorials/client_app/03_ide1.png"/></imageobject></mediaobject>
   </screenshot>
   
   </section>

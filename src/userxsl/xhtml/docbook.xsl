@@ -4,11 +4,15 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
   <xsl:import href="urn:docbkx:stylesheet" />
-
+  
   <xsl:import href="../html/highlight.xsl"/>
   <xsl:import href="../../../target/docbkx/template/titlepage/titlepage.xhtml.xsl"/>
   
+  <xsl:include href="../common.xsl"/>
+  
   <xsl:param name="section.label.includes.component.label">1</xsl:param>
+  
+  <xsl:param name="ignore.image.scaling">1</xsl:param>
   
   <xsl:param name="table.borders.with.css">1</xsl:param>
   <xsl:param name="default.table.frame">none</xsl:param>

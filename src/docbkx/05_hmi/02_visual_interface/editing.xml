@@ -28,7 +28,7 @@
     <title>Screenshot of preview menu entry</title>
     <mediaobject>
       <imageobject>
-        <imagedata fileref="images/vi/preview_menu.png"/>
+        <imagedata scalefit="1" width="100%" contentdepth="100%" fileref="images/vi/preview_menu.png"/>
       </imageobject>
     </mediaobject>
   </screenshot>
