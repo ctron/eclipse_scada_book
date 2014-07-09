@@ -13,8 +13,6 @@
   
   <xsl:param name="section.label.includes.component.label">1</xsl:param>
   
-  <xsl:param name="ignore.image.scaling">1</xsl:param>
-  
   <xsl:param name="table.borders.with.css">1</xsl:param>
   <xsl:param name="default.table.frame">none</xsl:param>
   
