@@ -7,6 +7,7 @@
   <xsl:import href="../../../target/docbkx/template/titlepage/titlepage.epub3.xsl"/>
 
   <xsl:include href="../common.xsl"/>
+  <xsl:include href="../common-html.xsl"/>
 
   <xsl:param name="toc.section.depth">3</xsl:param>
   

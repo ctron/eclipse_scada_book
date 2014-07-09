@@ -9,14 +9,14 @@
   <xsl:import href="../../../target/docbkx/template/titlepage/titlepage.xhtml.xsl"/>
   
   <xsl:include href="../common.xsl"/>
+  <xsl:include href="../common-html.xsl"/>
   
   <xsl:param name="section.label.includes.component.label">1</xsl:param>
-  
-  <xsl:param name="ignore.image.scaling">1</xsl:param>
   
   <xsl:param name="table.borders.with.css">1</xsl:param>
   <xsl:param name="default.table.frame">none</xsl:param>
   
+  <xsl:param name="default.table.width"></xsl:param>
   <xsl:param name="table.frame.border.style">solid</xsl:param>
   <xsl:param name="table.frame.border.thickness">2pt</xsl:param>
   <xsl:param name="table.frame.border.color">#AAAAAA</xsl:param>
