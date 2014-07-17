@@ -45,8 +45,8 @@
   the <envar>PATH</envar>. This can normally be configured using the command <filename>update-java-alternatives</filename>. 
   </para>
   
-  <note><title>Java 7+</title><para>While it is possible to select a Java 6 (or earlier) JVM using <filename>update-java-alternatives</filename>
-  or the environment variables, still Eclipse SCADA <emphasis>won't work</emphasis> with Java versions 6 or earlier.</para></note>
+  <warning><title>Java 7+</title><para>While it is possible to select a Java 6 (or earlier) JVM using <filename>update-java-alternatives</filename>
+  or the environment variables, still Eclipse SCADA <emphasis>won't work</emphasis> with Java versions 6 or earlier.</para></warning>
   
   </section>
     
