@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<section
+  xmlns="http://docbook.org/ns/docbook"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+  
+    <title>AE – Alarms &amp; Events</title>
+    <para>
+      The main purpose of the AE module is to monitor and evaluate the
+      data acquired by DA. A set of rules can be specified for each item or for a group of
+      items, which will be evaluated to <quote>ok</quote> or <quote>not ok</quote>. Changes
+      to these states will be transformed into events, which are logged to a persistent storage.
+    </para>
+
+</section>

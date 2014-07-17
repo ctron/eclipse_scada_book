@@ -15,5 +15,7 @@
   
     <xi:include href="01_core.xml"/>
 	<xi:include href="02_da.xml"/>
+    <xi:include href="03_ae.xml"/>
+    <xi:include href="04_hd.xml"/>
 
 </section>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<section
+  xmlns="http://docbook.org/ns/docbook"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+  
+    <title>HD – Historical Data</title>
+    <para>
+      While the AE module stores events (log entries) the HD system is for storing analog
+      values over a long period of time. Data which is provided by the DA modules can be
+      persisted and queried to/from a time series database.
+    </para>
+
+</section>
