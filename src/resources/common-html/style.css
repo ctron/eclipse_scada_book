@@ -56,10 +56,14 @@ div.note {
 	background: #FCFCFF;
 	border-radius: 1em; 
 	padding-left: 1em;
-	padding-top: 0px;
+	padding-top: 1em;
 	padding-bottom: 0px;
 	margin: 1em;
 	border: 1px solid #AAAACC;
+}
+
+div.note tr:first-child > td:first-child {
+	padding-right: 1em;
 }
 
 /* gui menu */

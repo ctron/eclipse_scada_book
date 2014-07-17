@@ -7,6 +7,12 @@
 	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
 	<title>Legal</title>
 
+    <section><title>Attribution</title>
+    <para>
+      Some icons by <link xlink:href="http://p.yusukekamiyamane.com/">Yusuke Kamiyamane</link>. Licensed under a <link xlink:href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</link>.
+    </para>
+    </section>
+
 	<section>
 		<title>Creative Commons Attribution-NonCommercial-ShareAlike 4.0
 			International Public License

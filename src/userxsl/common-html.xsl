@@ -4,4 +4,8 @@
   <xsl:param name="ignore.image.scaling">1</xsl:param>
   <xsl:param name="tablecolumns.extension">0</xsl:param>
   
+  <xsl:param name="admon.graphics">1</xsl:param>
+  <xsl:param name="admon.graphic.width">32</xsl:param>
+  <xsl:param name="admon.style"></xsl:param>
+  
 </xsl:stylesheet>
