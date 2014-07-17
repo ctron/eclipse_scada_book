@@ -29,9 +29,9 @@
     <listitem><para>Use the java virtual machine found on the path</para></listitem>
   </orderedlist>
   
-  <note><para>If <envar>JAVA_HOME</envar> or <envar>JRE_HOME</envar> are set to a path
+  <warning><para>If <envar>JAVA_HOME</envar> or <envar>JRE_HOME</envar> are set to a path
   that is not existing, the execution will fail. The scripts do not switch to the next
-  possible option.</para></note>
+  possible option.</para></warning>
   
   <para>
   The variables can either be set in the files <filename>/etc/sysconfig/eclipsescada</filename> or <filename>/etc/default/eclipsescada</filename>
