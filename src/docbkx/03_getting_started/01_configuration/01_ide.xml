@@ -125,12 +125,12 @@
 			These contain the OPC and the SNMP adapters. This may be part of 
 			the 0.2.0 release of Eclipse SCADA, but for now they have to be 
 			downloaded from the openSCADA site. To install it just repeat the steps
-			above with the URL <link xlink:href="http://repo.openscada.org/p2/org.openscada/R/1.2.0/"/>
+			above with the URL <link xlink:href="http://neutronium.openscada.org/p2/1.2/release/"/>
 			<footnote>
 				<para>
-					The release will not be ready until End of May, until then
+					The release will not be ready until End of August, until then
 					please use the integration build found under
-					<link xlink:href="http://repo.openscada.org/p2/org.openscada/I/1.2.0/"/>
+					<link xlink:href="http://neutronium.openscada.org/p2/1.2/nightly/"/> or <link xlink:href="http://neutronium.openscada.org/p2/1.2/milestone/"/>
 				</para>
 			</footnote>
 			and select the "OpenSCADA IDE" category.
