@@ -18,11 +18,13 @@
 	<section xml:id="setup_ide_java">
 		<title>Installing Java</title>
 		
+        <note><title>Java 8</title>
 		<para>
 			At the time of writing Java 8 was just released, so the current version
 			which is still in use in conjunction with Eclipse SCADA is Java 7.
 			Java 8 should theoretically work, but it is not tested so far.
 		</para>
+        </note>
 		
 		<section>
 			<title>On Windows</title>
