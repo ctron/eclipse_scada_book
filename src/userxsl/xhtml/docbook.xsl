@@ -11,6 +11,9 @@
   <xsl:include href="../common.xsl"/>
   <xsl:include href="../common-html.xsl"/>
   
+  <xsl:param name="use.id.as.filename">1</xsl:param>
+  <xsl:param name="chunk.first.sections">1</xsl:param>
+  
   <xsl:param name="section.label.includes.component.label">1</xsl:param>
   
   <xsl:param name="table.borders.with.css">1</xsl:param>

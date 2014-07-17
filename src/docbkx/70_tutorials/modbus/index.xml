@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<chapter
-  xml:id="tutorials"
+<section
+  xml:id="tutorial_modbus"
   xmlns="http://docbook.org/ns/docbook"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:xi="http://www.w3.org/2001/XInclude" 
   xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
 
-  <title>Tutorials</title>
+  <title>Modbus Exporter</title>
 
   <para>
-  This chapter features a set of tutorials.
+    See <xref linkend="core_export_modbus_prog"/>.
   </para>
     
-  <xi:include href="vi_client_app/index.xml" />
-  <xi:include href="modbus/index.xml" />
-    
-</chapter>
+</section>
