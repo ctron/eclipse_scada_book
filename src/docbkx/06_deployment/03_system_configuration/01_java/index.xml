@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" 
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+
+  <title>Java Configuration</title>
+
+  <para>
+  These sub-sections cover the different aspects of the Java Virtual Machine required for
+  executing Java based Eclipse SCADA Applications. 
+  </para>
+
+  <section><title>Locating the Java Virtual Machine</title>
+  
+
+  <note>
+    <para>This section applies to <trademark>Unix</trademark> based systems.</para>
+  </note>
+
+  <para>
+  By default Eclipse SCADA will install a set of shell scripts which manage starting and stopping
+  the different Eclipse SCADA applications. These shell script will use the following mechanism to
+  locate Java. 
+  </para>
+  
+  <orderedlist>
+    <listitem><para>If <envar>JAVA_HOME</envar> is set, it will be used</para></listitem>
+    <listitem><para>If <envar>JRE_HOME</envar> is set, it will be used</para></listitem>
+    <listitem><para>Use the java virtual machine found on the path</para></listitem>
+  </orderedlist>
+  
+  <note><para>If <envar>JAVA_HOME</envar> or <envar>JRE_HOME</envar> are set to a path
+  that is not existing, the execution will fail. The scripts do not switch to the next
+  possible option.</para></note>
+  
+  <para>
+  The variables can either be set in the files <filename>/etc/sysconfig/eclipsescada</filename> or <filename>/etc/default/eclipsescada</filename>
+  or using some system way for setting environment variables (e.g. <filename>/etc/profile.d</filename>).
+  This is also the order of defining. This means that while you system may specific a JAVA_HOME already,
+  it is possible to override for Eclipse SCADA using the <quote>sysconfig</quote> or <quote>default</quote> file.
+  </para>
+  
+  <para>
+  If neither environment variable is set, then the scripts will fall back to using the Java Virtual Machine from
+  the <envar>PATH</envar>. This can normally be configured using the command <filename>update-java-alternatives</filename>. 
+  </para>
+  
+  <note><para>While it is possible to select a Java 6 (or earlier) JVM using <filename>update-java-alternatives</filename>
+  or the environment variables, still Eclipse SCADA <emphasis>won't work</emphasis> with Java versions 6 or earlier.</para></note>
+  
+  </section>
+    
+</section>

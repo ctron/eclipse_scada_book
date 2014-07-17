@@ -10,5 +10,6 @@
     
     <xi:include href="01_overview/index.xml" />
     <xi:include href="02_basic_server_setup/index.xml" />
+    <xi:include href="03_system_configuration/index.xml" />
 
 </chapter>

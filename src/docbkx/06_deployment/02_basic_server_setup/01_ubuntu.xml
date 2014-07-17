@@ -7,6 +7,10 @@
   
   <para>…</para>
   
+  <para>
+  Also see <link xlink:href="https://wiki.eclipse.org/EclipseSCADA/Installation/Ubuntu"/>.
+  </para>
+  
   <section>
     <title>Repository</title>
     
@@ -17,8 +21,14 @@
     
     <para>
     In order to add the Eclipse SCADA repository to your system create a file called
-    <filename>/etc/apt/sources.d/eclipse-scada.list </filename> with the following content:
+    <filename>/etc/apt/sources.d/eclipse-scada.list</filename> with the following content:
     <programlisting>deb http://download.eclipse.org/eclipsescada/repos/release/0.1.0/apt/ default main</programlisting>
+    </para>
+    
+    <para>
+    For enabling additions of the openSCADA project create a second file, called
+    <filename>/etc/apt/sources.d/openscada.list</filename> with the following content:
+     <programlisting>deb http://neutronium.openscada.org/apt/1.2/nightly default main</programlisting>
     </para>
     
     <para>If you also plan on using the <quote>ICMP Ping Helper</quote> application, you
@@ -42,6 +52,14 @@ org.eclipse.scada - Eclipse SCADA base package
 org.eclipse.scada.deploy.p2director-incubation - Eclipse SCADA P2 Director]]></programlisting>
     </para>
     
+  </section>
+  
+  <section><title>Pre-requisites</title>
+  <para>
+  In order to easily install the configuration archives including all dependencies use the tool <quote>gdebi</quote>.
+  It needs to be installed before use:
+  </para>
+  <programlisting language="shell">sudo apt-get install gdebi-core</programlisting>
   </section>
     
 </section>

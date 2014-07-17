@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" 
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+
+  <title>System configuration</title>
+
+  <para>
+  This section describes several areas of system configuration. Some of these sections might
+  not apply to all types of target systems.
+  </para>
+
+  <xi:include href="01_java/index.xml" />
+    
+</section>
