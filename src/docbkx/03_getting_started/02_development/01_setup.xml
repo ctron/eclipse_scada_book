@@ -27,49 +27,33 @@
 
 		<para>
 			Eclipse SCADA is built using Eclipse Tycho. It is a set maven
-			plugins, which
-			extend maven in a way that the Eclipse PDE type
-			projects can be used
-			without much additional changes for maven.
+			plugins, which extend maven in a way that the Eclipse PDE type
+			projects can be used without much additional changes for maven.
 		</para>
 
 		<para>
 			This works extremely well in the Eclipse PDE enviroment, but if
-			you
-			want
-			to develop a plain maven project you would need to import the
-			artifacts
-			manually, and Eclipse SCADA has a lot
+			you want to develop a plain maven project you would need to import the
+			artifacts manually, and Eclipse SCADA has a lot
 			<footnote>
-				<para>A the moment of writing it is over 400 OSGi bundles/JAR files.
-				</para>
+				<para>A the moment of writing it is over 400 OSGi bundles/JAR files.</para>
 			</footnote>
 			of bundles.
 		</para>
 
 		<para>
-			The P2 repositories (which is the output of the Eclipse Tycho
-			build) are
-			converted
-			to plain maven 2 repositories at the end of the
-			build process.
-			Dependencies are generated based on the validating
-			target platform of the build.
-			This might not be an optimal solution,
-			but creates a working setup
-			without much additional effort.
+			The P2 repositories (which is the output of the Eclipse Tycho build) are
+			converted to plain maven 2 repositories at the end of the
+			build process. Dependencies are generated based on the validating
+			target platform of the build. This might not be an optimal solution,
+			but creates a working setup without much additional effort.
 		</para>
 
 		<para>
 			Dependencies to external projects, also the dependencies to Eclipse
-			Orbit, are
-			replaced with their Maven Central counterparts (as long as
-			they have
-			some). These artifacts are
-			also exlucded from the mirror
-			process and
-			<emphasis>not</emphasis>
-			served from
+			Orbit, are replaced with their Maven Central counterparts (as long as
+			they have some). These artifacts are also excluded from the mirror process and
+			<emphasis>not</emphasis> served from
 			<link xlink:href="http://download.eclipse.org">download.eclipse.org</link>
 			.
 		</para>
@@ -114,13 +98,16 @@
 </repository>
 ...]]></programlisting>
 
-			<note>
+			<note><title>Nightly builds</title>
 				<para>
 					If you reference a nightly build (N), the versions will be
 					<quote>-SNAPSHOT</quote>
 					versions and you will need to also enable snapshots
 					for the repository.
 				</para>
+                <para>Only the two most recent nightly builds well be kept. Therefore
+                linking to a nightly release might not be a good idea since it might
+                be gone pretty soon.</para>
 			</note>
 
 		</para>
@@ -135,34 +122,23 @@
 		</para>
 
 		<para>
-			The reason behind that is, that the
-			<filename>maven-bundle-plugin</filename>
-			creates its artifacts with the suffix
-			<filename>.jar</filename>
-			, since OSGi bundles are actually JAR files. However it defines the
-			packaging type
+			The reason behind that is, that the <filename>maven-bundle-plugin</filename>
+			creates its artifacts with the suffix <filename>.jar</filename>,
+			since OSGi bundles are actually JAR files. However it defines the packaging type
 			<filename>bundle</filename>
 			in the maven POM file of Apache Mina. Now as soon as a dependency is
 			declared on an Apache Mina project, Maven tries to resolve that
-			dependency using
-			the suffix
-			<filename>.bundle</filename>
-			, due to the packaging type
-			<filename>bundle</filename>
-			. But that file does not exists, since the correct file extension for
-			OSGi bundles is
-			<filename>.jar</filename>
-			.
+			dependency using the suffix
+			<filename>.bundle</filename>, due to the packaging type <filename>bundle</filename>.
+            But that file does not exists, since the correct file extension for
+			OSGi bundles is <filename>.jar</filename>.
 		</para>
 
 		<para>
-			Adding the
-			<filename>maven-bundle-plugin</filename>
+			Adding the <filename>maven-bundle-plugin</filename>
 			to the build takes care of this behavior. The plugin automatically
 			rewrites these requests internally from
-			<filename>.bundle</filename>
-			to
-			<filename>.jar</filename>
+			<filename>.bundle</filename> to <filename>.jar</filename>
 			and everything works as expected.
 		</para>
 
