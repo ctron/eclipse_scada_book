@@ -1,0 +1,12 @@
+<phrase
+  xmlns="http://docbook.org/ns/docbook"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+
+A URI to the image that should be shown. This can be any URI schema the Java system can resolve.
+
+For example: <filename>http://</filename>, <filename>file://</filename> but also <filename>platform://plugin</filename>
+
+</phrase>

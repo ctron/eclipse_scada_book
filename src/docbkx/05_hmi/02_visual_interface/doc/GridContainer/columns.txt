@@ -1,0 +1,1 @@
+The number of columns the grid layout should have

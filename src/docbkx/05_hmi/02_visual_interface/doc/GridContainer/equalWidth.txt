@@ -1,0 +1,1 @@
+Whether all columns should have the same width

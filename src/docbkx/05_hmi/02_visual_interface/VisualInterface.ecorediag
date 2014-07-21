@@ -1051,7 +1051,6 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_wovXEsy7EeCZatunG8aJEQ" fontColor="4210752" fontName="Sans" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="VisualInterface.ecore#//GridContainer/children"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wovXE8y7EeCZatunG8aJEQ" points="[28, 7, -351, -87]$[380, 60, 1, -34]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wowlMMy7EeCZatunG8aJEQ" id="(0.834319526627219,0.6153846153846154)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wowlMcy7EeCZatunG8aJEQ" id="(0.21739130434782608,0.3953488372093023)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_xpN8oMy7EeCZatunG8aJEQ" type="3002" source="_bWVl4My6EeCZatunG8aJEQ" target="_pbEE4My6EeCZatunG8aJEQ">

@@ -187,8 +187,6 @@
       <para>This sections describes the classes of the model.</para>
       <section xml:id="vi_Symbol">
          <title>Symbol</title>
-         <para/>
-         <para/>
          <table>
             <title>Structural features of Symbol</title>
             <tgroup cols="5">
@@ -280,7 +278,9 @@ Also see <xref linkend="vi_style_color"/>.
                      </entry>
                      <entry>[0..1]</entry>
                      <entry/>
-                     <entry>The size as intended by the designer. May be used for layouting as preferred size.</entry>
+                     <entry>
+                        <para>The size as intended by the designer. May be used for layouting as preferred size.</para>
+                     </entry>
                   </row>
                   <row>
                      <entry>connections</entry>
@@ -299,8 +299,6 @@ Also see <xref linkend="vi_style_color"/>.
          <title>Primitive</title>
          <para>This class is abstract.</para>
          <para>This class is an interface.</para>
-         <para/>
-         <para/>
          <table>
             <title>Structural features of Primitive</title>
             <tgroup cols="5">
@@ -341,8 +339,6 @@ Also see <xref linkend="vi_style_color"/>.
                </listitem>
             </itemizedlist>
          </para>
-         <para/>
-         <para/>
       </section>
       <section xml:id="vi_Shape">
          <title>Shape</title>
@@ -356,8 +352,6 @@ Also see <xref linkend="vi_style_color"/>.
                </listitem>
             </itemizedlist>
          </para>
-         <para/>
-         <para/>
          <table>
             <title>Structural features of Shape</title>
             <tgroup cols="5">
@@ -424,8 +418,6 @@ Also see <xref linkend="vi_style_color"/>.
                </listitem>
             </itemizedlist>
          </para>
-         <para/>
-         <para/>
       </section>
       <section xml:id="vi_Text">
          <title>Text</title>
@@ -438,8 +430,6 @@ Also see <xref linkend="vi_style_color"/>.
                </listitem>
             </itemizedlist>
          </para>
-         <para/>
-         <para/>
          <table>
             <title>Structural features of Text</title>
             <tgroup cols="5">
@@ -533,8 +523,6 @@ Also see <xref linkend="vi_style_color"/>.
       </section>
       <section xml:id="vi_Child">
          <title>Child</title>
-         <para/>
-         <para/>
          <table>
             <title>Structural features of Child</title>
             <tgroup cols="5">
@@ -582,8 +570,6 @@ Also see <xref linkend="vi_style_color"/>.
                </listitem>
             </itemizedlist>
          </para>
-         <para/>
-         <para/>
          <table>
             <title>Structural features of XYChild</title>
             <tgroup cols="5">
@@ -616,7 +602,9 @@ Also see <xref linkend="vi_style_color"/>.
                      </entry>
                      <entry>[0..1]</entry>
                      <entry/>
-                     <entry>An optional dimension for the XYLayout. If not set the preferred dimension of the child will be used.</entry>
+                     <entry>
+                        <para>An optional dimension for the XYLayout. If not set the preferred dimension of the child will be used.</para>
+                     </entry>
                   </row>
                </tbody>
             </tgroup>
@@ -633,8 +621,6 @@ Also see <xref linkend="vi_style_color"/>.
                </listitem>
             </itemizedlist>
          </para>
-         <para/>
-         <para/>
          <table>
             <title>Structural features of XYContainer</title>
             <tgroup cols="5">
@@ -666,8 +652,6 @@ Also see <xref linkend="vi_style_color"/>.
       </section>
       <section xml:id="vi_Position">
          <title>Position</title>
-         <para/>
-         <para/>
          <table>
             <title>Structural features of Position</title>
             <tgroup cols="5">
@@ -713,8 +697,6 @@ Also see <xref linkend="vi_style_color"/>.
                </listitem>
             </itemizedlist>
          </para>
-         <para/>
-         <para/>
          <table>
             <title>Structural features of Line</title>
             <tgroup cols="5">
@@ -756,8 +738,6 @@ Also see <xref linkend="vi_style_color"/>.
                </listitem>
             </itemizedlist>
          </para>
-         <para/>
-         <para/>
          <table>
             <title>Structural features of Figure</title>
             <tgroup cols="5">
@@ -936,10 +916,7 @@ Also see <xref linkend="vi_scripting"/>.
                   </para>
                </listitem>
             </itemizedlist>
-         </para>
-         <para/>
-         <para/>
-         <table>
+         </para>Include another symbol<table>
             <title>Structural features of SymbolReference</title>
             <tgroup cols="5">
                <colspec/>
@@ -990,10 +967,7 @@ Also see <xref linkend="vi_scripting"/>.
          </table>
       </section>
       <section xml:id="vi_StringToStringMap">
-         <title>StringToStringMap</title>
-         <para/>
-         <para/>
-         <table>
+         <title>StringToStringMap</title>A generic properties map.<table>
             <title>Structural features of StringToStringMap</title>
             <tgroup cols="5">
                <colspec/>
@@ -1029,8 +1003,6 @@ Also see <xref linkend="vi_scripting"/>.
       </section>
       <section xml:id="vi_Dimension">
          <title>Dimension</title>
-         <para/>
-         <para/>
          <table>
             <title>Structural features of Dimension</title>
             <tgroup cols="5">
@@ -1068,8 +1040,6 @@ Also see <xref linkend="vi_scripting"/>.
       <section xml:id="vi_Cursor">
          <title>Cursor</title>
          <para>This class is abstract.</para>
-         <para/>
-         <para/>
       </section>
       <section xml:id="vi_SystemCursor">
          <title>SystemCursor</title>
@@ -1082,8 +1052,6 @@ Also see <xref linkend="vi_scripting"/>.
                </listitem>
             </itemizedlist>
          </para>
-         <para/>
-         <para/>
          <table>
             <title>Structural features of SystemCursor</title>
             <tgroup cols="5">
@@ -1123,10 +1091,7 @@ Also see <xref linkend="vi_scripting"/>.
                   </para>
                </listitem>
             </itemizedlist>
-         </para>
-         <para/>
-         <para/>
-         <table>
+         </para>A container aligning children in a grid layout.<table>
             <title>Structural features of GridContainer</title>
             <tgroup cols="5">
                <colspec/>
@@ -1147,14 +1112,14 @@ Also see <xref linkend="vi_scripting"/>.
                      <entry>integer</entry>
                      <entry>[0..1]</entry>
                      <entry>1</entry>
-                     <entry/>
+                     <entry>The number of columns the grid layout should have</entry>
                   </row>
                   <row>
                      <entry>equalWidth</entry>
                      <entry>boolean</entry>
                      <entry>[0..1]</entry>
                      <entry>false</entry>
-                     <entry/>
+                     <entry>Whether all columns should have the same width</entry>
                   </row>
                   <row>
                      <entry>children</entry>
@@ -1208,8 +1173,6 @@ Also see <xref linkend="vi_scripting"/>.
                </listitem>
             </itemizedlist>
          </para>
-         <para/>
-         <para/>
          <table>
             <title>Structural features of BorderContainer</title>
             <tgroup cols="5">
@@ -1264,8 +1227,6 @@ Also see <xref linkend="vi_scripting"/>.
                </listitem>
             </itemizedlist>
          </para>
-         <para/>
-         <para/>
          <table>
             <title>Structural features of BorderChild</title>
             <tgroup cols="5">
@@ -1306,8 +1267,6 @@ Also see <xref linkend="vi_scripting"/>.
                </listitem>
             </itemizedlist>
          </para>
-         <para/>
-         <para/>
          <table>
             <title>Structural features of GridChild</title>
             <tgroup cols="5">
@@ -1399,8 +1358,6 @@ Also see <xref linkend="vi_scripting"/>.
                </listitem>
             </itemizedlist>
          </para>
-         <para/>
-         <para/>
          <table>
             <title>Structural features of FigureContainer</title>
             <tgroup cols="5">
@@ -1440,10 +1397,7 @@ Also see <xref linkend="vi_scripting"/>.
                   </para>
                </listitem>
             </itemizedlist>
-         </para>
-         <para/>
-         <para/>
-         <table>
+         </para>An image element.<table>
             <title>Structural features of Image</title>
             <tgroup cols="5">
                <colspec/>
@@ -1464,7 +1418,15 @@ Also see <xref linkend="vi_scripting"/>.
                      <entry>string</entry>
                      <entry>[0..1]</entry>
                      <entry/>
-                     <entry/>
+                     <entry>
+                        <phrase xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
+
+A URI to the image that should be shown. This can be any URI schema the Java system can resolve.
+
+For example: <filename>http://</filename>, <filename>file://</filename> but also <filename>platform://plugin</filename>
+
+                        </phrase>
+                     </entry>
                   </row>
                   <row>
                      <entry>imageAlignment</entry>
@@ -1490,8 +1452,6 @@ Also see <xref linkend="vi_scripting"/>.
                </listitem>
             </itemizedlist>
          </para>
-         <para/>
-         <para/>
       </section>
       <section xml:id="vi_Arc">
          <title>Arc</title>
@@ -1504,8 +1464,6 @@ Also see <xref linkend="vi_scripting"/>.
                </listitem>
             </itemizedlist>
          </para>
-         <para/>
-         <para/>
          <table>
             <title>Structural features of Arc</title>
             <tgroup cols="5">
@@ -1542,8 +1500,6 @@ Also see <xref linkend="vi_scripting"/>.
       </section>
       <section xml:id="vi_Connection">
          <title>Connection</title>
-         <para/>
-         <para/>
          <table>
             <title>Structural features of Connection</title>
             <tgroup cols="5">
@@ -1593,8 +1549,6 @@ Also see <xref linkend="vi_scripting"/>.
                </listitem>
             </itemizedlist>
          </para>
-         <para/>
-         <para/>
          <table>
             <title>Structural features of StackContainer</title>
             <tgroup cols="5">

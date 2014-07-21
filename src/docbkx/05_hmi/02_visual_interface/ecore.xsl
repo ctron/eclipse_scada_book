@@ -20,8 +20,11 @@
   </xsl:template>
    
   <xsl:template name="documentation">
-    <xsl:apply-templates select="eAnnotations[@source='http://www.eclipse.org/emf/2002/GenModel']/details[@key='documentation']" mode="doc">
-    </xsl:apply-templates>
+    <xsl:if test="eAnnotations[@source='http://www.eclipse.org/emf/2002/GenModel']/details[@key='documentation']">
+      <para>
+        <xsl:apply-templates select="eAnnotations[@source='http://www.eclipse.org/emf/2002/GenModel']/details[@key='documentation']" mode="doc"/>
+      </para>
+    </xsl:if>
   </xsl:template>
   
   <xsl:template name="includeExternal">
@@ -156,10 +159,9 @@
       <para>This class is an interface.</para>
       </xsl:if>
       <xsl:call-template name="supertypes"/>
-      <para>
-      </para>
       
-      <para><xsl:call-template name="documentation"/></para>
+      <xsl:call-template name="documentation"/>
+      <xsl:call-template name="includeExternal"><xsl:with-param name="file" select="concat('doc/',@name)"/></xsl:call-template>
       
       <xsl:if test="count(eStructuralFeatures)>0">
       <table>
