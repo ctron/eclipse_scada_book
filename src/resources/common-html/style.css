@@ -2,6 +2,22 @@ html {
 	font-family: Helvetica, Arial, sans-serif;
 }
 
+div.section > p, dl, ol, ul {
+	margin-left: 2em;
+}
+
+.funcsynopsis {
+	margin-left: 4em;
+}
+
+.informaltable {
+	margin-left: 2em;
+}
+
+.table {
+	margin-left: 2em;
+}
+
 .property {
 	font-family: Courier, Courier New, monospace; 
 }
@@ -11,6 +27,7 @@ html {
 	border: 1px solid #AAAAAA;
 	padding: 1em;
 	margin: 1em;
+	margin-left: 3em;
 	border-radius: 1em; 
 }
 
