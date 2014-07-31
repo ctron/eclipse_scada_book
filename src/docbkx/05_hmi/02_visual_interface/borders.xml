@@ -158,9 +158,9 @@
       </tr>
       
       <tr>
-        <td><userinput>COMPOUND:[GROUP:Name|LINE:[lineWidth=2,color=#00FF00]]</userinput></td>
+        <td><userinput>COMPOUND:[inner=GROUP:Name,outer=LINE:[lineWidth=2,color=#00FF00]]</userinput></td>
         <td>
-        This will create a group border with the label <quote>Name</quote> and inside
+        This will create a group border with the label <quote>Name</quote> and outside
         it has a solid line border, 2 pixel, green.
         </td>
       </tr>
