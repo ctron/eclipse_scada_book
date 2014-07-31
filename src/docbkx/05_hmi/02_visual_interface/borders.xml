@@ -21,7 +21,6 @@
       <programlisting>TYPE:[property1=value1,property2=value2]</programlisting>
       <para>If the border type has a simple value argument the argument can simply be specified without brackets:</para>
       <programlisting>TYPE:simpleValue</programlisting>
-  
   </section>
 
   <section>
@@ -42,7 +41,7 @@
       <tr>
         <td>color</td>
         <td></td>
-        <td>Line color in hex notation</td>
+        <td>Line color in hex notation. See also <xref linkend="vi_style_color"/>.</td>
       </tr>
     </informaltable>
   </section>
@@ -64,7 +63,8 @@
       </tr>
       <tr>
         <td>textColor</td>
-        <td>The color of the text</td>
+        <td></td>
+        <td>The color of the text. See also <xref linkend="vi_style_color"/>.</td>
       </tr>
     </informaltable>
   </section>
@@ -87,12 +87,12 @@
       <tr>
         <td>textColor</td>
         <td></td>
-        <td>The color of the text</td>
+        <td>The color of the text. See also <xref linkend="vi_style_color"/>.</td>
       </tr>
       <tr>
         <td>backgroundColor</td>
         <td></td>
-        <td>The color of the background</td>
+        <td>The color of the background. See also <xref linkend="vi_style_color"/>.</td>
       </tr>
     </informaltable>
   </section>
@@ -112,7 +112,26 @@
         <td>X</td>
         <td>The inset of the margin border</td>
       </tr>
+      <tr>
+        <td>t</td><td></td><td>Inset on top</td>
+      </tr>
+      <tr>
+        <td>b</td><td></td><td>Inset on bottom</td>
+      </tr>
+      <tr>
+        <td>l</td><td></td><td>Inset on left</td>
+      </tr>
+      <tr>
+        <td>r</td><td></td><td>Inset on right</td>
+      </tr>
     </informaltable>
+    
+    <para>
+    Either <code>inset</code> or any of <code>t, b, l, r</code> should be specified. <code>inset</code> takes
+    precedence over the others. With <code>inset</code> is possible to specific the same
+    inset for all side at once, while the others allow a specific inset on each side. If any of the
+    parameters <code>t, b, l, r</code> is omitted then it is considered zero.
+    </para>
   </section>
 
   

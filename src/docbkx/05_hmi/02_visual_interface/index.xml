@@ -93,10 +93,23 @@
       <section xml:id="vi_style_color">
       <title>Colors</title>
       <para>
-      If VI are represented as RGB colors in the hex notation. As known from HTML. But other than
-      HTML, VI requires the color information to be always 6 characters long.
+      In VI are represented as RGB colors in the hex notation. As known from HTML. But other than
+      HTML, VI requires the color information to be always 6 characters long. The case is not significant.
       </para>
-      <para>For example: <code>#FF0000</code>, would be red.</para>
+    
+      <informaltable>
+      <tr><th>Valid examples</th><th>Invalid examples</th></tr>
+      <tr><td>
+        <para><code>#FF0000</code></para>
+        <para><code>#00ff00</code></para>
+        <para><code>#0000fF</code></para>
+      </td><td>
+        <para><code>red</code> (names are not allowed)</para>
+        <para><code>#f00</code> (short form is not allowed, must have 6 character plus #)</para>
+        <para><code>FF0000</code> (missing #)</para>
+       </td></tr>
+      </informaltable>
+      
       </section>
       
       <xi:include href="borders.xml"/>
