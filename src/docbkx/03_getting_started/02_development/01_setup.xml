@@ -72,26 +72,26 @@
 			<varlistentry>
 				<term>version</term>
 				<listitem>
-					<para>The main version (e.g. 0.1.0)</para>
+					<para>The main version (e.g. 0.2.0)</para>
 				</listitem>
 			</varlistentry>
 			<varlistentry>
 				<term>buildId</term>
 				<listitem>
-					<para>The ID of the build (e.g. R201405070743)</para>
+					<para>The ID of the build (e.g. R201501260629)</para>
 				</listitem>
 			</varlistentry>
 		</variablelist>
 
 		<para>
 			So in order to use
-			<quote>0.1.1</quote>
+			<quote>0.2.0</quote>
 			using plain maven, adding the following repository setup will do:
 
 			<programlisting language="xml"><![CDATA[...
 <repository>
   <id>eclipse.scada</id>
-  <url>http://download.eclipse.org/eclipsescada/downloads/org.eclipse.scada/drops/0.1.0/R201405070743/maven/</url>
+  <url>http://download.eclipse.org/eclipsescada/downloads/org.eclipse.scada/drops/0.2.0/R201501260629/maven/</url>
   <releases>
     <enabled>true</enabled>
   </releases>

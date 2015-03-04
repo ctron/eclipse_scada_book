@@ -79,12 +79,12 @@
 		<title>Installing Eclipse</title>
 	
 		<para>
-			The current version (0.1.0) of Eclipse SCADA is based on the Kepler 
-			release (4.3). Although the following instructions might (and
-			actually should) work  without change with the future Luna release,
-			we recommend to stay with the Kepler release. For Release 0.2.0
-			it is planned to ensure Java 8 compatibility and we will switch
-			to the Luna release.
+			The current version (0.2) of Eclipse SCADA is based on the Kepler 
+			release (4.3). Although the following instructions work  without 
+			change with the Luna release,
+			we recommend to stay with the Kepler release. For Release 0.4
+			it is planned to enhance Java 8 compatibility and we will switch
+			to the Mars release.
 		</para>
 		
 		<para>
@@ -92,9 +92,7 @@
 			to be extracted to somewhere on the file system and can be run from
 			there. Even though many Linux distributions will include Eclipse
 			in its package repositories, we do not recommend to use those.
-			Just download the Kepler from <link xlink:href="http://www.eclipse.org/downloads/">http://www.eclipse.org/downloads/</link>
-			or, if there is already a newer release available, it can always be
-			downloaded from the archives: <link xlink:href="http://www.eclipse.org/downloads/packages/release/kepler/sr2">http://www.eclipse.org/downloads/packages/release/kepler/sr2</link>.
+			Just download the Eclipse Kepler release from the archives: <link xlink:href="http://www.eclipse.org/downloads/packages/release/kepler/sr2">http://www.eclipse.org/downloads/packages/release/kepler/sr2</link> since.
 			You have to download the same architecture as the Java Version you 
 			installed.
 		</para>
@@ -112,7 +110,7 @@
 			Eclipse SCADA components. For this go to
             <menuchoice><guimenu>Help</guimenu><guimenuitem>Install New Software</guimenuitem></menuchoice>. 
 			In the text box "Work with" just enter following URL: 
-			<link xlink:href="http://download.eclipse.org/eclipsescada/updates/release/0.1.0/"/>
+			<link xlink:href="http://download.eclipse.org/eclipsescada/updates/release/0.2/"/>
 			Then select the "Eclipse SCADA IDE" category and click on "Next".
 			The next screen should contain all the additionally selected 
 			dependencies. Click on "Next" there as well. On the next screen 
@@ -123,16 +121,9 @@
 		<para>
 			Additionally you can now install the additional openSCADA components. 
 			These contain the OPC and the SNMP adapters. This may be part of 
-			the 0.2.0 release of Eclipse SCADA, but for now they have to be 
+			the 0.3 release of Eclipse SCADA, but for now they have to be 
 			downloaded from the openSCADA site. To install it just repeat the steps
-			above with the URL <link xlink:href="http://neutronium.openscada.org/p2/1.2/release/"/>
-			<footnote>
-				<para>
-					The release will not be ready until End of August, until then
-					please use the integration build found under
-					<link xlink:href="http://neutronium.openscada.org/p2/1.2/nightly/"/> or <link xlink:href="http://neutronium.openscada.org/p2/1.2/milestone/"/>
-				</para>
-			</footnote>
+			above with the URL <link xlink:href="http://neutronium.openscada.org/p2/1.3/release/"/>
 			and select the "OpenSCADA IDE" category.
 		</para>
 		

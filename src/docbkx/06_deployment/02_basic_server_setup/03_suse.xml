@@ -18,7 +18,7 @@
     In order to add the Eclipse SCADA repository to your system execute the following commands
     as <quote>root</quote>.
     
-    <programlisting language="shell"><![CDATA[zypper addrepo -G http://download.eclipse.org/eclipsescada/repos/release/0.1.0/yum/ eclipsescada
+    <programlisting language="shell"><![CDATA[zypper addrepo -G http://download.eclipse.org/eclipsescada/repos/release/0.2/yum/ eclipsescada
 zypper refresh]]></programlisting>    
     </para>
     

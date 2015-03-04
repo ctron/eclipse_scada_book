@@ -23,15 +23,9 @@
   <section><title>Prerequisites</title>
   
     <para>
-    You will need to have Java 7 and the Eclipse IDE installed. See <xref linkend="setup_ide_java"/> and
+    You will need to have Java 7 or Java 8 and the Eclipse IDE installed. See <xref linkend="setup_ide_java"/> and
     <xref linkend="setup_ide_eclipse"/> for further information.
     </para>
-    
-    <note><para>
-    This tutorial is based on functionality which is only available in the 0.2.x branch which is
-    currently under development. The feature is available in 0.2.x builds after the <date>2014-07-05</date>.
-    Therefore you might need to use a nightly or milestone version.
-    </para></note>
     
     <para>
     Also is a version of Apache Maven 3.x required in order to perform the actual client build.

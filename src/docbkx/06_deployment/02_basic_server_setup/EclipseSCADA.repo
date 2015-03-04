@@ -1,6 +1,6 @@
 # Eclipse SCADA repository
 
 [EclipseSCADA]
-name=Eclipse SCADA 0.1.0 - Release
-baseurl=http://download.eclipse.org/eclipsescada/repos/release/0.1.0/yum/
+name=Eclipse SCADA 0.2.0 - Release
+baseurl=http://download.eclipse.org/eclipsescada/repos/release/0.2/yum/
 gpgcheck=0
