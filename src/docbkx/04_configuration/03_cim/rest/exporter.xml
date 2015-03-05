@@ -3,14 +3,10 @@
 	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" 
 	xsi:schemaLocation="http://docbook.org/ns/docbook http://docbook.org/xml/5.0/xsd/docbook.xsd">
 
-	<title>Component/Infrastructure models</title>
+	<title>REST Exporter</title>
 
   <para>
-  The component and infrastructure models describe the system setup. Split up in
-  system components and the technical infrastructure.
+  The REST exporter allows exposing values from a master server instance as HTTP endpoints.
 	</para>
-  
-    <xi:include href="modbus/exporter.xml"/>  
-    <xi:include href="rest/exporter.xml"/>  
-	
+    
 </section>
