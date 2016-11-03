@@ -7,7 +7,7 @@
 	<title>Communication</title>
 
 	<para>
-	The following sections describe the communication behavior of the Eclipse SCADA system.
+	The following sections describe the communication behavior of the Eclipse NeoSCADA system.
 	</para>
 	
 	<xi:include href="01_reconnect.xml"/>

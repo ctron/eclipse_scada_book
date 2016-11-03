@@ -53,7 +53,7 @@ this.modbusExporter = builder.build ();]]></programlisting>
   using the modbus interface. The offset is, contrary to modbus, in bytes and using a zero based
   index. Although it is technically possible to start an export with a odd number (e.g. 1 or 5) it
   is not recommended, since this would mean that the whole export is not word/register aligned.
-  Eclipse SCADA itself can read such data using the memory model definition, but many other modbus
+  Eclipse NeoSCADA itself can read such data using the memory model definition, but many other modbus
   based tools cannot.
   </para>
   

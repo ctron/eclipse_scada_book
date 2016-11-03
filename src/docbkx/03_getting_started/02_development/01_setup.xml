@@ -10,10 +10,10 @@
 
 	<para>
 		The following sub section explain in brief detail on how to setup
-		a development environment. Eclipse SCADA is developed using the
+		a development environment. Eclipse NeoSCADA is developed using the
 		Eclipse Java
 		IDE (JDT), still it possible to use other IDEs and
-		development environments as well in order to use Eclipse SCADA in your
+		development environments as well in order to use Eclipse NeoSCADA in your
 		own applications.
 	</para>
 
@@ -26,7 +26,7 @@
 		<title>Setting up a plain maven project</title>
 
 		<para>
-			Eclipse SCADA is built using Eclipse Tycho. It is a set maven
+			Eclipse NeoSCADA is built using Eclipse Tycho. It is a set maven
 			plugins, which extend maven in a way that the Eclipse PDE type
 			projects can be used without much additional changes for maven.
 		</para>
@@ -34,7 +34,7 @@
 		<para>
 			This works extremely well in the Eclipse PDE enviroment, but if
 			you want to develop a plain maven project you would need to import the
-			artifacts manually, and Eclipse SCADA has a lot
+			artifacts manually, and Eclipse NeoSCADA has a lot
 			<footnote>
 				<para>A the moment of writing it is over 400 OSGi bundles/JAR files.</para>
 			</footnote>
@@ -113,11 +113,11 @@
 		</para>
 
 		<para>
-			Eclipse SCADA uses Apache Mina for most of its communication
+			Eclipse NeoSCADA uses Apache Mina for most of its communication
 			protocols. Apache Mina uses the maven plugin
 			<filename>org.apache.felix:maven-bundle-plugin</filename>
 			for providing OSGi bundles. So as soon as you declare a dependency to
-			some Eclipse SCADA module which has a dependency to Apache Mina, you
+			some Eclipse NeoSCADA module which has a dependency to Apache Mina, you
 			will need to add this plugin to you setup as well.
 		</para>
 

@@ -7,9 +7,9 @@
 	<title>Getting started</title>
 
 	<para>
-	The following sub section should give you a quick start into the Eclipse SCADA system.
+	The following sub section should give you a quick start into the Eclipse NeoSCADA system.
 	Also see <link xlink:href="https://wiki.eclipse.org/EclipseSCADA#Getting_started">https://wiki.eclipse.org/EclipseSCADA#Getting_started</link>
-	in the Eclipse SCADA wiki.
+	in the Eclipse NeoSCADA wiki.
 	</para>
 	
 	<xi:include href="01_configuration/index.xml"/>

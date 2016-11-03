@@ -44,7 +44,7 @@
         that are commonly used are <quote>tag</quote>, <quote>data point</quote>.
       </para>
       <para>
-        In Eclipse SCADA the data item consists of:
+        In Eclipse NeoSCADA the data item consists of:
         <itemizedlist>
           <listitem>
             <para>A unique ID</para>

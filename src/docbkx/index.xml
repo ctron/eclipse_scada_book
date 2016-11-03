@@ -8,7 +8,7 @@
 
 	version="5.0">
 
-	<title>Eclipse SCADA</title>
+	<title>Eclipse NeoSCADA</title>
 	<subtitle>The definite guide</subtitle>
 
 	<info>
@@ -46,7 +46,7 @@
 		</authorgroup>
 
 		<cover>
-			<para role="tagline">Explaining the Eclipse SCADA system</para>
+			<para role="tagline">Explaining the Eclipse NeoSCADA system</para>
 			<mediaobject role="cover">
 				<imageobject condition="web">
 					<imagedata fileref="images/cover.png" />

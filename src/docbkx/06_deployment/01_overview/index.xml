@@ -6,7 +6,7 @@
 	<title>Overview</title>
 
 	<para>
-  The Eclipse SCADA system will install a number of applications and libraries. There it is
+  The Eclipse NeoSCADA system will install a number of applications and libraries. There it is
   recommended to use some package manager to install the whole system.
     </para>
     
@@ -20,7 +20,7 @@
     <section>
       <title>Pre-Requisites</title>
       <para>
-  Installing the Eclipse SCADA systems requires:
+  Installing the Eclipse NeoSCADA systems requires:
   <itemizedlist>
     <listitem><para>Administrative permissions (aka "root access")</para></listitem>
     <listitem><para>Java 7 (JRE)</para></listitem>
@@ -28,7 +28,7 @@
       </para>
       <para>
       In addition to the basic software packages that you can install
-      using Eclipse SCADA is not much fun without having a configuration
+      using Eclipse NeoSCADA is not much fun without having a configuration
       for your system. So in addition to the basic software you will need
       some sort of configuration to deploy. The easiest way to create you
       own configuration is by using the configuration tool described under
@@ -42,7 +42,7 @@
   The question about the <quote>best</quote> platform will never be really answered.
   However there are two facts to consider:
   <orderedlist>
-    <listitem><para>Eclipse SCADA is tested mostly on the most recent Ubuntu LTS release, 64bit</para></listitem>
+    <listitem><para>Eclipse NeoSCADA is tested mostly on the most recent Ubuntu LTS release, 64bit</para></listitem>
     <listitem><para>Client applications are most often used on Windows 7+ installations (32 or 64bit)</para></listitem>
   </orderedlist>
       </para>
@@ -54,7 +54,7 @@
     <section>
       <title>Processor architecture</title>
       <para>
-  While most parts of Eclipse SCADA are plain Java and therefore independent of the
+  While most parts of Eclipse NeoSCADA are plain Java and therefore independent of the
   processor architecture or platform, this is not the whole truth.
       </para>
       <para>

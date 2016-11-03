@@ -9,17 +9,17 @@
 	<title>Standard ports</title>
 
 	<para>
-		The protocols Eclipse SCADA provides are normally based on plain
+		The protocols Eclipse NeoSCADA provides are normally based on plain
 		TCP
 		client/server protocols. Each driver and application provides
 		services
 		on different TCP ports. The follow map provides a list of
 		<quote>well known ports</quote>
-		in the Eclipse SCADA system.
+		in the Eclipse NeoSCADA system.
 	</para>
 
 	<para>
-		For an update to list, see also the Eclipse SCADA Wiki page at
+		For an update to list, see also the Eclipse NeoSCADA Wiki page at
 		<link
 			xlink:href="https://wiki.eclipse.org/EclipseSCADA/Documentation/StandardPorts">https://wiki.eclipse.org/EclipseSCADA/Documentation/StandardPorts
 		</link>

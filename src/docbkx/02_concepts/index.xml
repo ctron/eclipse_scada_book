@@ -7,7 +7,7 @@
 	<title>Concepts</title>
 
 	<para>
-	The following sub sections describe the different concepts of Eclipse SCADA.
+	The following sub sections describe the different concepts of Eclipse NeoSCADA.
 	</para>
 	
     <xi:include href="01_functionality/index.xml"/>

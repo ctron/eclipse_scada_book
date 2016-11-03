@@ -1,5 +1,5 @@
 Eclipse SCADA: The definite guide
-==================
+=================================
 
 This is the source code to the Eclipse SCADA Book.
 

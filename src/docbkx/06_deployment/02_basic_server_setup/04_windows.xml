@@ -6,7 +6,7 @@
   <title><trademark>Windows</trademark></title>
   
   <para>
-  The common driver package can be downloaded from Eclipse SCADA at
+  The common driver package can be downloaded from Eclipse NeoSCADA at
   <link xlink:href="http://www.eclipse.org/downloads/download.php?file=/eclipsescada/downloads/org.eclipse.scada/drops/0.2.0/R201501260629/msi/common_driver_0.2.0_x86.msi">http://www.eclipse.org/downloads/download.php?file=/eclipsescada/downloads/org.eclipse.scada/drops/0.2.0/R201501260629/msi/common_driver_0.2.0_x86.msi</link> for 32bit
   and at
   <link xlink:href="http://www.eclipse.org/downloads/download.php?file=/eclipsescada/downloads/org.eclipse.scada/drops/0.2.0/R201501260629/msi/common_driver_0.2.0_x64.msi">http://www.eclipse.org/downloads/download.php?file=/eclipsescada/downloads/org.eclipse.scada/drops/0.2.0/R201501260629/msi/common_driver_0.2.0_x64.msi</link> for 64bit.

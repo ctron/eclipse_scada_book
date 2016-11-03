@@ -13,7 +13,7 @@
   This tutorial creates a standalone Eclipse RCP application which contains:
   <itemizedlist>
     <listitem><para>A basic Eclipse RCP application setup</para></listitem>
-    <listitem><para>An Eclipse SCADA connection context</para></listitem>
+    <listitem><para>An Eclipse NeoSCADA connection context</para></listitem>
     <listitem><para>Alarm system configuration (views, menus)</para></listitem>
     <listitem><para>Basic view screens (logon, logoff)</para></listitem>
     <listitem><para>A small visualization for data coming from <filename>scada.eclipse.org</filename></para></listitem>
@@ -42,7 +42,7 @@
   
   <section><title>Installing a nightly/milestone version of the Configurator</title>
     <para>
-    In order to install a nightly or milestone version of the Eclipse SCADA configurator you need to
+    In order to install a nightly or milestone version of the Eclipse NeoSCADA configurator you need to
     open the software installation dialog <menuchoice><guimenu>Help</guimenu><guimenuitem>Install New Software</guimenuitem></menuchoice>
     and enter the appropriate URL into the <quote>Work with</quote> field and press enter.
     The URL will automatically be tested and added.
@@ -108,7 +108,7 @@
   </screenshot>
   
   <para>
-  From the list of templates select the <quote>Eclipse SCADA Client Application</quote> template.
+  From the list of templates select the <quote>Eclipse NeoSCADA Client Application</quote> template.
   </para>
   
   <screenshot>

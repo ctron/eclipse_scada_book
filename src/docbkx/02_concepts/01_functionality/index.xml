@@ -7,8 +7,8 @@
 	<title>Data Types, Data Model &amp; Functionality</title>
 
 	<para>
-	The following sections describe the main functionalities of the Eclipse SCADA system.
-    Most of these functionalities are not specific to Eclipse SCADA, but to SCADA systems
+	The following sections describe the main functionalities of the Eclipse NeoSCADA system.
+    Most of these functionalities are not specific to Eclipse NeoSCADA, but to SCADA systems
     in general. Also is there no sharp line between other technologies like <acronym>M2M</acronym>
     or <acronym>IoT</acronym> systems which also offer connectivity with other devices.
 	</para>

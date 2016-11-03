@@ -8,20 +8,20 @@
   <title>Exporting Data</title>
   
   <para>
-    Eclipse SCADA internally provides process data by the <classname>Hive</classname> interface.
+    Eclipse NeoSCADA internally provides process data by the <classname>Hive</classname> interface.
     It is the internal, programming language specific, interface of accessing data. However in
     many cases it is necessary to access this data again over some sort of remote interface.
   </para>  
   
   <para>
     Data which is provided by <classname>Hive</classname> instance can be exported using <quote>exporters</quote>.
-    The most common exporter in Eclipse SCADA is the <quote>DA NGP</quote> exporter. It allows access
+    The most common exporter in Eclipse NeoSCADA is the <quote>DA NGP</quote> exporter. It allows access
     to the Hive instance (DA interface) over the <acronym>NGP</acronym> protocol. The Java class
     implementing this functionality is <classname>org.eclipse.scada.da.server.ngp.Exporter.Exporter</classname>. 
   </para>
   
   <para>
-    However there are a few other exporters which allow access to data from Eclipse SCADA via
+    However there are a few other exporters which allow access to data from Eclipse NeoSCADA via
     some other protocols.
   </para>
   

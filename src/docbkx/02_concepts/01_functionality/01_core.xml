@@ -9,7 +9,7 @@
   <title>Core Data Types</title>
 
   <para>
-    The Eclipse SCADA system re-used some data types and structures at many interfaces.
+    The Eclipse NeoSCADA system re-used some data types and structures at many interfaces.
     So they deserve some extra explanation.
   </para>
 
@@ -88,7 +88,7 @@
       </para>
 
       <para>
-        At the moment the definition of the Variant is a bit awkward and will be reworked in the 0.2.0 release of Eclipse SCADA.
+        At the moment the definition of the Variant is a bit awkward and will be reworked in the 0.5.0 release of Eclipse NeoSCADA.
         The progress can be tracked at <link xlink:href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=431323">bug #431323</link>.
       </para>
       

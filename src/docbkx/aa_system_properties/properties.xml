@@ -61,9 +61,9 @@
     >
     <description>
     <db:para>
-    Starting with Eclipse SCADA 0.2.0 client connections will also use a shared IO processor to
+    Starting with Eclipse NeoSCADA 0.2.0 client connections will also use a shared IO processor to
     reduce the number of system resources by default. Setting this value to <db:literal>true</db:literal>
-    will revert to the behavior of Eclipse SCADA 0.1.0 and openSCADA 1.1.0. 
+    will revert to the behavior of Eclipse NeoSCADA 0.1.0 and openSCADA 1.1.0. 
     </db:para>
     </description>
 </property>

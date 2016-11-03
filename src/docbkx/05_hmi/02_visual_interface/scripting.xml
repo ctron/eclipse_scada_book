@@ -214,7 +214,7 @@ text.setForegroundColor ( "#FF0000" );
   <para>
   In order to see a mapping table of which element is controlled by which controller, and to
   see a documentation of the controllers, open the Eclipse help system and navigate to
-  <menuchoice><guimenu>Eclipse SCADA HMI</guimenu><guisubmenu>Reference</guisubmenu><guimenuitem>Scripting</guimenuitem></menuchoice>.
+  <menuchoice><guimenu>Eclipse NeoSCADA HMI</guimenu><guisubmenu>Reference</guisubmenu><guimenuitem>Scripting</guimenuitem></menuchoice>.
   </para>
   
   </section>

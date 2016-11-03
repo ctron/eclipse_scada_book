@@ -7,7 +7,7 @@
 	<title>Authorization</title>
 
 <para>
-Eclipse SCADA has two different behaviors for connections to servers. One manual mode and one automatic mode.
+Eclipse NeoSCADA has two different behaviors for connections to servers. One manual mode and one automatic mode.
 The decision is done by the application which mode to use. It cannot be configured in the connection
 string itself.  
 </para>
@@ -22,7 +22,7 @@ user re-opens.
 
 <para>
 In automatic mode the application simply decides weather the connection should stay open or stay closed.
-Eclipse SCADA manages then the connection state and will trigger connect and disconnect calls automatically.
+Eclipse NeoSCADA manages then the connection state and will trigger connect and disconnect calls automatically.
 In most cases the application simply requests the connection to be open. This mode is primarily used
 by the master server or the normal end user client.
 </para>

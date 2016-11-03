@@ -57,7 +57,7 @@
   <section><title>Recipe handlers</title>
   
   <para>
-  The following recipe handlers come with Eclipse SCADA and can be used by the Execute element:
+  The following recipe handlers come with Eclipse NeoSCADA and can be used by the Execute element:
   </para>
   
   <section><title>Load models</title>

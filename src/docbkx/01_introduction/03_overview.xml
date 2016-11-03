@@ -9,7 +9,7 @@
 	<title>Data</title>
 
 	<para>
-		Eclipse SCADA is, as the name says, a SCADA system. SCADA stands for
+		Eclipse NeoSCADA is, as the name says, a SCADA system. SCADA stands for
 		<quote>supervisory control and data acquisition</quote>
 		.
 	</para>
@@ -23,7 +23,7 @@
 	</para>
 
 	<para>
-		So the main functions provided by Eclipse SCADA are:
+		So the main functions provided by Eclipse NeoSCADA are:
 		<variablelist>
 			<varlistentry>
 				<term>DA – Data Access</term>

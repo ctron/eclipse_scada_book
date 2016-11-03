@@ -6,7 +6,7 @@
 	<title>Human-Machine Interface</title>
 
 	<para>
-	Eclipse SCADA has currently two main ways of visualizing information.
+	Eclipse NeoSCADA has currently two main ways of visualizing information.
     Both are part of a rich client concept based on the
     Eclipse Rich Client Platform (<acronym>RCP</acronym>).  
 	</para>

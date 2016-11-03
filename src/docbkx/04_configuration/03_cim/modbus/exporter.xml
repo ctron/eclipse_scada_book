@@ -7,14 +7,14 @@
 
   <para>
   The modbus exporter allows exporting values from a master server instance using the Modbus TCP
-  protocol. In this case Eclipse SCADA acts as a Modbus TCP Slave.
+  protocol. In this case Eclipse NeoSCADA acts as a Modbus TCP Slave.
 	</para>
   
   <note>
     <para>The default modbus TCP port number is 502. While it is technically possible to use
     this port number, it is below 1024, which makes it a privilged port on most Unix based systems.</para>
     <para>Therefore it is recommended to use a different port, one greater than 1024. Otherwise
-    the Eclipse SCADA software stack has to be run with <filename>root</filename> privileges.</para>
+    the Eclipse NeoSCADA software stack has to be run with <filename>root</filename> privileges.</para>
   </note>
   
   <section><title>Selector Script</title>

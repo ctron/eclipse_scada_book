@@ -10,7 +10,7 @@
 
   <para>
   The model describing the symbols and views is an Ecore model, which is documented in
-  <xref linkend="model_vi"/>. Eclipse SCADA Provides a set of tools (Wizards, Editors) in order
+  <xref linkend="model_vi"/>. Eclipse NeoSCADA Provides a set of tools (Wizards, Editors) in order
   to ease the development symbols. However it still is possible to edit the symbols with a
   plain text or XML editor.
   </para>

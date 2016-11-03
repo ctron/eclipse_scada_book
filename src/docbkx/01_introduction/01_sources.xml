@@ -7,33 +7,33 @@
 
 	<para>
 		The following place may help you in understanding and using the
-		Eclipse SCADA system:
+		Eclipse NeoSCADA system:
 
 		<itemizedlist>
 			<listitem>
 				<para>
 					<link xlink:href="http://www.eclipse.org/eclipsescada/"/>
-					– The Eclipse SCADA homepage
+					– The Eclipse NeoSCADA homepage
 				</para>
 			</listitem>
 			<listitem>
 				<para>
 					<link xlink:href="http://openscada.org"/>
 					– The openSCADA homepage holds some information about the system
-					that became Eclipse SCADA. There is also the wiki, news group and
+					that became Eclipse NeoSCADA. There is also the wiki, news group and
 					blog.
 				</para>
 			</listitem>
 			<listitem>
 				<para>
 					<link xlink:href="https://wiki.eclipse.org/EclipseSCADA"/>
-					– The Eclipse SCADA Wiki page
+					– The Eclipse NeoSCADA Wiki page
 				</para>
 			</listitem>
 			<listitem>
 				<para>
 					<link xlink:href="http://download.eclipse.org/eclipsescada/"/>
-					– The download area of Eclipse SCADA
+					– The download area of Eclipse NeoSCADA
 				</para>
 			</listitem>
 		</itemizedlist>

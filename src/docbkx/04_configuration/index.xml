@@ -7,7 +7,7 @@
 	<title>Configuration</title>
 
 	<para>
-	Eclipse SCADA consists of many different configuration options. Therefore the whole
+	Eclipse NeoSCADA consists of many different configuration options. Therefore the whole
     configuration process is split up into several parts.
 	</para>
   

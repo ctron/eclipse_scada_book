@@ -8,13 +8,13 @@
   <title>Modbus Exporter</title>
   
   <para>
-  The modbus exporter allows exporting DA data from Eclipse SCADA over the Modbus TCP protocol.
+  The modbus exporter allows exporting DA data from Eclipse NeoSCADA over the Modbus TCP protocol.
   See also <link xlink:href="http://www.simplymodbus.ca/TCP.htm"/>.
   </para>
   
   <para>
-  In this case Eclipse SCADA is a Modbus TCP Slave, which is a TCP server. This means that
-  Eclipse SCADA is waiting for incoming TCP connections from Modbus TCP Master applications.
+  In this case Eclipse NeoSCADA is a Modbus TCP Slave, which is a TCP server. This means that
+  Eclipse NeoSCADA is waiting for incoming TCP connections from Modbus TCP Master applications.
   </para>
   
   <para>

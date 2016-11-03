@@ -851,7 +851,7 @@ This defines the border style of the figure element. The syntax of the border de
                      <entry>string</entry>
                      <entry>[0..1]</entry>
                      <entry/>
-                     <entry/>
+                     <entry>A text which will be show as a tooltip when the mouse cursor hovers the element.</entry>
                   </row>
                   <row>
                      <entry>onMouseIn</entry>

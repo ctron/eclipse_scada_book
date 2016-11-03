@@ -5,7 +5,7 @@
 
 	<title>Introduction</title>
 	<para>
-	Welcome to Eclipse SCADA!
+	Welcome to Eclipse NeoSCADA!
 	</para>
 
 	<xi:include href="01_sources.xml" />
