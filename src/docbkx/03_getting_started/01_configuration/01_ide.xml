@@ -20,9 +20,9 @@
 		
         <note><title>Java 8</title>
 		<para>
-			At the time of writing Java 8 was just released, so the current version
-			which is still in use in conjunction with Eclipse NeoSCADA is Java 7.
-			Java 8 should theoretically work, but it is not tested so far.
+			With the release of Eclipse NeoSCADA 0.4, it is based on Eclipse Neon (4.6),
+			which requires Java 8 to run. Therefore Eclipse NeoSCADA will also need
+			a Java 8 VM.
 		</para>
         </note>
 		
@@ -49,9 +49,9 @@
 				The default Java package for most Linux distributions is the OpenJDK.
 				To install the OpenJDK for your flavor of Linux use the package
 				management tool of your distribution and install the package
-				<filename>openjdk-7-jdk</filename> (the name of the package might be 
+				<filename>openjdk-8-jdk</filename> (the name of the package might be 
 				slightly different depending on your distribution, on Red Hat for 
-				instance it is called <filename>java-1.7.0-openjdk-devel</filename>).
+				instance it is called <filename>java-1.8.0-openjdk-devel</filename>).
 				The important thing is, to install the JDK and not the JRE.
 				If you install Java via the package manager, you will automatically
 				get the correct version for your architecture (32bit or 64bit).
@@ -77,22 +77,14 @@
 	
 	<section xml:id="setup_ide_eclipse">
 		<title>Installing Eclipse</title>
-	
-		<para>
-			The current version (0.3) of Eclipse NeoSCADA is based on the Mars 
-			release (4.5). Although the following instructions work  without 
-			change with the Neon release,
-			we recommend to stay with the Kepler release. For Release 0.4
-			it is planned to depend on Java 8 and we will switch
-			to the Neon release.
-		</para>
-		
+			
 		<para>
 			Traditionally Eclipse comes as a simple ZIP file, which just has
 			to be extracted to somewhere on the file system and can be run from
 			there. Even though many Linux distributions will include Eclipse
 			in its package repositories, we do not recommend to use those.
-			Just download the Eclipse Kepler release from the archives: <link xlink:href="http://www.eclipse.org/downloads/packages/release/kepler/sr2">http://www.eclipse.org/downloads/packages/release/kepler/sr2</link> since.
+			Just download the Eclipse Neon release from the archives: 
+			<link xlink:href="https://www.eclipse.org/downloads/packages/release/Neon/1A">https://www.eclipse.org/downloads/packages/release/Neon/1A</link> then.
 			You have to download the same architecture as the Java Version you 
 			installed.
 		</para>
@@ -100,6 +92,10 @@
 		<para>
 			Unzip it to a directory of your choice. From there you can now start it.
 		</para>
+
+		<para>
+			Alternatively you can also use the Eclipse Installer: <link xlink:href="https://wiki.eclipse.org/Eclipse_Installer">https://wiki.eclipse.org/Eclipse_Installer</link>.
+		</para>		
 	</section>
 	
 	<section>
@@ -110,7 +106,7 @@
 			Eclipse NeoSCADA components. For this go to
             <menuchoice><guimenu>Help</guimenu><guimenuitem>Install New Software</guimenuitem></menuchoice>. 
 			In the text box "Work with" just enter following URL: 
-			<link xlink:href="http://download.eclipse.org/eclipsescada/updates/release/0.3/"/>
+			<link xlink:href="http://download.eclipse.org/eclipsescada/updates/release/0.4/"/>
 			Then select the "Eclipse NeoSCADA IDE" category and click on "Next".
 			The next screen should contain all the additionally selected 
 			dependencies. Click on "Next" there as well. On the next screen 
@@ -121,7 +117,7 @@
 		<para>
 			Additionally you can now install the additional openSCADA components. 
 			These contain the OPC and the SNMP adapters. To install it just repeat the steps
-			above with the URL <link xlink:href="http://thedrone.packagedrone.org/p2/openscada-1.4/"/>
+			above with the URL <link xlink:href="http://thedrone.packagedrone.org/p2/openscada-1.5/"/>
 			and select the "OpenSCADA IDE" category.
 		</para>
 		

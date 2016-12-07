@@ -1,4 +1,4 @@
-package org.eclipse.scada.examples.modbus.exporter;
+package org.eclipse.neoscada.sample;
 
 import org.eclipse.scada.da.server.browser.common.FolderCommon;
 import org.eclipse.scada.da.server.common.MemoryDataItem;

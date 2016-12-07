@@ -13,7 +13,7 @@ wants to perform an operation. Selecting a user and verifying the identity is th
 </para>
 
 <para>
-Eclipse NeoSCADA uses a simple TCP client/server communication concept with the NGP and NET protocol. After the TCP
+Eclipse NeoSCADA uses a simple TCP client/server communication concept with the NGP protocol. After the TCP
 connection has been established the client side sends its user credentials to the server side. The server verifies
 and remembers the authenticated user for the lifetime of the TCP connection or closes the TCP connection immediately.
 Data subscription and control operation can only be performed after the user has been authenticated.
@@ -28,9 +28,9 @@ See also the section "authorization".
 There are two ways of authenticating a user in Eclipse NeoSCADA. The first, simple, mechanism is used for connector
 modules (aka drivers). Each driver checks for a specific username and password combination during the logon
 process described above. The server checks for the system property
-<property>org.eclipse.scada.core.server.common.ServiceCommon.password</property> if is is set
+<property>org.eclipse.scada.core.server.common.ServiceCommon.password</property> if it is set,
 the value will be used as password. The user name is not relevant but will be remembered by the server. If the
-password is not set any user is allowed to connect to the service without authentication.
+password is not set, any user is allowed to connect to the service without authentication.
 </para>
 
 <para>

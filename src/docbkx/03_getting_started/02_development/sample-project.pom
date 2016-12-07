@@ -5,36 +5,41 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.eclipse.scada</groupId>
+  <groupId>org.eclipse.neoscada</groupId>
   <artifactId>client-sample1</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>Eclipse SCADA Client Sample #1</name>
+  <name>Eclipse NeoSCADA Client Sample #1</name>
   <description>A sample client</description>
 
-  <repositories>
-    <repository>
-      <id>eclipse.scada</id>
-      <url>http://download.eclipse.org/eclipsescada/downloads/org.eclipse.scada/drops/0.2.0/R201501260629/maven/</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
-
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  
   <dependencies>
-    <dependency>
-      <groupId>org.eclipse.scada.core</groupId>
-      <artifactId>org.eclipse.scada.da.client.ngp</artifactId>
-      <version>[0.1.0,)</version>
-    </dependency>
+    <!-- our suggested logging framework -->
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
-      <version>1.1.1</version>
+      <version>1.1.7</version>
+    </dependency>
+    <!-- for implementing NeoSCADA clients -->
+    <dependency>
+      <groupId>org.eclipse.neoscada.core</groupId>
+      <artifactId>org.eclipse.scada.da.client.ngp</artifactId>
+      <version>[0.1.0,)</version>
+    </dependency>
+    <!-- for implementing NeoSCADA servers -->
+    <dependency>
+      <groupId>org.eclipse.neoscada.core</groupId>
+      <artifactId>org.eclipse.scada.da.server.ngp</artifactId>
+      <version>[0.1.0,)</version>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.neoscada.core</groupId>
+      <artifactId>org.eclipse.scada.da.server.common</artifactId>
+      <version>[0.1.0,)</version>
     </dependency>
   </dependencies>
 

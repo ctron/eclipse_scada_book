@@ -1,4 +1,4 @@
-package org.eclipse.scada.eclipsemagazin;
+package org.eclipse.neoscada.sample;
  
 import java.util.Observable;
 import java.util.Observer;
